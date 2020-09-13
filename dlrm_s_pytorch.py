@@ -65,6 +65,7 @@ import dlrm_data_pytorch as dp
 
 # numpy
 import numpy as np
+import os
 
 # onnx
 # The onnx import causes deprecation warnings every time workers
@@ -537,8 +538,8 @@ if __name__ == "__main__":
     # gpu
     parser.add_argument("--use-gpu", action="store_true", default=False)
     # debugging and profiling
-    parser.add_argument("--print-freq", type=int, default=1)
-    parser.add_argument("--test-freq", type=int, default=-1)
+    parser.add_argument("--print-freq", type=int, default=1024)
+    parser.add_argument("--test-freq", type=int, default=1024)
     parser.add_argument("--test-mini-batch-size", type=int, default=-1)
     parser.add_argument("--test-num-workers", type=int, default=-1)
     parser.add_argument("--print-time", action="store_true", default=False)
@@ -546,7 +547,7 @@ if __name__ == "__main__":
     parser.add_argument("--enable-profiling", action="store_true", default=False)
     parser.add_argument("--plot-compute-graph", action="store_true", default=False)
     # store/load model
-    parser.add_argument("--save-model", type=str, default="")
+    # parser.add_argument("--save-model", type=str, default="")
     parser.add_argument("--load-model", type=str, default="")
     # mlperf logging (disables other output and stops early)
     parser.add_argument("--mlperf-logging", action="store_true", default=False)
@@ -561,6 +562,11 @@ if __name__ == "__main__":
     parser.add_argument("--lr-decay-start-step", type=int, default=0)
     parser.add_argument("--lr-num-decay-steps", type=int, default=0)
     args = parser.parse_args()
+
+    save_model_dir = os.path.join('results', '%s_lr%s' % (args.arch_mlp_top, args.learning_rate))
+    if not os.path.isdir(save_model_dir):
+        os.makedirs(save_model_dir)
+    args.save_model = os.path.join(save_model_dir, 'model.pth')
 
     if args.mlperf_logging:
         print('command line args: ', json.dumps(vars(args)))
