@@ -1,0 +1,31 @@
+Using CPU...
+Reading pre-processed data=/hdd3/jiayi/kaggle/kaggleAdDisplayChallenge_processed.npz
+Sparse fea = 26, Dense fea = 13
+Defined train indices...
+Randomized indices across days ...
+Split data according to indices...
+Reading pre-processed data=/hdd3/jiayi/kaggle/kaggleAdDisplayChallenge_processed.npz
+Sparse fea = 26, Dense fea = 13
+Defined test indices...
+Randomized indices across days ...
+Split data according to indices...
+time/loss/accuracy (if enabled):
+Finished training it 1024/306969 of epoch 0, 123.69 ms/it, loss 0.515881, accuracy 75.889 %
+Saving model to results/192-96-1_lr0.1/model.pth
+Testing at - 1024/306969 of epoch 0, loss 0.508576, accuracy 75.892 %, best 75.892 %
+Finished training it 2048/306969 of epoch 0, 117.60 ms/it, loss 0.501866, accuracy 76.548 %
+Saving model to results/192-96-1_lr0.1/model.pth
+Testing at - 2048/306969 of epoch 0, loss 0.501060, accuracy 76.285 %, best 76.285 %
+Finished training it 3072/306969 of epoch 0, 117.14 ms/it, loss 0.497879, accuracy 76.614 %
+Saving model to results/192-96-1_lr0.1/model.pth
+Testing at - 3072/306969 of epoch 0, loss 0.496319, accuracy 76.512 %, best 76.512 %
+Finished training it 4096/306969 of epoch 0, 117.13 ms/it, loss 0.488538, accuracy 77.410 %
+Saving model to results/192-96-1_lr0.1/model.pth
+Testing at - 4096/306969 of epoch 0, loss 0.494878, accuracy 76.679 %, best 76.679 %
+Finished training it 5120/306969 of epoch 0, 116.05 ms/it, loss 0.489103, accuracy 77.083 %
+Saving model to results/192-96-1_lr0.1/model.pth
+Testing at - 5120/306969 of epoch 0, loss 0.492290, accuracy 76.909 %, best 76.909 %
+Finished training it 6144/306969 of epoch 0, 135.02 ms/it, loss 0.484698, accuracy 77.315 %
+Saving model to results/192-96-1_lr0.1/model.pth
+Testing at - 6144/306969 of epoch 0, loss 0.488493, accuracy 77.044 %, best 77.044 %
+Finished training it 7168/306969 of epoch 0, 196.06 ms/it, loss 0.480305, accuracy 77.549 %
