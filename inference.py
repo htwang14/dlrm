@@ -693,57 +693,6 @@ if __name__ == "__main__":
             round_dim=args.md_round_dims
         ).tolist()
 
-    # test prints (model arch)
-    if args.debug_mode:
-        print("model arch:")
-        print(
-            "mlp top arch "
-            + str(ln_top.size - 1)
-            + " layers, with input to output dimensions:"
-        )
-        print(ln_top)
-        print("# of interactions")
-        print(num_int)
-        print(
-            "mlp bot arch "
-            + str(ln_bot.size - 1)
-            + " layers, with input to output dimensions:"
-        )
-        print(ln_bot)
-        print("# of features (sparse and dense)")
-        print(num_fea)
-        print("dense feature size")
-        print(m_den)
-        print("sparse feature size")
-        print(m_spa)
-        print(
-            "# of embeddings (= # of sparse features) "
-            + str(ln_emb.size)
-            + ", with dimensions "
-            + str(m_spa)
-            + "x:"
-        )
-        print(ln_emb)
-
-        print("data (inputs and targets):")
-        for j, (X, lS_o, lS_i, T) in enumerate(train_ld):
-            # early exit if nbatches was set by the user and has been exceeded
-            if nbatches > 0 and j >= nbatches:
-                break
-
-            print("mini-batch: %d" % j)
-            print(X.detach().cpu().numpy())
-            # transform offsets to lengths when printing
-            print(
-                [
-                    np.diff(
-                        S_o.detach().cpu().tolist() + list(lS_i[i].shape)
-                    ).tolist()
-                    for i, S_o in enumerate(lS_o)
-                ]
-            )
-            print([S_i.detach().cpu().tolist() for S_i in lS_i])
-            print(T.detach().cpu().numpy())
 
     ndevices = min(ngpus, args.mini_batch_size, num_fea - 1) if use_gpu else -1
 
@@ -770,12 +719,6 @@ if __name__ == "__main__":
         md_flag=args.md_flag,
         md_threshold=args.md_threshold,
     )
-    # test prints
-    if args.debug_mode:
-        print("initial parameters (weights and bias):")
-        for param in dlrm.parameters():
-            print(param.detach().cpu().numpy())
-        # print(dlrm)
 
     if use_gpu:
         # Custom Model-Data Parallel
@@ -785,22 +728,6 @@ if __name__ == "__main__":
         if dlrm.ndevices > 1:
             dlrm.emb_l = dlrm.create_emb(m_spa, ln_emb)
 
-    # specify the loss function
-    if args.loss_function == "mse":
-        loss_fn = torch.nn.MSELoss(reduction="mean")
-    elif args.loss_function == "bce":
-        loss_fn = torch.nn.BCELoss(reduction="mean")
-    elif args.loss_function == "wbce":
-        loss_ws = torch.tensor(np.fromstring(args.loss_weights, dtype=float, sep="-"))
-        loss_fn = torch.nn.BCELoss(reduction="none")
-    else:
-        sys.exit("ERROR: --loss-function=" + args.loss_function + " is not supported")
-
-    if not args.inference_only:
-        # specify the optimizer algorithm
-        optimizer = torch.optim.SGD(dlrm.parameters(), lr=args.learning_rate)
-        lr_scheduler = LRPolicyScheduler(optimizer, args.lr_num_warmup_steps, args.lr_decay_start_step,
-                                         args.lr_num_decay_steps)
 
     ### main loop ###
     def time_wrap(use_gpu):
@@ -823,37 +750,6 @@ if __name__ == "__main__":
             )
         else:
             return dlrm(X, lS_o, lS_i)
-
-    def loss_fn_wrap(Z, T, use_gpu, device):
-        if args.loss_function == "mse" or args.loss_function == "bce":
-            if use_gpu:
-                return loss_fn(Z, T.to(device))
-            else:
-                return loss_fn(Z, T)
-        elif args.loss_function == "wbce":
-            if use_gpu:
-                loss_ws_ = loss_ws[T.data.view(-1).long()].view_as(T).to(device)
-                loss_fn_ = loss_fn(Z, T.to(device))
-            else:
-                loss_ws_ = loss_ws[T.data.view(-1).long()].view_as(T)
-                loss_fn_ = loss_fn(Z, T.to(device))
-            loss_sc_ = loss_ws_ * loss_fn_
-            # debug prints
-            # print(loss_ws_)
-            # print(loss_fn_)
-            return loss_sc_.mean()
-
-    # training or inference
-    best_gA_test = 0
-    best_auc_test = 0
-    skip_upto_epoch = 0
-    skip_upto_batch = 0
-    total_time = 0
-    total_loss = 0
-    total_accu = 0
-    total_iter = 0
-    total_samp = 0
-    k = 0
 
     # Load model is specified
     if not (args.load_model == ""):
@@ -887,16 +783,6 @@ if __name__ == "__main__":
         ld_total_accu = ld_model["total_accu"]
         ld_gA_test = ld_model["test_acc"]
         ld_gL_test = ld_model["test_loss"]
-        if not args.inference_only:
-            optimizer.load_state_dict(ld_model["opt_state_dict"])
-            best_gA_test = ld_gA_test
-            total_loss = ld_total_loss
-            total_accu = ld_total_accu
-            skip_upto_epoch = ld_k  # epochs
-            skip_upto_batch = ld_j  # batches
-        else:
-            args.print_freq = ld_nbatches
-            args.test_freq = 0
 
         print(
             "Saved at: epoch = {:d}/{:d}, batch = {:d}/{:d}, ntbatch = {:d}".format(
