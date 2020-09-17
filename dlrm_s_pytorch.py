@@ -1044,37 +1044,37 @@ if __name__ == "__main__":
                         scores = []
                         targets = []
 
-                    for i, (X_test, lS_o_test, lS_i_test, T_test) in enumerate(test_ld):
-                        # early exit if nbatches was set by the user and was exceeded
-                        if nbatches > 0 and i >= nbatches:
-                            break
+                    t1_test = time_wrap(use_gpu)
+                    with torch.no_grad():
+                        for i, (X_test, lS_o_test, lS_i_test, T_test) in enumerate(test_ld):
+                            # early exit if nbatches was set by the user and was exceeded
+                            if nbatches > 0 and i >= nbatches:
+                                break                           
 
-                        t1_test = time_wrap(use_gpu)
+                            # forward pass
+                            Z_test = dlrm_wrap(
+                                X_test, lS_o_test, lS_i_test, use_gpu, device
+                            )
+                            if args.mlperf_logging:
+                                S_test = Z_test.detach().cpu().numpy()  # numpy array
+                                T_test = T_test.detach().cpu().numpy()  # numpy array
+                                scores.append(S_test)
+                                targets.append(T_test)
+                            else:
+                                # loss
+                                E_test = loss_fn_wrap(Z_test, T_test, use_gpu, device)
 
-                        # forward pass
-                        Z_test = dlrm_wrap(
-                            X_test, lS_o_test, lS_i_test, use_gpu, device
-                        )
-                        if args.mlperf_logging:
-                            S_test = Z_test.detach().cpu().numpy()  # numpy array
-                            T_test = T_test.detach().cpu().numpy()  # numpy array
-                            scores.append(S_test)
-                            targets.append(T_test)
-                        else:
-                            # loss
-                            E_test = loss_fn_wrap(Z_test, T_test, use_gpu, device)
+                                # compute loss and accuracy
+                                L_test = E_test.detach().cpu().numpy()  # numpy array
+                                S_test = Z_test.detach().cpu().numpy()  # numpy array
+                                T_test = T_test.detach().cpu().numpy()  # numpy array
+                                mbs_test = T_test.shape[0]  # = mini_batch_size except last
+                                A_test = np.sum((np.round(S_test, 0) == T_test).astype(np.uint8))
+                                test_accu += A_test
+                                test_loss += L_test * mbs_test
+                                test_samp += mbs_test
 
-                            # compute loss and accuracy
-                            L_test = E_test.detach().cpu().numpy()  # numpy array
-                            S_test = Z_test.detach().cpu().numpy()  # numpy array
-                            T_test = T_test.detach().cpu().numpy()  # numpy array
-                            mbs_test = T_test.shape[0]  # = mini_batch_size except last
-                            A_test = np.sum((np.round(S_test, 0) == T_test).astype(np.uint8))
-                            test_accu += A_test
-                            test_loss += L_test * mbs_test
-                            test_samp += mbs_test
-
-                        t2_test = time_wrap(use_gpu)
+                    t2_test = time_wrap(use_gpu)
 
                     if args.mlperf_logging:
                         scores = np.concatenate(scores, axis=0)
@@ -1180,6 +1180,7 @@ if __name__ == "__main__":
                                 validation_results['accuracy'] * 100,
                                 best_gA_test * 100
                             )
+                            + " time %.2f" % (t2_test - t1_test)
                         )
                     else:
                         print(
