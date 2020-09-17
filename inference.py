@@ -916,26 +916,26 @@ if __name__ == "__main__":
 
     # test
     correct_num = 0
-    N_test = 0
-    # with torch.no_grad():
+    N_test = 0    
     t1_test = time_wrap(use_gpu)
-    for i, (X_test, lS_o_test, lS_i_test, T_test) in enumerate(test_ld):
-        # print(i)
-        # early exit if nbatches was set by the user and was exceeded
-        if nbatches > 0 and i >= nbatches:
-            break
+    with torch.no_grad():
+        for i, (X_test, lS_o_test, lS_i_test, T_test) in enumerate(test_ld):
+            # print(i)
+            # early exit if nbatches was set by the user and was exceeded
+            if nbatches > 0 and i >= nbatches:
+                break
 
-        # forward pass
-        Z_test = dlrm_wrap(
-            X_test, lS_o_test, lS_i_test, use_gpu, device
-        )
+            # forward pass
+            Z_test = dlrm_wrap(
+                X_test, lS_o_test, lS_i_test, use_gpu, device
+            )
 
-        # compute loss and accuracy
-        S_test = Z_test.detach().cpu().numpy()  # numpy array
-        T_test = T_test.detach().cpu().numpy()  # numpy array
-        A_test = np.sum((np.round(S_test, 0) == T_test).astype(np.uint8))
-        correct_num += A_test
-        N_test += S_test.shape[0]
+            # compute loss and accuracy
+            S_test = Z_test.detach().cpu().numpy()  # numpy array
+            T_test = T_test.detach().cpu().numpy()  # numpy array
+            A_test = np.sum((np.round(S_test, 0) == T_test).astype(np.uint8))
+            correct_num += A_test
+            N_test += S_test.shape[0]
 
     t2_test = time_wrap(use_gpu)
 
