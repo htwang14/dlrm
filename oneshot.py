@@ -845,12 +845,11 @@ if __name__ == "__main__":
         print('Calculating training loss...')
         t1_train = time_wrap(use_gpu)
         E = 0 # total loss
-        with torch.no_grad():
-            for j, (X, lS_o, lS_i, T) in enumerate(train_ld):
-                if j >= 1024:
-                    break               
-                Z = dlrm_wrap(X, lS_o, lS_i, use_gpu, device)
-                E += loss_fn_wrap(Z, T, use_gpu, device)
+        for j, (X, lS_o, lS_i, T) in enumerate(train_ld):
+            if j >= 1024:
+                break               
+            Z = dlrm_wrap(X, lS_o, lS_i, use_gpu, device)
+            E += loss_fn_wrap(Z, T, use_gpu, device)
         E /= 1024 # total loss
         t2_train = time_wrap(use_gpu)
         print('Training set inference time: ', t2_train-t1_train)
