@@ -159,6 +159,7 @@ CUDA_VISIBLE_DEVICES=2 python dlrm_s_pytorch.py \
     --arch-interaction-op cat \
     --load-model results/64-32-1_lr0.1/model.pth \
     --use-gpu \
+    --nepochs 2 \
     2>&1 | tee 64-32-1_lr0.1.log
 
 # FLOPs = 2*432*48+48+2*48*24+24+2*24+1 = 43897
@@ -181,7 +182,9 @@ CUDA_VISIBLE_DEVICES=2 python dlrm_s_pytorch.py \
     --test-mini-batch-size=16384 \
     --test-num-workers=16 \
     --arch-interaction-op cat \
+    --load-model results/48-24-1_lr0.1/model.pth \
     --use-gpu \
+    --nepochs 2 \
     2>&1 | tee 48-24-1_lr0.1.log
 
 # FLOPs = 2*432*40+40+2*40*20+20+2*20+1 = 43897
@@ -204,7 +207,9 @@ CUDA_VISIBLE_DEVICES=1 python dlrm_s_pytorch.py \
     --test-mini-batch-size=16384 \
     --test-num-workers=16 \
     --arch-interaction-op cat \
+    --load-model results/40-20-1_lr0.1/model.pth \
     --use-gpu \
+    --nepochs 2 \
     2>&1 | tee 40-20-1_lr0.1.log
 
 # FLOPs = 2*432*32+32+2*32*16+16+2*16+1 = 28753
@@ -229,4 +234,5 @@ CUDA_VISIBLE_DEVICES=2 python dlrm_s_pytorch.py \
     --arch-interaction-op cat \
     --load-model results/32-16-1_lr0.1/model.pth \
     --use-gpu \
+    --nepochs 2 \
     2>&1 | tee 32-16-1_lr0.1.log
