@@ -561,6 +561,8 @@ if __name__ == "__main__":
     parser.add_argument("--lr-num-warmup-steps", type=int, default=0)
     parser.add_argument("--lr-decay-start-step", type=int, default=0)
     parser.add_argument("--lr-num-decay-steps", type=int, default=0)
+    # pruning
+    parser.add_argument("--metric", choices=['l1', 'taylor'], default='l1')
     args = parser.parse_args()
 
     save_model_dir = os.path.join('results', '%s_lr%s' % (args.arch_mlp_top, args.learning_rate))
@@ -727,6 +729,36 @@ if __name__ == "__main__":
         dlrm = dlrm.to(device)  # .cuda()
         if dlrm.ndevices > 1:
             dlrm.emb_l = dlrm.create_emb(m_spa, ln_emb)
+    
+    # specify the loss function
+    if args.loss_function == "mse":
+        loss_fn = torch.nn.MSELoss(reduction="mean")
+    elif args.loss_function == "bce":
+        loss_fn = torch.nn.BCELoss(reduction="mean")
+    elif args.loss_function == "wbce":
+        loss_ws = torch.tensor(np.fromstring(args.loss_weights, dtype=float, sep="-"))
+        loss_fn = torch.nn.BCELoss(reduction="none")
+    else:
+        sys.exit("ERROR: --loss-function=" + args.loss_function + " is not supported")
+    
+    def loss_fn_wrap(Z, T, use_gpu, device):
+        if args.loss_function == "mse" or args.loss_function == "bce":
+            if use_gpu:
+                return loss_fn(Z, T.to(device))
+            else:
+                return loss_fn(Z, T)
+        elif args.loss_function == "wbce":
+            if use_gpu:
+                loss_ws_ = loss_ws[T.data.view(-1).long()].view_as(T).to(device)
+                loss_fn_ = loss_fn(Z, T.to(device))
+            else:
+                loss_ws_ = loss_ws[T.data.view(-1).long()].view_as(T)
+                loss_fn_ = loss_fn(Z, T.to(device))
+            loss_sc_ = loss_ws_ * loss_fn_
+            # debug prints
+            # print(loss_ws_)
+            # print(loss_fn_)
+            return loss_sc_.mean()
 
 
     ### main loop ###
@@ -805,20 +837,33 @@ if __name__ == "__main__":
     if args.metric == 'l1':
         for name, p in dlrm.named_parameters():
             print(name, p.size())            
-            if 'top' and 'weight' in name:
-                importance_score = torch.norm(p, p=1, dim=0)
+            if 'top' in name and 'weight' in name:
+                importance_score = torch.norm(p, p=1, dim=1)
                 print('importance_score:', importance_score.size())
                 importance_score_dict[name] = importance_score.detach().cpu().numpy()
     elif args.metric == 'taylor':
+        print('Calculating training loss...')
+        t1_train = time_wrap(use_gpu)
         E = 0 # total loss
-        Nb = 0 # total batch number
-        for j, (X, lS_o, lS_i, T) in enumerate(train_ld):               
-            Z = dlrm_wrap(X, lS_o, lS_i, use_gpu, device)
-            E += loss_fn_wrap(Z, T, use_gpu, device)
-            Nb += 1
-        E /= Nb # total loss
-        if 'top' and 'weight' in name:
-            importance_score = None
+        with torch.no_grad():
+            for j, (X, lS_o, lS_i, T) in enumerate(train_ld):
+                if j >= 1024:
+                    break               
+                Z = dlrm_wrap(X, lS_o, lS_i, use_gpu, device)
+                E += loss_fn_wrap(Z, T, use_gpu, device)
+        E /= 1024 # total loss
+        t2_train = time_wrap(use_gpu)
+        print('Training set inference time: ', t2_train-t1_train)
+        for name, p in dlrm.named_parameters():
+            print(name, p.size())       
+            if 'top' in name and 'weight' in name:
+                W = p.detach()
+                print('W:', W.size())
+                grad = torch.autograd.grad(E, p).detach()
+                print('grad:', grad.size())
+                importance_score = torch.pow(torch.sum(W * grad, dim=1), 2)
+                print('importance_score:', importance_score.size())
+                importance_score_dict[name] = importance_score.detach().cpu().numpy()
 
     np.save(os.path.join('importance_score/%s.npy' % args.metric), importance_score_dict)
 

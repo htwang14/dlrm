@@ -1,0 +1,37 @@
+Using 1 GPU(s)...
+Reading pre-processed data=/hdd3/jiayi/kaggle/kaggleAdDisplayChallenge_processed.npz
+Sparse fea = 26, Dense fea = 13
+Defined train indices...
+Randomized indices across days ...
+Split data according to indices...
+Reading pre-processed data=/hdd3/jiayi/kaggle/kaggleAdDisplayChallenge_processed.npz
+Sparse fea = 26, Dense fea = 13
+Defined test indices...
+Randomized indices across days ...
+Split data according to indices...
+time/loss/accuracy (if enabled):
+Finished training it 1024/306969 of epoch 0, 14.82 ms/it, loss 0.516038, accuracy 75.790 %
+Saving model to results/40-20-1_lr0.1/model.pth
+Testing at - 1024/306969 of epoch 0, loss 0.508835, accuracy 75.858 %, best 75.858 %
+Finished training it 2048/306969 of epoch 0, 15.27 ms/it, loss 0.501430, accuracy 76.556 %
+Saving model to results/40-20-1_lr0.1/model.pth
+Testing at - 2048/306969 of epoch 0, loss 0.500465, accuracy 76.318 %, best 76.318 %
+Finished training it 3072/306969 of epoch 0, 13.89 ms/it, loss 0.497069, accuracy 76.633 %
+Saving model to results/40-20-1_lr0.1/model.pth
+Testing at - 3072/306969 of epoch 0, loss 0.495098, accuracy 76.569 %, best 76.569 %
+Finished training it 4096/306969 of epoch 0, 14.31 ms/it, loss 0.487739, accuracy 77.432 %
+Saving model to results/40-20-1_lr0.1/model.pth
+Testing at - 4096/306969 of epoch 0, loss 0.494588, accuracy 76.734 %, best 76.734 %
+Finished training it 5120/306969 of epoch 0, 15.24 ms/it, loss 0.488542, accuracy 77.123 %
+Saving model to results/40-20-1_lr0.1/model.pth
+Testing at - 5120/306969 of epoch 0, loss 0.490342, accuracy 76.987 %, best 76.987 %
+Finished training it 6144/306969 of epoch 0, 15.62 ms/it, loss 0.484231, accuracy 77.349 %
+Saving model to results/40-20-1_lr0.1/model.pth
+Testing at - 6144/306969 of epoch 0, loss 0.487944, accuracy 77.065 %, best 77.065 %
+Finished training it 7168/306969 of epoch 0, 13.73 ms/it, loss 0.480076, accuracy 77.570 %
+Saving model to results/40-20-1_lr0.1/model.pth
+Testing at - 7168/306969 of epoch 0, loss 0.483208, accuracy 77.246 %, best 77.246 %
+Finished training it 8192/306969 of epoch 0, 13.74 ms/it, loss 0.479343, accuracy 77.643 %
+Saving model to results/40-20-1_lr0.1/model.pth
+Testing at - 8192/306969 of epoch 0, loss 0.481821, accuracy 77.320 %, best 77.320 %
+Finished training it 9216/306969 of epoch 0, 13.77 ms/it, loss 0.476667, accuracy 77.794 %
