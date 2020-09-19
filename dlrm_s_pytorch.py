@@ -561,9 +561,16 @@ if __name__ == "__main__":
     parser.add_argument("--lr-num-warmup-steps", type=int, default=0)
     parser.add_argument("--lr-decay-start-step", type=int, default=0)
     parser.add_argument("--lr-num-decay-steps", type=int, default=0)
+    # load mask
+    parser.add_argument("--mask_path", default='')
     args = parser.parse_args()
 
-    save_model_dir = os.path.join('results', '%s_lr%s' % (args.arch_mlp_top, args.learning_rate))
+    if args.mask_path:
+        metric = (args.mask_path).split('/')[-2]
+        _file_name = (args.mask_path).split('/')[-1][:-4]
+        save_model_dir = os.path.join('results', metric, _file_name)
+    else:
+        save_model_dir = os.path.join('results', '%s_lr%s' % (args.arch_mlp_top, args.learning_rate))
     if not os.path.isdir(save_model_dir):
         os.makedirs(save_model_dir)
     args.save_model = os.path.join(save_model_dir, 'model.pth')
@@ -876,6 +883,26 @@ if __name__ == "__main__":
             # when targeting inference on CPU
             ld_model = torch.load(args.load_model, map_location=torch.device('cpu'))
         dlrm.load_state_dict(ld_model["state_dict"])
+
+        # define masks:
+        if args.mask_path:
+            print(args.mask_path)
+            if not os.path.isfile(args.mask_path):
+                raise Exception('file not exist: %s' % args.mask_path)
+            dlrm_weights = []
+            for name, m in dlrm.named_modules():
+                if type(m) == torch.nn.modules.linear.Linear and "top" in name:  
+                    print(m.weight)
+                    dlrm_weights.append(m.weight)
+            import pickle 
+            f = open(args.mask_path, "rb")
+            dlrm_weights_mask = pickle.load(f)
+            f.close()
+            for mask in dlrm_weights_mask:
+                mask = mask.cuda()
+                print('mask:', mask.size())
+
+
         ld_j = ld_model["iter"]
         ld_k = ld_model["epoch"]
         ld_nepochs = ld_model["nepochs"]
@@ -992,6 +1019,10 @@ if __name__ == "__main__":
                     # optimizer
                     optimizer.step()
                     lr_scheduler.step()
+                    
+                    if args.mask_path:
+                        for i,w in enumerate(dlrm_weights):
+                            w.data *= dlrm_weights_mask[i]
 
                 if args.mlperf_logging:
                     total_time += iteration_time

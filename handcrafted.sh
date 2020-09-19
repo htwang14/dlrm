@@ -125,7 +125,7 @@ CUDA_VISIBLE_DEVICES=2 python dlrm_s_pytorch.py \
     --arch-interaction-op cat \
     --load-model results/128-64-1_lr0.1/model.pth \
     --use-gpu \
-    --nepochs 1 \
+    --nepochs 2 \
     2>&1 | tee 128-64-1_lr0.1.log
 
 # FLOPs = 2*432*64+64+2*64*32+32+2*32+1 = 59553

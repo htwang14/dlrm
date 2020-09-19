@@ -1,5 +1,5 @@
 import numpy as np 
-import os, argparse, pickle
+import os, argparse, pickle, torch
 
 parser = argparse.ArgumentParser(description="Train Deep Learning Recommendation Model (DLRM)")
 parser.add_argument("--ratio", '-r', type=float)
@@ -42,7 +42,7 @@ m2[prune_bins_w2,:] = 0
 m2[:,prune_bins_w1] = 0
 m3 = np.ones((1, 256))
 m3[:,prune_bins_w2] = 0
-mask_list = [m1, m2, m3]
+mask_list = [torch.from_numpy(m1), torch.from_numpy(m2), torch.from_numpy(m3)]
 
 # find flops
 c1 = 512-np.sum(prune_bins_w1)
@@ -62,3 +62,4 @@ f = open(os.path.join(save_dir, '%d_%s.pkl' % (FLOPs, args.ratio)), "rb")
 mask_list = pickle.load(f)
 for mask in mask_list:
     print(mask.shape)
+f.close()
