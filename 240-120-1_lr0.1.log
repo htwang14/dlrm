@@ -1,4 +1,4 @@
-Using CPU...
+Using 1 GPU(s)...
 Reading pre-processed data=/hdd3/jiayi/kaggle/kaggleAdDisplayChallenge_processed.npz
 Sparse fea = 26, Dense fea = 13
 Defined train indices...
@@ -9,671 +9,719 @@ Sparse fea = 26, Dense fea = 13
 Defined test indices...
 Randomized indices across days ...
 Split data according to indices...
+Loading saved model results/240-120-1_lr0.1/model.pth
+Saved at: epoch = 0/1, batch = 306176/306969, ntbatch = 200
+Training state: loss = 0.447825, accuracy = 79.214 %
+Testing state: loss = 0.453590, accuracy = 78.797 %
 time/loss/accuracy (if enabled):
-Finished training it 1024/306969 of epoch 0, 242.74 ms/it, loss 0.516037, accuracy 75.817 %
-Saving model to results/240-120-1_lr0.1/model.pth
-Testing at - 1024/306969 of epoch 0, loss 0.509818, accuracy 75.799 %, best 75.799 %
-Finished training it 2048/306969 of epoch 0, 257.63 ms/it, loss 0.502919, accuracy 76.436 %
-Saving model to results/240-120-1_lr0.1/model.pth
-Testing at - 2048/306969 of epoch 0, loss 0.502127, accuracy 76.212 %, best 76.212 %
-Finished training it 3072/306969 of epoch 0, 242.69 ms/it, loss 0.498871, accuracy 76.578 %
-Saving model to results/240-120-1_lr0.1/model.pth
-Testing at - 3072/306969 of epoch 0, loss 0.497276, accuracy 76.447 %, best 76.447 %
-Finished training it 4096/306969 of epoch 0, 248.94 ms/it, loss 0.489493, accuracy 77.367 %
-Saving model to results/240-120-1_lr0.1/model.pth
-Testing at - 4096/306969 of epoch 0, loss 0.496181, accuracy 76.630 %, best 76.630 %
-Finished training it 5120/306969 of epoch 0, 242.27 ms/it, loss 0.489928, accuracy 77.046 %
-Saving model to results/240-120-1_lr0.1/model.pth
-Testing at - 5120/306969 of epoch 0, loss 0.493633, accuracy 76.855 %, best 76.855 %
-Finished training it 6144/306969 of epoch 0, 248.60 ms/it, loss 0.485674, accuracy 77.312 %
-Saving model to results/240-120-1_lr0.1/model.pth
-Testing at - 6144/306969 of epoch 0, loss 0.490175, accuracy 76.981 %, best 76.981 %
-Finished training it 7168/306969 of epoch 0, 248.49 ms/it, loss 0.481259, accuracy 77.515 %
-Saving model to results/240-120-1_lr0.1/model.pth
-Testing at - 7168/306969 of epoch 0, loss 0.484726, accuracy 77.175 %, best 77.175 %
-Finished training it 8192/306969 of epoch 0, 264.91 ms/it, loss 0.480617, accuracy 77.579 %
-Saving model to results/240-120-1_lr0.1/model.pth
-Testing at - 8192/306969 of epoch 0, loss 0.482842, accuracy 77.241 %, best 77.241 %
-Finished training it 9216/306969 of epoch 0, 250.08 ms/it, loss 0.477967, accuracy 77.705 %
-Saving model to results/240-120-1_lr0.1/model.pth
-Testing at - 9216/306969 of epoch 0, loss 0.481405, accuracy 77.307 %, best 77.307 %
-Finished training it 10240/306969 of epoch 0, 270.88 ms/it, loss 0.475157, accuracy 77.742 %
-Saving model to results/240-120-1_lr0.1/model.pth
-Testing at - 10240/306969 of epoch 0, loss 0.481929, accuracy 77.308 %, best 77.308 %
-Finished training it 11264/306969 of epoch 0, 249.31 ms/it, loss 0.473655, accuracy 77.887 %
-Saving model to results/240-120-1_lr0.1/model.pth
-Testing at - 11264/306969 of epoch 0, loss 0.479219, accuracy 77.481 %, best 77.481 %
-Finished training it 12288/306969 of epoch 0, 250.32 ms/it, loss 0.468654, accuracy 78.225 %
-Testing at - 12288/306969 of epoch 0, loss 0.478025, accuracy 77.452 %, best 77.481 %
-Finished training it 13312/306969 of epoch 0, 251.05 ms/it, loss 0.474825, accuracy 77.833 %
-Saving model to results/240-120-1_lr0.1/model.pth
-Testing at - 13312/306969 of epoch 0, loss 0.475863, accuracy 77.687 %, best 77.687 %
-Finished training it 14336/306969 of epoch 0, 254.64 ms/it, loss 0.470786, accuracy 78.056 %
-Testing at - 14336/306969 of epoch 0, loss 0.475183, accuracy 77.685 %, best 77.687 %
-Finished training it 15360/306969 of epoch 0, 252.58 ms/it, loss 0.469309, accuracy 78.022 %
-Testing at - 15360/306969 of epoch 0, loss 0.477527, accuracy 77.588 %, best 77.687 %
-Finished training it 16384/306969 of epoch 0, 254.84 ms/it, loss 0.468843, accuracy 78.116 %
-Saving model to results/240-120-1_lr0.1/model.pth
-Testing at - 16384/306969 of epoch 0, loss 0.472940, accuracy 77.774 %, best 77.774 %
-Finished training it 17408/306969 of epoch 0, 192.35 ms/it, loss 0.467264, accuracy 78.156 %
-Testing at - 17408/306969 of epoch 0, loss 0.476552, accuracy 77.597 %, best 77.774 %
-Finished training it 18432/306969 of epoch 0, 201.09 ms/it, loss 0.469185, accuracy 78.096 %
-Saving model to results/240-120-1_lr0.1/model.pth
-Testing at - 18432/306969 of epoch 0, loss 0.472356, accuracy 77.794 %, best 77.794 %
-Finished training it 19456/306969 of epoch 0, 219.80 ms/it, loss 0.467311, accuracy 78.206 %
-Testing at - 19456/306969 of epoch 0, loss 0.478291, accuracy 77.465 %, best 77.794 %
-Finished training it 20480/306969 of epoch 0, 221.37 ms/it, loss 0.467069, accuracy 78.171 %
-Testing at - 20480/306969 of epoch 0, loss 0.475930, accuracy 77.640 %, best 77.794 %
-Finished training it 21504/306969 of epoch 0, 235.44 ms/it, loss 0.467297, accuracy 78.189 %
-Saving model to results/240-120-1_lr0.1/model.pth
-Testing at - 21504/306969 of epoch 0, loss 0.471789, accuracy 77.876 %, best 77.876 %
-Finished training it 22528/306969 of epoch 0, 234.50 ms/it, loss 0.466217, accuracy 78.082 %
-Testing at - 22528/306969 of epoch 0, loss 0.471657, accuracy 77.830 %, best 77.876 %
-Finished training it 23552/306969 of epoch 0, 228.81 ms/it, loss 0.468836, accuracy 78.166 %
-Saving model to results/240-120-1_lr0.1/model.pth
-Testing at - 23552/306969 of epoch 0, loss 0.470132, accuracy 77.897 %, best 77.897 %
-Finished training it 24576/306969 of epoch 0, 227.48 ms/it, loss 0.463946, accuracy 78.362 %
-Testing at - 24576/306969 of epoch 0, loss 0.471892, accuracy 77.834 %, best 77.897 %
-Finished training it 25600/306969 of epoch 0, 230.79 ms/it, loss 0.462814, accuracy 78.397 %
-Testing at - 25600/306969 of epoch 0, loss 0.470444, accuracy 77.858 %, best 77.897 %
-Finished training it 26624/306969 of epoch 0, 230.29 ms/it, loss 0.463408, accuracy 78.458 %
-Saving model to results/240-120-1_lr0.1/model.pth
-Testing at - 26624/306969 of epoch 0, loss 0.469978, accuracy 77.905 %, best 77.905 %
-Finished training it 27648/306969 of epoch 0, 237.97 ms/it, loss 0.461199, accuracy 78.526 %
-Saving model to results/240-120-1_lr0.1/model.pth
-Testing at - 27648/306969 of epoch 0, loss 0.469746, accuracy 77.958 %, best 77.958 %
-Finished training it 28672/306969 of epoch 0, 238.53 ms/it, loss 0.463676, accuracy 78.346 %
-Saving model to results/240-120-1_lr0.1/model.pth
-Testing at - 28672/306969 of epoch 0, loss 0.468634, accuracy 78.015 %, best 78.015 %
-Finished training it 29696/306969 of epoch 0, 233.66 ms/it, loss 0.465264, accuracy 78.154 %
-Testing at - 29696/306969 of epoch 0, loss 0.469449, accuracy 77.928 %, best 78.015 %
-Finished training it 30720/306969 of epoch 0, 241.11 ms/it, loss 0.463659, accuracy 78.384 %
-Saving model to results/240-120-1_lr0.1/model.pth
-Testing at - 30720/306969 of epoch 0, loss 0.468177, accuracy 78.049 %, best 78.049 %
-Finished training it 31744/306969 of epoch 0, 245.64 ms/it, loss 0.464467, accuracy 78.296 %
-Testing at - 31744/306969 of epoch 0, loss 0.474904, accuracy 77.611 %, best 78.049 %
-Finished training it 32768/306969 of epoch 0, 242.85 ms/it, loss 0.463921, accuracy 78.323 %
-Testing at - 32768/306969 of epoch 0, loss 0.467759, accuracy 78.023 %, best 78.049 %
-Finished training it 33792/306969 of epoch 0, 244.82 ms/it, loss 0.461887, accuracy 78.428 %
-Testing at - 33792/306969 of epoch 0, loss 0.467570, accuracy 78.047 %, best 78.049 %
-Finished training it 34816/306969 of epoch 0, 242.58 ms/it, loss 0.460281, accuracy 78.575 %
-Saving model to results/240-120-1_lr0.1/model.pth
-Testing at - 34816/306969 of epoch 0, loss 0.467750, accuracy 78.051 %, best 78.051 %
-Finished training it 35840/306969 of epoch 0, 236.99 ms/it, loss 0.464790, accuracy 78.418 %
-Saving model to results/240-120-1_lr0.1/model.pth
-Testing at - 35840/306969 of epoch 0, loss 0.468129, accuracy 78.092 %, best 78.092 %
-Finished training it 36864/306969 of epoch 0, 231.29 ms/it, loss 0.460952, accuracy 78.599 %
-Testing at - 36864/306969 of epoch 0, loss 0.469079, accuracy 78.043 %, best 78.092 %
-Finished training it 37888/306969 of epoch 0, 226.56 ms/it, loss 0.460507, accuracy 78.543 %
-Testing at - 37888/306969 of epoch 0, loss 0.467310, accuracy 78.056 %, best 78.092 %
-Finished training it 38912/306969 of epoch 0, 234.32 ms/it, loss 0.462937, accuracy 78.310 %
-Saving model to results/240-120-1_lr0.1/model.pth
-Testing at - 38912/306969 of epoch 0, loss 0.466278, accuracy 78.135 %, best 78.135 %
-Finished training it 39936/306969 of epoch 0, 227.58 ms/it, loss 0.461689, accuracy 78.470 %
-Testing at - 39936/306969 of epoch 0, loss 0.466351, accuracy 78.112 %, best 78.135 %
-Finished training it 40960/306969 of epoch 0, 258.29 ms/it, loss 0.460888, accuracy 78.535 %
-Saving model to results/240-120-1_lr0.1/model.pth
-Testing at - 40960/306969 of epoch 0, loss 0.466200, accuracy 78.145 %, best 78.145 %
-Finished training it 41984/306969 of epoch 0, 393.83 ms/it, loss 0.460536, accuracy 78.560 %
-Testing at - 41984/306969 of epoch 0, loss 0.466618, accuracy 78.101 %, best 78.145 %
-Finished training it 43008/306969 of epoch 0, 430.10 ms/it, loss 0.460292, accuracy 78.577 %
-Saving model to results/240-120-1_lr0.1/model.pth
-Testing at - 43008/306969 of epoch 0, loss 0.465778, accuracy 78.150 %, best 78.150 %
-Finished training it 44032/306969 of epoch 0, 731.80 ms/it, loss 0.461266, accuracy 78.436 %
-Testing at - 44032/306969 of epoch 0, loss 0.467265, accuracy 78.122 %, best 78.150 %
-Finished training it 45056/306969 of epoch 0, 407.87 ms/it, loss 0.461887, accuracy 78.432 %
-Saving model to results/240-120-1_lr0.1/model.pth
-Testing at - 45056/306969 of epoch 0, loss 0.465334, accuracy 78.187 %, best 78.187 %
-Finished training it 46080/306969 of epoch 0, 1266.19 ms/it, loss 0.460617, accuracy 78.534 %
-Testing at - 46080/306969 of epoch 0, loss 0.467705, accuracy 78.000 %, best 78.187 %
-Finished training it 47104/306969 of epoch 0, 1224.13 ms/it, loss 0.462740, accuracy 78.350 %
-Testing at - 47104/306969 of epoch 0, loss 0.468352, accuracy 78.046 %, best 78.187 %
-Finished training it 48128/306969 of epoch 0, 1253.32 ms/it, loss 0.461414, accuracy 78.414 %
-Testing at - 48128/306969 of epoch 0, loss 0.468799, accuracy 77.976 %, best 78.187 %
-Finished training it 49152/306969 of epoch 0, 1055.53 ms/it, loss 0.457309, accuracy 78.712 %
-Testing at - 49152/306969 of epoch 0, loss 0.465342, accuracy 78.173 %, best 78.187 %
-Finished training it 50176/306969 of epoch 0, 975.98 ms/it, loss 0.459412, accuracy 78.555 %
-Testing at - 50176/306969 of epoch 0, loss 0.467343, accuracy 78.111 %, best 78.187 %
-Finished training it 51200/306969 of epoch 0, 471.09 ms/it, loss 0.461112, accuracy 78.525 %
-Testing at - 51200/306969 of epoch 0, loss 0.466378, accuracy 78.182 %, best 78.187 %
-Finished training it 52224/306969 of epoch 0, 464.85 ms/it, loss 0.461224, accuracy 78.492 %
-Testing at - 52224/306969 of epoch 0, loss 0.465058, accuracy 78.183 %, best 78.187 %
-Finished training it 53248/306969 of epoch 0, 485.41 ms/it, loss 0.460318, accuracy 78.691 %
-Saving model to results/240-120-1_lr0.1/model.pth
-Testing at - 53248/306969 of epoch 0, loss 0.464526, accuracy 78.191 %, best 78.191 %
-Finished training it 54272/306969 of epoch 0, 407.11 ms/it, loss 0.460264, accuracy 78.461 %
-Testing at - 54272/306969 of epoch 0, loss 0.466208, accuracy 78.125 %, best 78.191 %
-Finished training it 55296/306969 of epoch 0, 364.79 ms/it, loss 0.459160, accuracy 78.667 %
-Testing at - 55296/306969 of epoch 0, loss 0.466538, accuracy 78.164 %, best 78.191 %
-Finished training it 56320/306969 of epoch 0, 366.97 ms/it, loss 0.459029, accuracy 78.622 %
-Saving model to results/240-120-1_lr0.1/model.pth
-Testing at - 56320/306969 of epoch 0, loss 0.465451, accuracy 78.204 %, best 78.204 %
-Finished training it 57344/306969 of epoch 0, 359.40 ms/it, loss 0.456660, accuracy 78.636 %
-Testing at - 57344/306969 of epoch 0, loss 0.465001, accuracy 78.201 %, best 78.204 %
-Finished training it 58368/306969 of epoch 0, 353.42 ms/it, loss 0.456770, accuracy 78.780 %
-Saving model to results/240-120-1_lr0.1/model.pth
-Testing at - 58368/306969 of epoch 0, loss 0.463622, accuracy 78.237 %, best 78.237 %
-Finished training it 59392/306969 of epoch 0, 343.84 ms/it, loss 0.458655, accuracy 78.607 %
-Saving model to results/240-120-1_lr0.1/model.pth
-Testing at - 59392/306969 of epoch 0, loss 0.463862, accuracy 78.261 %, best 78.261 %
-Finished training it 60416/306969 of epoch 0, 342.97 ms/it, loss 0.458699, accuracy 78.623 %
-Testing at - 60416/306969 of epoch 0, loss 0.468709, accuracy 78.078 %, best 78.261 %
-Finished training it 61440/306969 of epoch 0, 343.11 ms/it, loss 0.461025, accuracy 78.478 %
-Testing at - 61440/306969 of epoch 0, loss 0.463882, accuracy 78.248 %, best 78.261 %
-Finished training it 62464/306969 of epoch 0, 359.48 ms/it, loss 0.458877, accuracy 78.621 %
-Testing at - 62464/306969 of epoch 0, loss 0.465254, accuracy 78.165 %, best 78.261 %
-Finished training it 63488/306969 of epoch 0, 545.74 ms/it, loss 0.458141, accuracy 78.596 %
-Testing at - 63488/306969 of epoch 0, loss 0.464178, accuracy 78.252 %, best 78.261 %
-Finished training it 64512/306969 of epoch 0, 434.04 ms/it, loss 0.460100, accuracy 78.461 %
-Testing at - 64512/306969 of epoch 0, loss 0.465610, accuracy 78.219 %, best 78.261 %
-Finished training it 65536/306969 of epoch 0, 336.50 ms/it, loss 0.461248, accuracy 78.436 %
-Saving model to results/240-120-1_lr0.1/model.pth
-Testing at - 65536/306969 of epoch 0, loss 0.463554, accuracy 78.272 %, best 78.272 %
-Finished training it 66560/306969 of epoch 0, 343.77 ms/it, loss 0.458670, accuracy 78.764 %
-Saving model to results/240-120-1_lr0.1/model.pth
-Testing at - 66560/306969 of epoch 0, loss 0.462778, accuracy 78.311 %, best 78.311 %
-Finished training it 67584/306969 of epoch 0, 351.89 ms/it, loss 0.457015, accuracy 78.681 %
-Testing at - 67584/306969 of epoch 0, loss 0.464000, accuracy 78.250 %, best 78.311 %
-Finished training it 68608/306969 of epoch 0, 344.38 ms/it, loss 0.457877, accuracy 78.688 %
-Testing at - 68608/306969 of epoch 0, loss 0.465052, accuracy 78.185 %, best 78.311 %
-Finished training it 69632/306969 of epoch 0, 355.16 ms/it, loss 0.457801, accuracy 78.641 %
-Testing at - 69632/306969 of epoch 0, loss 0.462881, accuracy 78.301 %, best 78.311 %
-Finished training it 70656/306969 of epoch 0, 366.72 ms/it, loss 0.457689, accuracy 78.668 %
-Testing at - 70656/306969 of epoch 0, loss 0.463005, accuracy 78.311 %, best 78.311 %
-Finished training it 71680/306969 of epoch 0, 361.76 ms/it, loss 0.459399, accuracy 78.613 %
-Saving model to results/240-120-1_lr0.1/model.pth
-Testing at - 71680/306969 of epoch 0, loss 0.463284, accuracy 78.322 %, best 78.322 %
-Finished training it 72704/306969 of epoch 0, 355.37 ms/it, loss 0.455845, accuracy 78.673 %
-Testing at - 72704/306969 of epoch 0, loss 0.463802, accuracy 78.210 %, best 78.322 %
-Finished training it 73728/306969 of epoch 0, 364.34 ms/it, loss 0.457888, accuracy 78.713 %
-Testing at - 73728/306969 of epoch 0, loss 0.463530, accuracy 78.257 %, best 78.322 %
-Finished training it 74752/306969 of epoch 0, 363.48 ms/it, loss 0.457256, accuracy 78.760 %
-Testing at - 74752/306969 of epoch 0, loss 0.465578, accuracy 78.077 %, best 78.322 %
-Finished training it 75776/306969 of epoch 0, 337.82 ms/it, loss 0.457016, accuracy 78.684 %
-Testing at - 75776/306969 of epoch 0, loss 0.463102, accuracy 78.286 %, best 78.322 %
-Finished training it 76800/306969 of epoch 0, 288.08 ms/it, loss 0.457346, accuracy 78.766 %
-Testing at - 76800/306969 of epoch 0, loss 0.464332, accuracy 78.230 %, best 78.322 %
-Finished training it 77824/306969 of epoch 0, 282.05 ms/it, loss 0.457367, accuracy 78.854 %
-Testing at - 77824/306969 of epoch 0, loss 0.462365, accuracy 78.322 %, best 78.322 %
-Finished training it 78848/306969 of epoch 0, 290.79 ms/it, loss 0.456412, accuracy 78.780 %
-Saving model to results/240-120-1_lr0.1/model.pth
-Testing at - 78848/306969 of epoch 0, loss 0.462276, accuracy 78.344 %, best 78.344 %
-Finished training it 79872/306969 of epoch 0, 274.27 ms/it, loss 0.456475, accuracy 78.722 %
-Testing at - 79872/306969 of epoch 0, loss 0.463347, accuracy 78.300 %, best 78.344 %
-Finished training it 80896/306969 of epoch 0, 263.40 ms/it, loss 0.456651, accuracy 78.848 %
-Testing at - 80896/306969 of epoch 0, loss 0.462559, accuracy 78.325 %, best 78.344 %
-Finished training it 81920/306969 of epoch 0, 274.60 ms/it, loss 0.457847, accuracy 78.669 %
-Saving model to results/240-120-1_lr0.1/model.pth
-Testing at - 81920/306969 of epoch 0, loss 0.461392, accuracy 78.379 %, best 78.379 %
-Finished training it 82944/306969 of epoch 0, 278.62 ms/it, loss 0.455987, accuracy 78.761 %
-Testing at - 82944/306969 of epoch 0, loss 0.462820, accuracy 78.294 %, best 78.379 %
-Finished training it 83968/306969 of epoch 0, 303.99 ms/it, loss 0.455075, accuracy 78.730 %
-Testing at - 83968/306969 of epoch 0, loss 0.462333, accuracy 78.365 %, best 78.379 %
-Finished training it 84992/306969 of epoch 0, 309.66 ms/it, loss 0.456111, accuracy 78.860 %
-Testing at - 84992/306969 of epoch 0, loss 0.461806, accuracy 78.345 %, best 78.379 %
-Finished training it 86016/306969 of epoch 0, 291.51 ms/it, loss 0.457911, accuracy 78.677 %
-Testing at - 86016/306969 of epoch 0, loss 0.462583, accuracy 78.288 %, best 78.379 %
-Finished training it 87040/306969 of epoch 0, 558.29 ms/it, loss 0.456560, accuracy 78.822 %
-Testing at - 87040/306969 of epoch 0, loss 0.462061, accuracy 78.344 %, best 78.379 %
-Finished training it 88064/306969 of epoch 0, 565.09 ms/it, loss 0.454066, accuracy 78.854 %
-Saving model to results/240-120-1_lr0.1/model.pth
-Testing at - 88064/306969 of epoch 0, loss 0.461269, accuracy 78.381 %, best 78.381 %
-Finished training it 89088/306969 of epoch 0, 581.22 ms/it, loss 0.456713, accuracy 78.805 %
-Testing at - 89088/306969 of epoch 0, loss 0.462236, accuracy 78.344 %, best 78.381 %
-Finished training it 90112/306969 of epoch 0, 557.87 ms/it, loss 0.455643, accuracy 78.855 %
-Testing at - 90112/306969 of epoch 0, loss 0.461628, accuracy 78.348 %, best 78.381 %
-Finished training it 91136/306969 of epoch 0, 576.82 ms/it, loss 0.455362, accuracy 78.736 %
-Testing at - 91136/306969 of epoch 0, loss 0.462243, accuracy 78.304 %, best 78.381 %
-Finished training it 92160/306969 of epoch 0, 567.76 ms/it, loss 0.457443, accuracy 78.772 %
-Saving model to results/240-120-1_lr0.1/model.pth
-Testing at - 92160/306969 of epoch 0, loss 0.461769, accuracy 78.389 %, best 78.389 %
-Finished training it 93184/306969 of epoch 0, 571.35 ms/it, loss 0.456359, accuracy 78.716 %
-Testing at - 93184/306969 of epoch 0, loss 0.461846, accuracy 78.364 %, best 78.389 %
-Finished training it 94208/306969 of epoch 0, 579.56 ms/it, loss 0.456006, accuracy 78.781 %
-Saving model to results/240-120-1_lr0.1/model.pth
-Testing at - 94208/306969 of epoch 0, loss 0.460881, accuracy 78.402 %, best 78.402 %
-Finished training it 95232/306969 of epoch 0, 564.90 ms/it, loss 0.454015, accuracy 78.861 %
-Testing at - 95232/306969 of epoch 0, loss 0.460828, accuracy 78.399 %, best 78.402 %
-Finished training it 96256/306969 of epoch 0, 565.59 ms/it, loss 0.454816, accuracy 78.811 %
-Testing at - 96256/306969 of epoch 0, loss 0.464520, accuracy 78.217 %, best 78.402 %
-Finished training it 97280/306969 of epoch 0, 579.27 ms/it, loss 0.454493, accuracy 78.954 %
-Saving model to results/240-120-1_lr0.1/model.pth
-Testing at - 97280/306969 of epoch 0, loss 0.461101, accuracy 78.403 %, best 78.403 %
-Finished training it 98304/306969 of epoch 0, 574.27 ms/it, loss 0.453889, accuracy 78.864 %
-Testing at - 98304/306969 of epoch 0, loss 0.461513, accuracy 78.397 %, best 78.403 %
-Finished training it 99328/306969 of epoch 0, 557.89 ms/it, loss 0.456247, accuracy 78.867 %
-Testing at - 99328/306969 of epoch 0, loss 0.462809, accuracy 78.308 %, best 78.403 %
-Finished training it 100352/306969 of epoch 0, 549.04 ms/it, loss 0.455133, accuracy 78.842 %
-Testing at - 100352/306969 of epoch 0, loss 0.460730, accuracy 78.386 %, best 78.403 %
-Finished training it 101376/306969 of epoch 0, 557.15 ms/it, loss 0.454929, accuracy 78.876 %
-Saving model to results/240-120-1_lr0.1/model.pth
-Testing at - 101376/306969 of epoch 0, loss 0.461156, accuracy 78.439 %, best 78.439 %
-Finished training it 102400/306969 of epoch 0, 559.98 ms/it, loss 0.455871, accuracy 78.822 %
-Testing at - 102400/306969 of epoch 0, loss 0.463137, accuracy 78.295 %, best 78.439 %
-Finished training it 103424/306969 of epoch 0, 554.25 ms/it, loss 0.456487, accuracy 78.793 %
-Testing at - 103424/306969 of epoch 0, loss 0.462518, accuracy 78.349 %, best 78.439 %
-Finished training it 104448/306969 of epoch 0, 460.35 ms/it, loss 0.456619, accuracy 78.664 %
-Testing at - 104448/306969 of epoch 0, loss 0.461058, accuracy 78.374 %, best 78.439 %
-Finished training it 105472/306969 of epoch 0, 392.13 ms/it, loss 0.456075, accuracy 78.777 %
-Testing at - 105472/306969 of epoch 0, loss 0.460859, accuracy 78.431 %, best 78.439 %
-Finished training it 106496/306969 of epoch 0, 400.58 ms/it, loss 0.454017, accuracy 78.801 %
-Testing at - 106496/306969 of epoch 0, loss 0.465907, accuracy 78.241 %, best 78.439 %
-Finished training it 107520/306969 of epoch 0, 417.38 ms/it, loss 0.454736, accuracy 78.904 %
-Testing at - 107520/306969 of epoch 0, loss 0.461753, accuracy 78.369 %, best 78.439 %
-Finished training it 108544/306969 of epoch 0, 411.64 ms/it, loss 0.454596, accuracy 78.792 %
-Saving model to results/240-120-1_lr0.1/model.pth
-Testing at - 108544/306969 of epoch 0, loss 0.460332, accuracy 78.455 %, best 78.455 %
-Finished training it 109568/306969 of epoch 0, 398.95 ms/it, loss 0.454390, accuracy 78.835 %
-Testing at - 109568/306969 of epoch 0, loss 0.460172, accuracy 78.439 %, best 78.455 %
-Finished training it 110592/306969 of epoch 0, 407.46 ms/it, loss 0.454689, accuracy 78.831 %
-Saving model to results/240-120-1_lr0.1/model.pth
-Testing at - 110592/306969 of epoch 0, loss 0.460115, accuracy 78.472 %, best 78.472 %
-Finished training it 111616/306969 of epoch 0, 402.05 ms/it, loss 0.457068, accuracy 78.673 %
-Testing at - 111616/306969 of epoch 0, loss 0.460722, accuracy 78.411 %, best 78.472 %
-Finished training it 112640/306969 of epoch 0, 396.33 ms/it, loss 0.456246, accuracy 78.807 %
-Testing at - 112640/306969 of epoch 0, loss 0.460115, accuracy 78.454 %, best 78.472 %
-Finished training it 113664/306969 of epoch 0, 400.91 ms/it, loss 0.455501, accuracy 78.755 %
-Testing at - 113664/306969 of epoch 0, loss 0.460644, accuracy 78.448 %, best 78.472 %
-Finished training it 114688/306969 of epoch 0, 400.74 ms/it, loss 0.454137, accuracy 78.793 %
-Testing at - 114688/306969 of epoch 0, loss 0.462109, accuracy 78.355 %, best 78.472 %
-Finished training it 115712/306969 of epoch 0, 409.05 ms/it, loss 0.453275, accuracy 78.892 %
-Testing at - 115712/306969 of epoch 0, loss 0.461660, accuracy 78.423 %, best 78.472 %
-Finished training it 116736/306969 of epoch 0, 410.89 ms/it, loss 0.456152, accuracy 78.827 %
-Saving model to results/240-120-1_lr0.1/model.pth
-Testing at - 116736/306969 of epoch 0, loss 0.460659, accuracy 78.473 %, best 78.473 %
-Finished training it 117760/306969 of epoch 0, 386.02 ms/it, loss 0.452696, accuracy 79.025 %
-Testing at - 117760/306969 of epoch 0, loss 0.460278, accuracy 78.412 %, best 78.473 %
-Finished training it 118784/306969 of epoch 0, 409.83 ms/it, loss 0.454806, accuracy 78.728 %
-Testing at - 118784/306969 of epoch 0, loss 0.460999, accuracy 78.357 %, best 78.473 %
-Finished training it 119808/306969 of epoch 0, 407.16 ms/it, loss 0.456882, accuracy 78.654 %
-Testing at - 119808/306969 of epoch 0, loss 0.463230, accuracy 78.271 %, best 78.473 %
-Finished training it 120832/306969 of epoch 0, 383.86 ms/it, loss 0.451724, accuracy 79.021 %
-Testing at - 120832/306969 of epoch 0, loss 0.459518, accuracy 78.473 %, best 78.473 %
-Finished training it 121856/306969 of epoch 0, 399.81 ms/it, loss 0.453958, accuracy 78.928 %
-Testing at - 121856/306969 of epoch 0, loss 0.460282, accuracy 78.449 %, best 78.473 %
-Finished training it 122880/306969 of epoch 0, 401.24 ms/it, loss 0.454515, accuracy 78.690 %
-Testing at - 122880/306969 of epoch 0, loss 0.460049, accuracy 78.438 %, best 78.473 %
-Finished training it 123904/306969 of epoch 0, 326.14 ms/it, loss 0.456972, accuracy 78.679 %
-Saving model to results/240-120-1_lr0.1/model.pth
-Testing at - 123904/306969 of epoch 0, loss 0.459719, accuracy 78.481 %, best 78.481 %
-Finished training it 124928/306969 of epoch 0, 289.92 ms/it, loss 0.453460, accuracy 78.871 %
-Testing at - 124928/306969 of epoch 0, loss 0.460074, accuracy 78.452 %, best 78.481 %
-Finished training it 125952/306969 of epoch 0, 290.44 ms/it, loss 0.455808, accuracy 78.795 %
-Testing at - 125952/306969 of epoch 0, loss 0.460002, accuracy 78.441 %, best 78.481 %
-Finished training it 126976/306969 of epoch 0, 253.95 ms/it, loss 0.456242, accuracy 78.663 %
-Testing at - 126976/306969 of epoch 0, loss 0.459301, accuracy 78.477 %, best 78.481 %
-Finished training it 128000/306969 of epoch 0, 237.16 ms/it, loss 0.452937, accuracy 79.011 %
-Saving model to results/240-120-1_lr0.1/model.pth
-Testing at - 128000/306969 of epoch 0, loss 0.459185, accuracy 78.483 %, best 78.483 %
-Finished training it 129024/306969 of epoch 0, 241.07 ms/it, loss 0.454414, accuracy 78.831 %
-Testing at - 129024/306969 of epoch 0, loss 0.459506, accuracy 78.466 %, best 78.483 %
-Finished training it 130048/306969 of epoch 0, 279.07 ms/it, loss 0.456826, accuracy 78.679 %
-Testing at - 130048/306969 of epoch 0, loss 0.460046, accuracy 78.442 %, best 78.483 %
-Finished training it 131072/306969 of epoch 0, 303.80 ms/it, loss 0.455361, accuracy 78.766 %
-Testing at - 131072/306969 of epoch 0, loss 0.460647, accuracy 78.440 %, best 78.483 %
-Finished training it 132096/306969 of epoch 0, 372.88 ms/it, loss 0.455241, accuracy 78.800 %
-Testing at - 132096/306969 of epoch 0, loss 0.459640, accuracy 78.461 %, best 78.483 %
-Finished training it 133120/306969 of epoch 0, 370.69 ms/it, loss 0.452624, accuracy 78.985 %
-Testing at - 133120/306969 of epoch 0, loss 0.460018, accuracy 78.450 %, best 78.483 %
-Finished training it 134144/306969 of epoch 0, 381.56 ms/it, loss 0.453426, accuracy 78.873 %
-Saving model to results/240-120-1_lr0.1/model.pth
-Testing at - 134144/306969 of epoch 0, loss 0.459360, accuracy 78.501 %, best 78.501 %
-Finished training it 135168/306969 of epoch 0, 377.25 ms/it, loss 0.451250, accuracy 78.951 %
-Testing at - 135168/306969 of epoch 0, loss 0.459583, accuracy 78.496 %, best 78.501 %
-Finished training it 136192/306969 of epoch 0, 360.06 ms/it, loss 0.454048, accuracy 78.928 %
-Testing at - 136192/306969 of epoch 0, loss 0.460639, accuracy 78.446 %, best 78.501 %
-Finished training it 137216/306969 of epoch 0, 366.59 ms/it, loss 0.454219, accuracy 78.911 %
-Saving model to results/240-120-1_lr0.1/model.pth
-Testing at - 137216/306969 of epoch 0, loss 0.458498, accuracy 78.527 %, best 78.527 %
-Finished training it 138240/306969 of epoch 0, 381.69 ms/it, loss 0.455022, accuracy 78.777 %
-Saving model to results/240-120-1_lr0.1/model.pth
-Testing at - 138240/306969 of epoch 0, loss 0.458636, accuracy 78.530 %, best 78.530 %
-Finished training it 139264/306969 of epoch 0, 375.89 ms/it, loss 0.453884, accuracy 78.839 %
-Testing at - 139264/306969 of epoch 0, loss 0.460560, accuracy 78.455 %, best 78.530 %
-Finished training it 140288/306969 of epoch 0, 343.35 ms/it, loss 0.450418, accuracy 79.015 %
-Testing at - 140288/306969 of epoch 0, loss 0.460511, accuracy 78.476 %, best 78.530 %
-Finished training it 141312/306969 of epoch 0, 353.62 ms/it, loss 0.453229, accuracy 78.906 %
-Testing at - 141312/306969 of epoch 0, loss 0.459955, accuracy 78.410 %, best 78.530 %
-Finished training it 142336/306969 of epoch 0, 351.53 ms/it, loss 0.450568, accuracy 79.064 %
-Testing at - 142336/306969 of epoch 0, loss 0.459228, accuracy 78.510 %, best 78.530 %
-Finished training it 143360/306969 of epoch 0, 366.86 ms/it, loss 0.452621, accuracy 79.063 %
-Testing at - 143360/306969 of epoch 0, loss 0.465064, accuracy 78.065 %, best 78.530 %
-Finished training it 144384/306969 of epoch 0, 378.46 ms/it, loss 0.452772, accuracy 78.852 %
-Saving model to results/240-120-1_lr0.1/model.pth
-Testing at - 144384/306969 of epoch 0, loss 0.458976, accuracy 78.539 %, best 78.539 %
-Finished training it 145408/306969 of epoch 0, 393.53 ms/it, loss 0.455690, accuracy 78.727 %
-Testing at - 145408/306969 of epoch 0, loss 0.461266, accuracy 78.439 %, best 78.539 %
-Finished training it 146432/306969 of epoch 0, 378.29 ms/it, loss 0.451551, accuracy 78.944 %
-Saving model to results/240-120-1_lr0.1/model.pth
-Testing at - 146432/306969 of epoch 0, loss 0.458553, accuracy 78.547 %, best 78.547 %
-Finished training it 147456/306969 of epoch 0, 378.57 ms/it, loss 0.451500, accuracy 78.967 %
-Testing at - 147456/306969 of epoch 0, loss 0.460858, accuracy 78.390 %, best 78.547 %
-Finished training it 148480/306969 of epoch 0, 348.32 ms/it, loss 0.450542, accuracy 79.018 %
-Testing at - 148480/306969 of epoch 0, loss 0.458367, accuracy 78.527 %, best 78.547 %
-Finished training it 149504/306969 of epoch 0, 372.35 ms/it, loss 0.451124, accuracy 79.044 %
-Testing at - 149504/306969 of epoch 0, loss 0.459249, accuracy 78.507 %, best 78.547 %
-Finished training it 150528/306969 of epoch 0, 368.96 ms/it, loss 0.452433, accuracy 79.008 %
-Saving model to results/240-120-1_lr0.1/model.pth
-Testing at - 150528/306969 of epoch 0, loss 0.457969, accuracy 78.560 %, best 78.560 %
-Finished training it 151552/306969 of epoch 0, 541.26 ms/it, loss 0.449535, accuracy 79.194 %
-Testing at - 151552/306969 of epoch 0, loss 0.462719, accuracy 78.173 %, best 78.560 %
-Finished training it 152576/306969 of epoch 0, 436.99 ms/it, loss 0.450501, accuracy 78.963 %
-Testing at - 152576/306969 of epoch 0, loss 0.458410, accuracy 78.527 %, best 78.560 %
-Finished training it 153600/306969 of epoch 0, 432.66 ms/it, loss 0.452757, accuracy 78.888 %
-Testing at - 153600/306969 of epoch 0, loss 0.458634, accuracy 78.467 %, best 78.560 %
-Finished training it 154624/306969 of epoch 0, 445.72 ms/it, loss 0.451731, accuracy 78.992 %
-Testing at - 154624/306969 of epoch 0, loss 0.457992, accuracy 78.546 %, best 78.560 %
-Finished training it 155648/306969 of epoch 0, 429.45 ms/it, loss 0.451793, accuracy 78.857 %
-Testing at - 155648/306969 of epoch 0, loss 0.458194, accuracy 78.551 %, best 78.560 %
-Finished training it 156672/306969 of epoch 0, 431.51 ms/it, loss 0.451459, accuracy 78.928 %
-Testing at - 156672/306969 of epoch 0, loss 0.458031, accuracy 78.542 %, best 78.560 %
-Finished training it 157696/306969 of epoch 0, 445.50 ms/it, loss 0.449639, accuracy 79.176 %
-Testing at - 157696/306969 of epoch 0, loss 0.457890, accuracy 78.555 %, best 78.560 %
-Finished training it 158720/306969 of epoch 0, 435.51 ms/it, loss 0.452546, accuracy 78.986 %
-Saving model to results/240-120-1_lr0.1/model.pth
-Testing at - 158720/306969 of epoch 0, loss 0.457874, accuracy 78.578 %, best 78.578 %
-Finished training it 159744/306969 of epoch 0, 388.41 ms/it, loss 0.452033, accuracy 79.062 %
-Testing at - 159744/306969 of epoch 0, loss 0.459745, accuracy 78.482 %, best 78.578 %
-Finished training it 160768/306969 of epoch 0, 322.81 ms/it, loss 0.452767, accuracy 79.053 %
-Testing at - 160768/306969 of epoch 0, loss 0.458090, accuracy 78.560 %, best 78.578 %
-Finished training it 161792/306969 of epoch 0, 332.47 ms/it, loss 0.453627, accuracy 78.876 %
-Testing at - 161792/306969 of epoch 0, loss 0.457879, accuracy 78.557 %, best 78.578 %
-Finished training it 162816/306969 of epoch 0, 302.85 ms/it, loss 0.453942, accuracy 78.872 %
-Testing at - 162816/306969 of epoch 0, loss 0.458044, accuracy 78.537 %, best 78.578 %
-Finished training it 163840/306969 of epoch 0, 289.92 ms/it, loss 0.453435, accuracy 78.899 %
-Testing at - 163840/306969 of epoch 0, loss 0.458372, accuracy 78.533 %, best 78.578 %
-Finished training it 164864/306969 of epoch 0, 273.36 ms/it, loss 0.452570, accuracy 79.002 %
-Testing at - 164864/306969 of epoch 0, loss 0.457966, accuracy 78.551 %, best 78.578 %
-Finished training it 165888/306969 of epoch 0, 306.63 ms/it, loss 0.452667, accuracy 78.930 %
-Testing at - 165888/306969 of epoch 0, loss 0.458607, accuracy 78.530 %, best 78.578 %
-Finished training it 166912/306969 of epoch 0, 302.79 ms/it, loss 0.453605, accuracy 78.876 %
-Testing at - 166912/306969 of epoch 0, loss 0.458254, accuracy 78.510 %, best 78.578 %
-Finished training it 167936/306969 of epoch 0, 293.89 ms/it, loss 0.454028, accuracy 78.942 %
-Saving model to results/240-120-1_lr0.1/model.pth
-Testing at - 167936/306969 of epoch 0, loss 0.457812, accuracy 78.583 %, best 78.583 %
-Finished training it 168960/306969 of epoch 0, 310.98 ms/it, loss 0.451004, accuracy 78.925 %
-Testing at - 168960/306969 of epoch 0, loss 0.457505, accuracy 78.576 %, best 78.583 %
-Finished training it 169984/306969 of epoch 0, 293.71 ms/it, loss 0.452375, accuracy 78.959 %
-Testing at - 169984/306969 of epoch 0, loss 0.458293, accuracy 78.522 %, best 78.583 %
-Finished training it 171008/306969 of epoch 0, 310.48 ms/it, loss 0.448859, accuracy 79.174 %
-Testing at - 171008/306969 of epoch 0, loss 0.459149, accuracy 78.476 %, best 78.583 %
-Finished training it 172032/306969 of epoch 0, 320.96 ms/it, loss 0.450998, accuracy 79.120 %
-Saving model to results/240-120-1_lr0.1/model.pth
-Testing at - 172032/306969 of epoch 0, loss 0.457273, accuracy 78.598 %, best 78.598 %
-Finished training it 173056/306969 of epoch 0, 318.01 ms/it, loss 0.453757, accuracy 78.783 %
-Saving model to results/240-120-1_lr0.1/model.pth
-Testing at - 173056/306969 of epoch 0, loss 0.456851, accuracy 78.624 %, best 78.624 %
-Finished training it 174080/306969 of epoch 0, 305.19 ms/it, loss 0.451322, accuracy 78.977 %
-Testing at - 174080/306969 of epoch 0, loss 0.458015, accuracy 78.561 %, best 78.624 %
-Finished training it 175104/306969 of epoch 0, 296.99 ms/it, loss 0.451312, accuracy 79.077 %
-Testing at - 175104/306969 of epoch 0, loss 0.458123, accuracy 78.510 %, best 78.624 %
-Finished training it 176128/306969 of epoch 0, 300.37 ms/it, loss 0.451044, accuracy 79.108 %
-Testing at - 176128/306969 of epoch 0, loss 0.457640, accuracy 78.592 %, best 78.624 %
-Finished training it 177152/306969 of epoch 0, 370.13 ms/it, loss 0.448847, accuracy 79.264 %
-Testing at - 177152/306969 of epoch 0, loss 0.457786, accuracy 78.567 %, best 78.624 %
-Finished training it 178176/306969 of epoch 0, 361.51 ms/it, loss 0.450617, accuracy 79.092 %
-Testing at - 178176/306969 of epoch 0, loss 0.457569, accuracy 78.530 %, best 78.624 %
-Finished training it 179200/306969 of epoch 0, 359.30 ms/it, loss 0.451313, accuracy 78.963 %
-Testing at - 179200/306969 of epoch 0, loss 0.457546, accuracy 78.589 %, best 78.624 %
-Finished training it 180224/306969 of epoch 0, 363.86 ms/it, loss 0.452600, accuracy 78.820 %
-Testing at - 180224/306969 of epoch 0, loss 0.457167, accuracy 78.606 %, best 78.624 %
-Finished training it 181248/306969 of epoch 0, 386.05 ms/it, loss 0.453743, accuracy 78.892 %
-Testing at - 181248/306969 of epoch 0, loss 0.457022, accuracy 78.590 %, best 78.624 %
-Finished training it 182272/306969 of epoch 0, 371.40 ms/it, loss 0.453081, accuracy 78.883 %
-Testing at - 182272/306969 of epoch 0, loss 0.459385, accuracy 78.508 %, best 78.624 %
-Finished training it 183296/306969 of epoch 0, 381.48 ms/it, loss 0.452018, accuracy 79.001 %
-Testing at - 183296/306969 of epoch 0, loss 0.457495, accuracy 78.586 %, best 78.624 %
-Finished training it 184320/306969 of epoch 0, 391.42 ms/it, loss 0.452036, accuracy 78.904 %
-Testing at - 184320/306969 of epoch 0, loss 0.456859, accuracy 78.618 %, best 78.624 %
-Finished training it 185344/306969 of epoch 0, 384.36 ms/it, loss 0.453599, accuracy 78.799 %
-Testing at - 185344/306969 of epoch 0, loss 0.456938, accuracy 78.607 %, best 78.624 %
-Finished training it 186368/306969 of epoch 0, 376.96 ms/it, loss 0.451246, accuracy 79.020 %
-Testing at - 186368/306969 of epoch 0, loss 0.458597, accuracy 78.494 %, best 78.624 %
-Finished training it 187392/306969 of epoch 0, 368.45 ms/it, loss 0.452695, accuracy 78.959 %
-Testing at - 187392/306969 of epoch 0, loss 0.457449, accuracy 78.595 %, best 78.624 %
-Finished training it 188416/306969 of epoch 0, 366.16 ms/it, loss 0.449294, accuracy 79.204 %
-Testing at - 188416/306969 of epoch 0, loss 0.457357, accuracy 78.578 %, best 78.624 %
-Finished training it 189440/306969 of epoch 0, 369.57 ms/it, loss 0.454965, accuracy 78.771 %
-Saving model to results/240-120-1_lr0.1/model.pth
-Testing at - 189440/306969 of epoch 0, loss 0.457100, accuracy 78.637 %, best 78.637 %
-Finished training it 190464/306969 of epoch 0, 369.94 ms/it, loss 0.452301, accuracy 78.931 %
-Testing at - 190464/306969 of epoch 0, loss 0.457090, accuracy 78.604 %, best 78.637 %
-Finished training it 191488/306969 of epoch 0, 387.48 ms/it, loss 0.450651, accuracy 79.123 %
-Testing at - 191488/306969 of epoch 0, loss 0.457220, accuracy 78.614 %, best 78.637 %
-Finished training it 192512/306969 of epoch 0, 383.78 ms/it, loss 0.448265, accuracy 79.239 %
-Testing at - 192512/306969 of epoch 0, loss 0.456891, accuracy 78.633 %, best 78.637 %
-Finished training it 193536/306969 of epoch 0, 376.25 ms/it, loss 0.451602, accuracy 78.986 %
-Testing at - 193536/306969 of epoch 0, loss 0.456663, accuracy 78.618 %, best 78.637 %
-Finished training it 194560/306969 of epoch 0, 358.29 ms/it, loss 0.451369, accuracy 79.025 %
-Testing at - 194560/306969 of epoch 0, loss 0.457926, accuracy 78.550 %, best 78.637 %
-Finished training it 195584/306969 of epoch 0, 367.79 ms/it, loss 0.454297, accuracy 78.790 %
-Testing at - 195584/306969 of epoch 0, loss 0.457149, accuracy 78.599 %, best 78.637 %
-Finished training it 196608/306969 of epoch 0, 325.47 ms/it, loss 0.451817, accuracy 79.037 %
-Testing at - 196608/306969 of epoch 0, loss 0.458585, accuracy 78.550 %, best 78.637 %
-Finished training it 197632/306969 of epoch 0, 314.30 ms/it, loss 0.451773, accuracy 78.975 %
-Testing at - 197632/306969 of epoch 0, loss 0.457655, accuracy 78.594 %, best 78.637 %
-Finished training it 198656/306969 of epoch 0, 247.68 ms/it, loss 0.451149, accuracy 79.080 %
-Testing at - 198656/306969 of epoch 0, loss 0.456692, accuracy 78.613 %, best 78.637 %
-Finished training it 199680/306969 of epoch 0, 230.55 ms/it, loss 0.453748, accuracy 78.877 %
-Testing at - 199680/306969 of epoch 0, loss 0.456641, accuracy 78.620 %, best 78.637 %
-Finished training it 200704/306969 of epoch 0, 228.08 ms/it, loss 0.451093, accuracy 79.095 %
-Testing at - 200704/306969 of epoch 0, loss 0.459192, accuracy 78.358 %, best 78.637 %
-Finished training it 201728/306969 of epoch 0, 239.02 ms/it, loss 0.451862, accuracy 78.934 %
-Testing at - 201728/306969 of epoch 0, loss 0.458609, accuracy 78.517 %, best 78.637 %
-Finished training it 202752/306969 of epoch 0, 245.53 ms/it, loss 0.450442, accuracy 78.999 %
-Saving model to results/240-120-1_lr0.1/model.pth
-Testing at - 202752/306969 of epoch 0, loss 0.455958, accuracy 78.657 %, best 78.657 %
-Finished training it 203776/306969 of epoch 0, 231.09 ms/it, loss 0.449835, accuracy 79.295 %
-Testing at - 203776/306969 of epoch 0, loss 0.456477, accuracy 78.613 %, best 78.657 %
-Finished training it 204800/306969 of epoch 0, 230.73 ms/it, loss 0.448987, accuracy 79.126 %
-Testing at - 204800/306969 of epoch 0, loss 0.457623, accuracy 78.589 %, best 78.657 %
-Finished training it 205824/306969 of epoch 0, 229.84 ms/it, loss 0.451073, accuracy 79.025 %
-Testing at - 205824/306969 of epoch 0, loss 0.457407, accuracy 78.573 %, best 78.657 %
-Finished training it 206848/306969 of epoch 0, 222.11 ms/it, loss 0.448760, accuracy 79.221 %
-Testing at - 206848/306969 of epoch 0, loss 0.456662, accuracy 78.619 %, best 78.657 %
-Finished training it 207872/306969 of epoch 0, 212.01 ms/it, loss 0.450238, accuracy 79.070 %
-Testing at - 207872/306969 of epoch 0, loss 0.456428, accuracy 78.638 %, best 78.657 %
-Finished training it 208896/306969 of epoch 0, 210.23 ms/it, loss 0.451943, accuracy 79.017 %
-Testing at - 208896/306969 of epoch 0, loss 0.456537, accuracy 78.630 %, best 78.657 %
-Finished training it 209920/306969 of epoch 0, 226.40 ms/it, loss 0.449553, accuracy 79.040 %
-Testing at - 209920/306969 of epoch 0, loss 0.456645, accuracy 78.631 %, best 78.657 %
-Finished training it 210944/306969 of epoch 0, 218.17 ms/it, loss 0.450325, accuracy 79.015 %
-Testing at - 210944/306969 of epoch 0, loss 0.456528, accuracy 78.607 %, best 78.657 %
-Finished training it 211968/306969 of epoch 0, 224.02 ms/it, loss 0.449731, accuracy 79.100 %
-Testing at - 211968/306969 of epoch 0, loss 0.456335, accuracy 78.631 %, best 78.657 %
-Finished training it 212992/306969 of epoch 0, 214.93 ms/it, loss 0.448428, accuracy 79.187 %
-Testing at - 212992/306969 of epoch 0, loss 0.458067, accuracy 78.596 %, best 78.657 %
-Finished training it 214016/306969 of epoch 0, 216.58 ms/it, loss 0.449837, accuracy 79.029 %
-Testing at - 214016/306969 of epoch 0, loss 0.456321, accuracy 78.635 %, best 78.657 %
-Finished training it 215040/306969 of epoch 0, 211.68 ms/it, loss 0.449330, accuracy 79.133 %
-Testing at - 215040/306969 of epoch 0, loss 0.457328, accuracy 78.578 %, best 78.657 %
-Finished training it 216064/306969 of epoch 0, 218.49 ms/it, loss 0.448714, accuracy 79.085 %
-Testing at - 216064/306969 of epoch 0, loss 0.456519, accuracy 78.617 %, best 78.657 %
-Finished training it 217088/306969 of epoch 0, 224.11 ms/it, loss 0.450671, accuracy 79.064 %
-Testing at - 217088/306969 of epoch 0, loss 0.457224, accuracy 78.610 %, best 78.657 %
-Finished training it 218112/306969 of epoch 0, 234.76 ms/it, loss 0.450639, accuracy 79.128 %
-Testing at - 218112/306969 of epoch 0, loss 0.458286, accuracy 78.485 %, best 78.657 %
-Finished training it 219136/306969 of epoch 0, 233.57 ms/it, loss 0.450082, accuracy 79.066 %
-Testing at - 219136/306969 of epoch 0, loss 0.456390, accuracy 78.633 %, best 78.657 %
-Finished training it 220160/306969 of epoch 0, 219.79 ms/it, loss 0.448983, accuracy 79.243 %
-Saving model to results/240-120-1_lr0.1/model.pth
-Testing at - 220160/306969 of epoch 0, loss 0.455844, accuracy 78.668 %, best 78.668 %
-Finished training it 221184/306969 of epoch 0, 221.05 ms/it, loss 0.447613, accuracy 79.238 %
-Testing at - 221184/306969 of epoch 0, loss 0.459004, accuracy 78.466 %, best 78.668 %
-Finished training it 222208/306969 of epoch 0, 222.72 ms/it, loss 0.450714, accuracy 79.044 %
-Saving model to results/240-120-1_lr0.1/model.pth
-Testing at - 222208/306969 of epoch 0, loss 0.455724, accuracy 78.692 %, best 78.692 %
-Finished training it 223232/306969 of epoch 0, 242.23 ms/it, loss 0.451150, accuracy 78.945 %
-Testing at - 223232/306969 of epoch 0, loss 0.457674, accuracy 78.644 %, best 78.692 %
-Finished training it 224256/306969 of epoch 0, 244.96 ms/it, loss 0.451081, accuracy 78.969 %
-Testing at - 224256/306969 of epoch 0, loss 0.456081, accuracy 78.638 %, best 78.692 %
-Finished training it 225280/306969 of epoch 0, 240.82 ms/it, loss 0.452620, accuracy 78.814 %
-Testing at - 225280/306969 of epoch 0, loss 0.455811, accuracy 78.671 %, best 78.692 %
-Finished training it 226304/306969 of epoch 0, 235.24 ms/it, loss 0.447897, accuracy 79.260 %
-Testing at - 226304/306969 of epoch 0, loss 0.455485, accuracy 78.681 %, best 78.692 %
-Finished training it 227328/306969 of epoch 0, 214.62 ms/it, loss 0.451994, accuracy 78.814 %
-Testing at - 227328/306969 of epoch 0, loss 0.455929, accuracy 78.654 %, best 78.692 %
-Finished training it 228352/306969 of epoch 0, 226.02 ms/it, loss 0.451095, accuracy 78.989 %
-Testing at - 228352/306969 of epoch 0, loss 0.457103, accuracy 78.605 %, best 78.692 %
-Finished training it 229376/306969 of epoch 0, 227.93 ms/it, loss 0.449954, accuracy 79.157 %
-Testing at - 229376/306969 of epoch 0, loss 0.455752, accuracy 78.690 %, best 78.692 %
-Finished training it 230400/306969 of epoch 0, 243.25 ms/it, loss 0.449494, accuracy 79.144 %
-Testing at - 230400/306969 of epoch 0, loss 0.456652, accuracy 78.652 %, best 78.692 %
-Finished training it 231424/306969 of epoch 0, 241.31 ms/it, loss 0.449110, accuracy 79.202 %
-Testing at - 231424/306969 of epoch 0, loss 0.455932, accuracy 78.664 %, best 78.692 %
-Finished training it 232448/306969 of epoch 0, 238.11 ms/it, loss 0.450998, accuracy 78.964 %
-Testing at - 232448/306969 of epoch 0, loss 0.456287, accuracy 78.650 %, best 78.692 %
-Finished training it 233472/306969 of epoch 0, 225.42 ms/it, loss 0.451721, accuracy 78.915 %
-Testing at - 233472/306969 of epoch 0, loss 0.455668, accuracy 78.689 %, best 78.692 %
-Finished training it 234496/306969 of epoch 0, 238.40 ms/it, loss 0.450153, accuracy 79.028 %
-Testing at - 234496/306969 of epoch 0, loss 0.456257, accuracy 78.636 %, best 78.692 %
-Finished training it 235520/306969 of epoch 0, 235.70 ms/it, loss 0.450734, accuracy 79.034 %
-Saving model to results/240-120-1_lr0.1/model.pth
-Testing at - 235520/306969 of epoch 0, loss 0.455204, accuracy 78.707 %, best 78.707 %
-Finished training it 236544/306969 of epoch 0, 232.03 ms/it, loss 0.452802, accuracy 78.812 %
-Testing at - 236544/306969 of epoch 0, loss 0.455745, accuracy 78.682 %, best 78.707 %
-Finished training it 237568/306969 of epoch 0, 230.79 ms/it, loss 0.448811, accuracy 79.139 %
-Testing at - 237568/306969 of epoch 0, loss 0.458750, accuracy 78.418 %, best 78.707 %
-Finished training it 238592/306969 of epoch 0, 240.78 ms/it, loss 0.450520, accuracy 79.223 %
-Testing at - 238592/306969 of epoch 0, loss 0.455363, accuracy 78.679 %, best 78.707 %
-Finished training it 239616/306969 of epoch 0, 235.63 ms/it, loss 0.453298, accuracy 78.796 %
-Testing at - 239616/306969 of epoch 0, loss 0.455322, accuracy 78.667 %, best 78.707 %
-Finished training it 240640/306969 of epoch 0, 242.64 ms/it, loss 0.449708, accuracy 79.091 %
-Testing at - 240640/306969 of epoch 0, loss 0.455628, accuracy 78.666 %, best 78.707 %
-Finished training it 241664/306969 of epoch 0, 228.92 ms/it, loss 0.447920, accuracy 79.231 %
-Testing at - 241664/306969 of epoch 0, loss 0.455585, accuracy 78.680 %, best 78.707 %
-Finished training it 242688/306969 of epoch 0, 256.29 ms/it, loss 0.449534, accuracy 79.121 %
-Testing at - 242688/306969 of epoch 0, loss 0.455750, accuracy 78.647 %, best 78.707 %
-Finished training it 243712/306969 of epoch 0, 295.71 ms/it, loss 0.449361, accuracy 79.196 %
-Testing at - 243712/306969 of epoch 0, loss 0.456801, accuracy 78.652 %, best 78.707 %
-Finished training it 244736/306969 of epoch 0, 279.43 ms/it, loss 0.450302, accuracy 79.031 %
-Testing at - 244736/306969 of epoch 0, loss 0.455656, accuracy 78.664 %, best 78.707 %
-Finished training it 245760/306969 of epoch 0, 302.45 ms/it, loss 0.449770, accuracy 79.243 %
-Testing at - 245760/306969 of epoch 0, loss 0.455964, accuracy 78.687 %, best 78.707 %
-Finished training it 246784/306969 of epoch 0, 292.45 ms/it, loss 0.448102, accuracy 79.137 %
-Testing at - 246784/306969 of epoch 0, loss 0.455164, accuracy 78.685 %, best 78.707 %
-Finished training it 247808/306969 of epoch 0, 298.54 ms/it, loss 0.448221, accuracy 79.086 %
-Testing at - 247808/306969 of epoch 0, loss 0.455615, accuracy 78.685 %, best 78.707 %
-Finished training it 248832/306969 of epoch 0, 304.02 ms/it, loss 0.449228, accuracy 79.143 %
-Saving model to results/240-120-1_lr0.1/model.pth
-Testing at - 248832/306969 of epoch 0, loss 0.455062, accuracy 78.724 %, best 78.724 %
-Finished training it 249856/306969 of epoch 0, 284.78 ms/it, loss 0.451338, accuracy 78.998 %
-Testing at - 249856/306969 of epoch 0, loss 0.456143, accuracy 78.607 %, best 78.724 %
-Finished training it 250880/306969 of epoch 0, 282.30 ms/it, loss 0.449996, accuracy 79.078 %
-Testing at - 250880/306969 of epoch 0, loss 0.455591, accuracy 78.676 %, best 78.724 %
-Finished training it 251904/306969 of epoch 0, 201.04 ms/it, loss 0.450823, accuracy 79.012 %
-Testing at - 251904/306969 of epoch 0, loss 0.455552, accuracy 78.679 %, best 78.724 %
-Finished training it 252928/306969 of epoch 0, 229.40 ms/it, loss 0.448243, accuracy 79.230 %
-Testing at - 252928/306969 of epoch 0, loss 0.454850, accuracy 78.713 %, best 78.724 %
-Finished training it 253952/306969 of epoch 0, 201.85 ms/it, loss 0.448292, accuracy 79.185 %
-Testing at - 253952/306969 of epoch 0, loss 0.454950, accuracy 78.705 %, best 78.724 %
-Finished training it 254976/306969 of epoch 0, 224.50 ms/it, loss 0.449746, accuracy 79.120 %
-Testing at - 254976/306969 of epoch 0, loss 0.455857, accuracy 78.643 %, best 78.724 %
-Finished training it 256000/306969 of epoch 0, 238.89 ms/it, loss 0.451271, accuracy 79.034 %
-Testing at - 256000/306969 of epoch 0, loss 0.455611, accuracy 78.669 %, best 78.724 %
-Finished training it 257024/306969 of epoch 0, 233.52 ms/it, loss 0.449433, accuracy 79.142 %
-Testing at - 257024/306969 of epoch 0, loss 0.455465, accuracy 78.678 %, best 78.724 %
-Finished training it 258048/306969 of epoch 0, 241.05 ms/it, loss 0.448370, accuracy 79.027 %
-Testing at - 258048/306969 of epoch 0, loss 0.455471, accuracy 78.685 %, best 78.724 %
-Finished training it 259072/306969 of epoch 0, 243.25 ms/it, loss 0.447585, accuracy 79.197 %
-Testing at - 259072/306969 of epoch 0, loss 0.455943, accuracy 78.667 %, best 78.724 %
-Finished training it 260096/306969 of epoch 0, 234.80 ms/it, loss 0.448389, accuracy 79.257 %
-Testing at - 260096/306969 of epoch 0, loss 0.455320, accuracy 78.689 %, best 78.724 %
-Finished training it 261120/306969 of epoch 0, 255.72 ms/it, loss 0.450119, accuracy 79.106 %
-Testing at - 261120/306969 of epoch 0, loss 0.454920, accuracy 78.715 %, best 78.724 %
-Finished training it 262144/306969 of epoch 0, 243.96 ms/it, loss 0.449062, accuracy 79.279 %
-Testing at - 262144/306969 of epoch 0, loss 0.456324, accuracy 78.593 %, best 78.724 %
-Finished training it 263168/306969 of epoch 0, 237.39 ms/it, loss 0.450647, accuracy 78.974 %
-Testing at - 263168/306969 of epoch 0, loss 0.455750, accuracy 78.638 %, best 78.724 %
-Finished training it 264192/306969 of epoch 0, 211.62 ms/it, loss 0.450467, accuracy 78.985 %
-Testing at - 264192/306969 of epoch 0, loss 0.455198, accuracy 78.675 %, best 78.724 %
-Finished training it 265216/306969 of epoch 0, 225.53 ms/it, loss 0.447902, accuracy 79.210 %
-Saving model to results/240-120-1_lr0.1/model.pth
-Testing at - 265216/306969 of epoch 0, loss 0.454850, accuracy 78.730 %, best 78.730 %
-Finished training it 266240/306969 of epoch 0, 215.02 ms/it, loss 0.448478, accuracy 79.162 %
-Testing at - 266240/306969 of epoch 0, loss 0.456435, accuracy 78.713 %, best 78.730 %
-Finished training it 267264/306969 of epoch 0, 215.04 ms/it, loss 0.450603, accuracy 79.095 %
-Testing at - 267264/306969 of epoch 0, loss 0.457879, accuracy 78.454 %, best 78.730 %
-Finished training it 268288/306969 of epoch 0, 237.60 ms/it, loss 0.450751, accuracy 79.084 %
-Testing at - 268288/306969 of epoch 0, loss 0.457450, accuracy 78.599 %, best 78.730 %
-Finished training it 269312/306969 of epoch 0, 233.15 ms/it, loss 0.447626, accuracy 79.255 %
-Testing at - 269312/306969 of epoch 0, loss 0.457588, accuracy 78.637 %, best 78.730 %
-Finished training it 270336/306969 of epoch 0, 236.99 ms/it, loss 0.449992, accuracy 79.102 %
-Saving model to results/240-120-1_lr0.1/model.pth
-Testing at - 270336/306969 of epoch 0, loss 0.454705, accuracy 78.730 %, best 78.730 %
-Finished training it 271360/306969 of epoch 0, 240.77 ms/it, loss 0.446231, accuracy 79.176 %
-Testing at - 271360/306969 of epoch 0, loss 0.454777, accuracy 78.694 %, best 78.730 %
-Finished training it 272384/306969 of epoch 0, 228.51 ms/it, loss 0.449304, accuracy 79.101 %
-Testing at - 272384/306969 of epoch 0, loss 0.456903, accuracy 78.585 %, best 78.730 %
-Finished training it 273408/306969 of epoch 0, 234.93 ms/it, loss 0.448834, accuracy 79.114 %
-Saving model to results/240-120-1_lr0.1/model.pth
-Testing at - 273408/306969 of epoch 0, loss 0.454631, accuracy 78.734 %, best 78.734 %
-Finished training it 274432/306969 of epoch 0, 230.54 ms/it, loss 0.449436, accuracy 79.146 %
-Testing at - 274432/306969 of epoch 0, loss 0.454659, accuracy 78.719 %, best 78.734 %
-Finished training it 275456/306969 of epoch 0, 224.87 ms/it, loss 0.450352, accuracy 79.008 %
-Testing at - 275456/306969 of epoch 0, loss 0.455325, accuracy 78.720 %, best 78.734 %
-Finished training it 276480/306969 of epoch 0, 221.32 ms/it, loss 0.448863, accuracy 79.249 %
-Testing at - 276480/306969 of epoch 0, loss 0.454777, accuracy 78.711 %, best 78.734 %
-Finished training it 277504/306969 of epoch 0, 222.31 ms/it, loss 0.446057, accuracy 79.369 %
-Testing at - 277504/306969 of epoch 0, loss 0.455377, accuracy 78.698 %, best 78.734 %
-Finished training it 278528/306969 of epoch 0, 218.38 ms/it, loss 0.451820, accuracy 78.999 %
-Testing at - 278528/306969 of epoch 0, loss 0.456193, accuracy 78.568 %, best 78.734 %
-Finished training it 279552/306969 of epoch 0, 218.66 ms/it, loss 0.451983, accuracy 78.774 %
-Saving model to results/240-120-1_lr0.1/model.pth
-Testing at - 279552/306969 of epoch 0, loss 0.454358, accuracy 78.751 %, best 78.751 %
-Finished training it 280576/306969 of epoch 0, 222.66 ms/it, loss 0.449483, accuracy 79.031 %
-Testing at - 280576/306969 of epoch 0, loss 0.454485, accuracy 78.735 %, best 78.751 %
-Finished training it 281600/306969 of epoch 0, 234.61 ms/it, loss 0.447339, accuracy 79.246 %
-Testing at - 281600/306969 of epoch 0, loss 0.455088, accuracy 78.701 %, best 78.751 %
-Finished training it 282624/306969 of epoch 0, 243.00 ms/it, loss 0.446982, accuracy 79.324 %
-Testing at - 282624/306969 of epoch 0, loss 0.454394, accuracy 78.742 %, best 78.751 %
-Finished training it 283648/306969 of epoch 0, 234.74 ms/it, loss 0.449879, accuracy 78.980 %
-Testing at - 283648/306969 of epoch 0, loss 0.455270, accuracy 78.697 %, best 78.751 %
-Finished training it 284672/306969 of epoch 0, 254.94 ms/it, loss 0.448158, accuracy 79.090 %
-Testing at - 284672/306969 of epoch 0, loss 0.454626, accuracy 78.715 %, best 78.751 %
-Finished training it 285696/306969 of epoch 0, 260.28 ms/it, loss 0.448201, accuracy 79.192 %
-Testing at - 285696/306969 of epoch 0, loss 0.455236, accuracy 78.695 %, best 78.751 %
-Finished training it 286720/306969 of epoch 0, 250.74 ms/it, loss 0.450813, accuracy 78.974 %
-Saving model to results/240-120-1_lr0.1/model.pth
-Testing at - 286720/306969 of epoch 0, loss 0.454368, accuracy 78.774 %, best 78.774 %
-Finished training it 287744/306969 of epoch 0, 252.41 ms/it, loss 0.446478, accuracy 79.227 %
-Testing at - 287744/306969 of epoch 0, loss 0.455002, accuracy 78.747 %, best 78.774 %
-Finished training it 288768/306969 of epoch 0, 251.33 ms/it, loss 0.447931, accuracy 79.219 %
-Testing at - 288768/306969 of epoch 0, loss 0.457223, accuracy 78.557 %, best 78.774 %
-Finished training it 289792/306969 of epoch 0, 243.94 ms/it, loss 0.447068, accuracy 79.247 %
-Testing at - 289792/306969 of epoch 0, loss 0.454725, accuracy 78.709 %, best 78.774 %
-Finished training it 290816/306969 of epoch 0, 240.50 ms/it, loss 0.450490, accuracy 79.015 %
-Testing at - 290816/306969 of epoch 0, loss 0.455385, accuracy 78.721 %, best 78.774 %
-Finished training it 291840/306969 of epoch 0, 237.45 ms/it, loss 0.446773, accuracy 79.288 %
-Testing at - 291840/306969 of epoch 0, loss 0.456295, accuracy 78.654 %, best 78.774 %
-Finished training it 292864/306969 of epoch 0, 224.74 ms/it, loss 0.449038, accuracy 79.020 %
-Testing at - 292864/306969 of epoch 0, loss 0.454173, accuracy 78.722 %, best 78.774 %
-Finished training it 293888/306969 of epoch 0, 233.45 ms/it, loss 0.449976, accuracy 79.054 %
-Testing at - 293888/306969 of epoch 0, loss 0.455219, accuracy 78.699 %, best 78.774 %
-Finished training it 294912/306969 of epoch 0, 244.43 ms/it, loss 0.447990, accuracy 79.047 %
-Testing at - 294912/306969 of epoch 0, loss 0.454362, accuracy 78.759 %, best 78.774 %
-Finished training it 295936/306969 of epoch 0, 251.25 ms/it, loss 0.448308, accuracy 79.196 %
-Testing at - 295936/306969 of epoch 0, loss 0.454335, accuracy 78.743 %, best 78.774 %
-Finished training it 296960/306969 of epoch 0, 248.46 ms/it, loss 0.448969, accuracy 79.156 %
-Testing at - 296960/306969 of epoch 0, loss 0.454486, accuracy 78.750 %, best 78.774 %
-Finished training it 297984/306969 of epoch 0, 234.84 ms/it, loss 0.452092, accuracy 78.825 %
-Testing at - 297984/306969 of epoch 0, loss 0.454214, accuracy 78.764 %, best 78.774 %
-Finished training it 299008/306969 of epoch 0, 248.85 ms/it, loss 0.451081, accuracy 78.994 %
-Testing at - 299008/306969 of epoch 0, loss 0.454530, accuracy 78.762 %, best 78.774 %
-Finished training it 300032/306969 of epoch 0, 246.78 ms/it, loss 0.448459, accuracy 79.224 %
-Testing at - 300032/306969 of epoch 0, loss 0.454297, accuracy 78.753 %, best 78.774 %
-Finished training it 301056/306969 of epoch 0, 243.07 ms/it, loss 0.447721, accuracy 79.189 %
-Testing at - 301056/306969 of epoch 0, loss 0.454582, accuracy 78.737 %, best 78.774 %
-Finished training it 302080/306969 of epoch 0, 239.63 ms/it, loss 0.447779, accuracy 79.208 %
-Testing at - 302080/306969 of epoch 0, loss 0.454299, accuracy 78.716 %, best 78.774 %
-Finished training it 303104/306969 of epoch 0, 217.52 ms/it, loss 0.448741, accuracy 79.057 %
-Testing at - 303104/306969 of epoch 0, loss 0.457853, accuracy 78.610 %, best 78.774 %
-Finished training it 304128/306969 of epoch 0, 153.67 ms/it, loss 0.449673, accuracy 79.002 %
-Testing at - 304128/306969 of epoch 0, loss 0.454282, accuracy 78.753 %, best 78.774 %
-Finished training it 305152/306969 of epoch 0, 139.81 ms/it, loss 0.446621, accuracy 79.200 %
-Testing at - 305152/306969 of epoch 0, loss 0.454210, accuracy 78.746 %, best 78.774 %
-Finished training it 306176/306969 of epoch 0, 150.07 ms/it, loss 0.447825, accuracy 79.214 %
-Saving model to results/240-120-1_lr0.1/model.pth
-Testing at - 306176/306969 of epoch 0, loss 0.453590, accuracy 78.797 %, best 78.797 %
-Finished training it 306969/306969 of epoch 0, 152.54 ms/it, loss 0.449895, accuracy 79.136 %
-Testing at - 306969/306969 of epoch 0, loss 0.454272, accuracy 78.750 %, best 78.797 %
+skip_upto_epoch: 0
+args.nepochs: 3
+k: 0
+Finished training it 306969/306969 of epoch 0, 16.68 ms/it, loss 0.449912, accuracy 79.122 %
+Testing at - 306969/306969 of epoch 0, loss 0.454335, accuracy 78.751 %, best 78.797 %
+Finished training it 1024/306969 of epoch 1, 16.12 ms/it, loss 0.449216, accuracy 79.124 %
+Testing at - 1024/306969 of epoch 0, loss 0.453787, accuracy 78.784 %, best 78.797 %
+Finished training it 2048/306969 of epoch 1, 17.08 ms/it, loss 0.445981, accuracy 79.277 %
+Testing at - 2048/306969 of epoch 0, loss 0.454103, accuracy 78.774 %, best 78.797 %
+Finished training it 3072/306969 of epoch 1, 17.83 ms/it, loss 0.448678, accuracy 79.121 %
+Testing at - 3072/306969 of epoch 0, loss 0.453823, accuracy 78.763 %, best 78.797 %
+Finished training it 4096/306969 of epoch 1, 19.87 ms/it, loss 0.445741, accuracy 79.422 %
+Testing at - 4096/306969 of epoch 0, loss 0.454829, accuracy 78.709 %, best 78.797 %
+Finished training it 5120/306969 of epoch 1, 23.29 ms/it, loss 0.449240, accuracy 79.247 %
+Testing at - 5120/306969 of epoch 0, loss 0.454727, accuracy 78.728 %, best 78.797 %
+Finished training it 6144/306969 of epoch 1, 17.51 ms/it, loss 0.448468, accuracy 79.182 %
+Testing at - 6144/306969 of epoch 0, loss 0.454036, accuracy 78.769 %, best 78.797 %
+Finished training it 7168/306969 of epoch 1, 16.77 ms/it, loss 0.446386, accuracy 79.385 %
+Testing at - 7168/306969 of epoch 0, loss 0.455972, accuracy 78.627 %, best 78.797 %
+Finished training it 8192/306969 of epoch 1, 18.32 ms/it, loss 0.447490, accuracy 79.192 %
+Testing at - 8192/306969 of epoch 0, loss 0.453887, accuracy 78.764 %, best 78.797 %
+Finished training it 9216/306969 of epoch 1, 20.27 ms/it, loss 0.446717, accuracy 79.214 %
+Testing at - 9216/306969 of epoch 0, loss 0.453545, accuracy 78.789 %, best 78.797 %
+Finished training it 10240/306969 of epoch 1, 18.02 ms/it, loss 0.447087, accuracy 79.176 %
+Testing at - 10240/306969 of epoch 0, loss 0.454522, accuracy 78.744 %, best 78.797 %
+Finished training it 11264/306969 of epoch 1, 15.97 ms/it, loss 0.446005, accuracy 79.308 %
+Testing at - 11264/306969 of epoch 0, loss 0.454119, accuracy 78.759 %, best 78.797 %
+Finished training it 12288/306969 of epoch 1, 15.94 ms/it, loss 0.442442, accuracy 79.520 %
+Testing at - 12288/306969 of epoch 0, loss 0.454434, accuracy 78.739 %, best 78.797 %
+Finished training it 13312/306969 of epoch 1, 16.33 ms/it, loss 0.448878, accuracy 79.204 %
+Testing at - 13312/306969 of epoch 0, loss 0.454765, accuracy 78.741 %, best 78.797 %
+Finished training it 14336/306969 of epoch 1, 16.95 ms/it, loss 0.446423, accuracy 79.289 %
+Testing at - 14336/306969 of epoch 0, loss 0.454969, accuracy 78.694 %, best 78.797 %
+Finished training it 15360/306969 of epoch 1, 16.25 ms/it, loss 0.445631, accuracy 79.209 %
+Testing at - 15360/306969 of epoch 0, loss 0.454642, accuracy 78.754 %, best 78.797 %
+Finished training it 16384/306969 of epoch 1, 13.98 ms/it, loss 0.445795, accuracy 79.348 %
+Testing at - 16384/306969 of epoch 0, loss 0.453407, accuracy 78.779 %, best 78.797 %
+Finished training it 17408/306969 of epoch 1, 18.37 ms/it, loss 0.444500, accuracy 79.288 %
+Testing at - 17408/306969 of epoch 0, loss 0.454562, accuracy 78.707 %, best 78.797 %
+Finished training it 18432/306969 of epoch 1, 19.69 ms/it, loss 0.446502, accuracy 79.300 %
+Testing at - 18432/306969 of epoch 0, loss 0.453703, accuracy 78.783 %, best 78.797 %
+Finished training it 19456/306969 of epoch 1, 19.75 ms/it, loss 0.445490, accuracy 79.288 %
+Testing at - 19456/306969 of epoch 0, loss 0.456546, accuracy 78.612 %, best 78.797 %
+Finished training it 20480/306969 of epoch 1, 16.54 ms/it, loss 0.446828, accuracy 79.139 %
+Testing at - 20480/306969 of epoch 0, loss 0.454985, accuracy 78.743 %, best 78.797 %
+Finished training it 21504/306969 of epoch 1, 20.30 ms/it, loss 0.447251, accuracy 79.123 %
+Testing at - 21504/306969 of epoch 0, loss 0.454524, accuracy 78.757 %, best 78.797 %
+Finished training it 22528/306969 of epoch 1, 22.13 ms/it, loss 0.445840, accuracy 79.154 %
+Testing at - 22528/306969 of epoch 0, loss 0.453857, accuracy 78.774 %, best 78.797 %
+Finished training it 23552/306969 of epoch 1, 19.43 ms/it, loss 0.448693, accuracy 79.168 %
+Testing at - 23552/306969 of epoch 0, loss 0.453667, accuracy 78.793 %, best 78.797 %
+Finished training it 24576/306969 of epoch 1, 17.14 ms/it, loss 0.444850, accuracy 79.380 %
+Testing at - 24576/306969 of epoch 0, loss 0.454839, accuracy 78.700 %, best 78.797 %
+Finished training it 25600/306969 of epoch 1, 18.69 ms/it, loss 0.443583, accuracy 79.391 %
+Testing at - 25600/306969 of epoch 0, loss 0.453876, accuracy 78.727 %, best 78.797 %
+Finished training it 26624/306969 of epoch 1, 16.39 ms/it, loss 0.444853, accuracy 79.425 %
+Testing at - 26624/306969 of epoch 0, loss 0.454001, accuracy 78.777 %, best 78.797 %
+Finished training it 27648/306969 of epoch 1, 14.72 ms/it, loss 0.443091, accuracy 79.440 %
+Testing at - 27648/306969 of epoch 0, loss 0.453483, accuracy 78.795 %, best 78.797 %
+Finished training it 28672/306969 of epoch 1, 16.04 ms/it, loss 0.446312, accuracy 79.266 %
+Testing at - 28672/306969 of epoch 0, loss 0.453465, accuracy 78.783 %, best 78.797 %
+Finished training it 29696/306969 of epoch 1, 18.66 ms/it, loss 0.447703, accuracy 79.051 %
+Testing at - 29696/306969 of epoch 0, loss 0.453534, accuracy 78.790 %, best 78.797 %
+Finished training it 30720/306969 of epoch 1, 20.32 ms/it, loss 0.445891, accuracy 79.186 %
+Testing at - 30720/306969 of epoch 0, loss 0.454785, accuracy 78.726 %, best 78.797 %
+Finished training it 31744/306969 of epoch 1, 21.30 ms/it, loss 0.447302, accuracy 79.133 %
+Testing at - 31744/306969 of epoch 0, loss 0.455577, accuracy 78.636 %, best 78.797 %
+Finished training it 32768/306969 of epoch 1, 20.01 ms/it, loss 0.446413, accuracy 79.185 %
+Saving model to results/240-120-1_lr0.1/model.pth
+Testing at - 32768/306969 of epoch 0, loss 0.453574, accuracy 78.800 %, best 78.800 %
+Finished training it 33792/306969 of epoch 1, 21.37 ms/it, loss 0.444495, accuracy 79.330 %
+Saving model to results/240-120-1_lr0.1/model.pth
+Testing at - 33792/306969 of epoch 0, loss 0.453039, accuracy 78.821 %, best 78.821 %
+Finished training it 34816/306969 of epoch 1, 18.76 ms/it, loss 0.442235, accuracy 79.472 %
+Testing at - 34816/306969 of epoch 0, loss 0.453624, accuracy 78.787 %, best 78.821 %
+Finished training it 35840/306969 of epoch 1, 18.67 ms/it, loss 0.448073, accuracy 79.253 %
+Testing at - 35840/306969 of epoch 0, loss 0.453680, accuracy 78.786 %, best 78.821 %
+Finished training it 36864/306969 of epoch 1, 19.32 ms/it, loss 0.444900, accuracy 79.369 %
+Testing at - 36864/306969 of epoch 0, loss 0.454463, accuracy 78.787 %, best 78.821 %
+Finished training it 37888/306969 of epoch 1, 19.52 ms/it, loss 0.443545, accuracy 79.411 %
+Testing at - 37888/306969 of epoch 0, loss 0.454636, accuracy 78.690 %, best 78.821 %
+Finished training it 38912/306969 of epoch 1, 19.39 ms/it, loss 0.447062, accuracy 79.140 %
+Testing at - 38912/306969 of epoch 0, loss 0.453275, accuracy 78.809 %, best 78.821 %
+Finished training it 39936/306969 of epoch 1, 18.18 ms/it, loss 0.445680, accuracy 79.243 %
+Saving model to results/240-120-1_lr0.1/model.pth
+Testing at - 39936/306969 of epoch 0, loss 0.452935, accuracy 78.826 %, best 78.826 %
+Finished training it 40960/306969 of epoch 1, 15.25 ms/it, loss 0.445038, accuracy 79.259 %
+Testing at - 40960/306969 of epoch 0, loss 0.453650, accuracy 78.780 %, best 78.826 %
+Finished training it 41984/306969 of epoch 1, 19.77 ms/it, loss 0.445292, accuracy 79.320 %
+Testing at - 41984/306969 of epoch 0, loss 0.453578, accuracy 78.799 %, best 78.826 %
+Finished training it 43008/306969 of epoch 1, 21.01 ms/it, loss 0.445380, accuracy 79.358 %
+Testing at - 43008/306969 of epoch 0, loss 0.453336, accuracy 78.818 %, best 78.826 %
+Finished training it 44032/306969 of epoch 1, 18.30 ms/it, loss 0.446019, accuracy 79.289 %
+Testing at - 44032/306969 of epoch 0, loss 0.454284, accuracy 78.792 %, best 78.826 %
+Finished training it 45056/306969 of epoch 1, 17.75 ms/it, loss 0.446743, accuracy 79.297 %
+Testing at - 45056/306969 of epoch 0, loss 0.453165, accuracy 78.817 %, best 78.826 %
+Finished training it 46080/306969 of epoch 1, 22.29 ms/it, loss 0.445264, accuracy 79.379 %
+Testing at - 46080/306969 of epoch 0, loss 0.453344, accuracy 78.780 %, best 78.826 %
+Finished training it 47104/306969 of epoch 1, 20.79 ms/it, loss 0.448394, accuracy 79.004 %
+Testing at - 47104/306969 of epoch 0, loss 0.455426, accuracy 78.725 %, best 78.826 %
+Finished training it 48128/306969 of epoch 1, 21.59 ms/it, loss 0.446594, accuracy 79.079 %
+Testing at - 48128/306969 of epoch 0, loss 0.454429, accuracy 78.751 %, best 78.826 %
+Finished training it 49152/306969 of epoch 1, 19.61 ms/it, loss 0.442505, accuracy 79.445 %
+Testing at - 49152/306969 of epoch 0, loss 0.453036, accuracy 78.801 %, best 78.826 %
+Finished training it 50176/306969 of epoch 1, 15.67 ms/it, loss 0.444400, accuracy 79.319 %
+Testing at - 50176/306969 of epoch 0, loss 0.455053, accuracy 78.727 %, best 78.826 %
+Finished training it 51200/306969 of epoch 1, 16.65 ms/it, loss 0.446407, accuracy 79.314 %
+Testing at - 51200/306969 of epoch 0, loss 0.453715, accuracy 78.802 %, best 78.826 %
+Finished training it 52224/306969 of epoch 1, 17.76 ms/it, loss 0.446785, accuracy 79.237 %
+Testing at - 52224/306969 of epoch 0, loss 0.453110, accuracy 78.826 %, best 78.826 %
+Finished training it 53248/306969 of epoch 1, 17.01 ms/it, loss 0.446259, accuracy 79.474 %
+Testing at - 53248/306969 of epoch 0, loss 0.453079, accuracy 78.808 %, best 78.826 %
+Finished training it 54272/306969 of epoch 1, 16.39 ms/it, loss 0.446061, accuracy 79.228 %
+Testing at - 54272/306969 of epoch 0, loss 0.453548, accuracy 78.802 %, best 78.826 %
+Finished training it 55296/306969 of epoch 1, 20.12 ms/it, loss 0.445090, accuracy 79.364 %
+Testing at - 55296/306969 of epoch 0, loss 0.454443, accuracy 78.770 %, best 78.826 %
+Finished training it 56320/306969 of epoch 1, 20.15 ms/it, loss 0.444840, accuracy 79.363 %
+Testing at - 56320/306969 of epoch 0, loss 0.453494, accuracy 78.806 %, best 78.826 %
+Finished training it 57344/306969 of epoch 1, 17.72 ms/it, loss 0.443055, accuracy 79.375 %
+Testing at - 57344/306969 of epoch 0, loss 0.453264, accuracy 78.821 %, best 78.826 %
+Finished training it 58368/306969 of epoch 1, 15.67 ms/it, loss 0.443462, accuracy 79.543 %
+Testing at - 58368/306969 of epoch 0, loss 0.453265, accuracy 78.783 %, best 78.826 %
+Finished training it 59392/306969 of epoch 1, 17.95 ms/it, loss 0.444995, accuracy 79.352 %
+Testing at - 59392/306969 of epoch 0, loss 0.453155, accuracy 78.808 %, best 78.826 %
+Finished training it 60416/306969 of epoch 1, 18.32 ms/it, loss 0.445891, accuracy 79.276 %
+Testing at - 60416/306969 of epoch 0, loss 0.456277, accuracy 78.677 %, best 78.826 %
+Finished training it 61440/306969 of epoch 1, 17.35 ms/it, loss 0.447866, accuracy 79.118 %
+Testing at - 61440/306969 of epoch 0, loss 0.453226, accuracy 78.815 %, best 78.826 %
+Finished training it 62464/306969 of epoch 1, 17.46 ms/it, loss 0.445599, accuracy 79.348 %
+Testing at - 62464/306969 of epoch 0, loss 0.454299, accuracy 78.719 %, best 78.826 %
+Finished training it 63488/306969 of epoch 1, 17.47 ms/it, loss 0.444131, accuracy 79.285 %
+Testing at - 63488/306969 of epoch 0, loss 0.452974, accuracy 78.825 %, best 78.826 %
+Finished training it 64512/306969 of epoch 1, 20.82 ms/it, loss 0.446178, accuracy 79.192 %
+Testing at - 64512/306969 of epoch 0, loss 0.454153, accuracy 78.771 %, best 78.826 %
+Finished training it 65536/306969 of epoch 1, 18.25 ms/it, loss 0.447994, accuracy 79.109 %
+Testing at - 65536/306969 of epoch 0, loss 0.453436, accuracy 78.794 %, best 78.826 %
+Finished training it 66560/306969 of epoch 1, 15.59 ms/it, loss 0.445215, accuracy 79.362 %
+Testing at - 66560/306969 of epoch 0, loss 0.453216, accuracy 78.790 %, best 78.826 %
+Finished training it 67584/306969 of epoch 1, 16.77 ms/it, loss 0.443322, accuracy 79.457 %
+Testing at - 67584/306969 of epoch 0, loss 0.453573, accuracy 78.796 %, best 78.826 %
+Finished training it 68608/306969 of epoch 1, 16.80 ms/it, loss 0.445581, accuracy 79.324 %
+Testing at - 68608/306969 of epoch 0, loss 0.453361, accuracy 78.784 %, best 78.826 %
+Finished training it 69632/306969 of epoch 1, 15.80 ms/it, loss 0.445089, accuracy 79.271 %
+Testing at - 69632/306969 of epoch 0, loss 0.452974, accuracy 78.802 %, best 78.826 %
+Finished training it 70656/306969 of epoch 1, 14.27 ms/it, loss 0.444628, accuracy 79.369 %
+Testing at - 70656/306969 of epoch 0, loss 0.453837, accuracy 78.786 %, best 78.826 %
+Finished training it 71680/306969 of epoch 1, 14.90 ms/it, loss 0.446535, accuracy 79.276 %
+Saving model to results/240-120-1_lr0.1/model.pth
+Testing at - 71680/306969 of epoch 0, loss 0.453228, accuracy 78.831 %, best 78.831 %
+Finished training it 72704/306969 of epoch 1, 18.29 ms/it, loss 0.442898, accuracy 79.421 %
+Testing at - 72704/306969 of epoch 0, loss 0.454035, accuracy 78.694 %, best 78.831 %
+Finished training it 73728/306969 of epoch 1, 18.01 ms/it, loss 0.445057, accuracy 79.422 %
+Testing at - 73728/306969 of epoch 0, loss 0.453801, accuracy 78.765 %, best 78.831 %
+Finished training it 74752/306969 of epoch 1, 17.63 ms/it, loss 0.445025, accuracy 79.308 %
+Testing at - 74752/306969 of epoch 0, loss 0.455205, accuracy 78.625 %, best 78.831 %
+Finished training it 75776/306969 of epoch 1, 17.57 ms/it, loss 0.444622, accuracy 79.356 %
+Testing at - 75776/306969 of epoch 0, loss 0.453156, accuracy 78.796 %, best 78.831 %
+Finished training it 76800/306969 of epoch 1, 17.51 ms/it, loss 0.444781, accuracy 79.298 %
+Testing at - 76800/306969 of epoch 0, loss 0.454260, accuracy 78.734 %, best 78.831 %
+Finished training it 77824/306969 of epoch 1, 17.26 ms/it, loss 0.445178, accuracy 79.459 %
+Saving model to results/240-120-1_lr0.1/model.pth
+Testing at - 77824/306969 of epoch 0, loss 0.452786, accuracy 78.856 %, best 78.856 %
+Finished training it 78848/306969 of epoch 1, 17.85 ms/it, loss 0.444906, accuracy 79.308 %
+Saving model to results/240-120-1_lr0.1/model.pth
+Testing at - 78848/306969 of epoch 0, loss 0.452319, accuracy 78.874 %, best 78.874 %
+Finished training it 79872/306969 of epoch 1, 18.15 ms/it, loss 0.443915, accuracy 79.306 %
+Testing at - 79872/306969 of epoch 0, loss 0.453357, accuracy 78.819 %, best 78.874 %
+Finished training it 80896/306969 of epoch 1, 16.61 ms/it, loss 0.444152, accuracy 79.391 %
+Testing at - 80896/306969 of epoch 0, loss 0.453490, accuracy 78.842 %, best 78.874 %
+Finished training it 81920/306969 of epoch 1, 17.27 ms/it, loss 0.445338, accuracy 79.339 %
+Testing at - 81920/306969 of epoch 0, loss 0.452485, accuracy 78.860 %, best 78.874 %
+Finished training it 82944/306969 of epoch 1, 18.38 ms/it, loss 0.443505, accuracy 79.388 %
+Testing at - 82944/306969 of epoch 0, loss 0.453748, accuracy 78.759 %, best 78.874 %
+Finished training it 83968/306969 of epoch 1, 19.11 ms/it, loss 0.443519, accuracy 79.340 %
+Testing at - 83968/306969 of epoch 0, loss 0.453552, accuracy 78.852 %, best 78.874 %
+Finished training it 84992/306969 of epoch 1, 20.04 ms/it, loss 0.444186, accuracy 79.467 %
+Testing at - 84992/306969 of epoch 0, loss 0.452740, accuracy 78.852 %, best 78.874 %
+Finished training it 86016/306969 of epoch 1, 19.33 ms/it, loss 0.445558, accuracy 79.276 %
+Testing at - 86016/306969 of epoch 0, loss 0.453347, accuracy 78.785 %, best 78.874 %
+Finished training it 87040/306969 of epoch 1, 18.86 ms/it, loss 0.444819, accuracy 79.301 %
+Testing at - 87040/306969 of epoch 0, loss 0.453133, accuracy 78.819 %, best 78.874 %
+Finished training it 88064/306969 of epoch 1, 17.94 ms/it, loss 0.442807, accuracy 79.507 %
+Testing at - 88064/306969 of epoch 0, loss 0.452512, accuracy 78.836 %, best 78.874 %
+Finished training it 89088/306969 of epoch 1, 15.32 ms/it, loss 0.444618, accuracy 79.344 %
+Testing at - 89088/306969 of epoch 0, loss 0.452995, accuracy 78.831 %, best 78.874 %
+Finished training it 90112/306969 of epoch 1, 18.16 ms/it, loss 0.444089, accuracy 79.491 %
+Testing at - 90112/306969 of epoch 0, loss 0.452939, accuracy 78.810 %, best 78.874 %
+Finished training it 91136/306969 of epoch 1, 17.75 ms/it, loss 0.444079, accuracy 79.272 %
+Testing at - 91136/306969 of epoch 0, loss 0.453403, accuracy 78.795 %, best 78.874 %
+Finished training it 92160/306969 of epoch 1, 16.91 ms/it, loss 0.445433, accuracy 79.270 %
+Testing at - 92160/306969 of epoch 0, loss 0.453702, accuracy 78.810 %, best 78.874 %
+Finished training it 93184/306969 of epoch 1, 17.52 ms/it, loss 0.444466, accuracy 79.348 %
+Testing at - 93184/306969 of epoch 0, loss 0.453219, accuracy 78.811 %, best 78.874 %
+Finished training it 94208/306969 of epoch 1, 17.55 ms/it, loss 0.444097, accuracy 79.350 %
+Testing at - 94208/306969 of epoch 0, loss 0.452464, accuracy 78.832 %, best 78.874 %
+Finished training it 95232/306969 of epoch 1, 17.21 ms/it, loss 0.442462, accuracy 79.499 %
+Testing at - 95232/306969 of epoch 0, loss 0.452287, accuracy 78.845 %, best 78.874 %
+Finished training it 96256/306969 of epoch 1, 15.24 ms/it, loss 0.442743, accuracy 79.456 %
+Testing at - 96256/306969 of epoch 0, loss 0.454545, accuracy 78.724 %, best 78.874 %
+Finished training it 97280/306969 of epoch 1, 18.00 ms/it, loss 0.442754, accuracy 79.507 %
+Testing at - 97280/306969 of epoch 0, loss 0.452753, accuracy 78.827 %, best 78.874 %
+Finished training it 98304/306969 of epoch 1, 17.32 ms/it, loss 0.442385, accuracy 79.398 %
+Testing at - 98304/306969 of epoch 0, loss 0.452818, accuracy 78.837 %, best 78.874 %
+Finished training it 99328/306969 of epoch 1, 18.75 ms/it, loss 0.445284, accuracy 79.382 %
+Testing at - 99328/306969 of epoch 0, loss 0.454062, accuracy 78.755 %, best 78.874 %
+Finished training it 100352/306969 of epoch 1, 17.72 ms/it, loss 0.443735, accuracy 79.450 %
+Testing at - 100352/306969 of epoch 0, loss 0.452586, accuracy 78.807 %, best 78.874 %
+Finished training it 101376/306969 of epoch 1, 17.95 ms/it, loss 0.443203, accuracy 79.425 %
+Testing at - 101376/306969 of epoch 0, loss 0.453342, accuracy 78.826 %, best 78.874 %
+Finished training it 102400/306969 of epoch 1, 14.90 ms/it, loss 0.444481, accuracy 79.395 %
+Testing at - 102400/306969 of epoch 0, loss 0.454307, accuracy 78.725 %, best 78.874 %
+Finished training it 103424/306969 of epoch 1, 16.60 ms/it, loss 0.445336, accuracy 79.333 %
+Testing at - 103424/306969 of epoch 0, loss 0.453246, accuracy 78.835 %, best 78.874 %
+Finished training it 104448/306969 of epoch 1, 18.04 ms/it, loss 0.445305, accuracy 79.203 %
+Testing at - 104448/306969 of epoch 0, loss 0.452983, accuracy 78.802 %, best 78.874 %
+Finished training it 105472/306969 of epoch 1, 18.47 ms/it, loss 0.445386, accuracy 79.294 %
+Testing at - 105472/306969 of epoch 0, loss 0.453122, accuracy 78.845 %, best 78.874 %
+Finished training it 106496/306969 of epoch 1, 19.64 ms/it, loss 0.442797, accuracy 79.398 %
+Testing at - 106496/306969 of epoch 0, loss 0.456626, accuracy 78.620 %, best 78.874 %
+Finished training it 107520/306969 of epoch 1, 18.20 ms/it, loss 0.443247, accuracy 79.463 %
+Testing at - 107520/306969 of epoch 0, loss 0.453085, accuracy 78.812 %, best 78.874 %
+Finished training it 108544/306969 of epoch 1, 16.84 ms/it, loss 0.443657, accuracy 79.366 %
+Testing at - 108544/306969 of epoch 0, loss 0.452198, accuracy 78.869 %, best 78.874 %
+Finished training it 109568/306969 of epoch 1, 17.26 ms/it, loss 0.443329, accuracy 79.389 %
+Testing at - 109568/306969 of epoch 0, loss 0.452320, accuracy 78.851 %, best 78.874 %
+Finished training it 110592/306969 of epoch 1, 18.01 ms/it, loss 0.443894, accuracy 79.296 %
+Saving model to results/240-120-1_lr0.1/model.pth
+Testing at - 110592/306969 of epoch 0, loss 0.452437, accuracy 78.892 %, best 78.892 %
+Finished training it 111616/306969 of epoch 1, 18.42 ms/it, loss 0.446420, accuracy 79.231 %
+Testing at - 111616/306969 of epoch 0, loss 0.452616, accuracy 78.845 %, best 78.892 %
+Finished training it 112640/306969 of epoch 1, 14.37 ms/it, loss 0.445492, accuracy 79.291 %
+Testing at - 112640/306969 of epoch 0, loss 0.452419, accuracy 78.865 %, best 78.892 %
+Finished training it 113664/306969 of epoch 1, 17.89 ms/it, loss 0.444670, accuracy 79.281 %
+Testing at - 113664/306969 of epoch 0, loss 0.453005, accuracy 78.856 %, best 78.892 %
+Finished training it 114688/306969 of epoch 1, 19.04 ms/it, loss 0.443376, accuracy 79.407 %
+Testing at - 114688/306969 of epoch 0, loss 0.454053, accuracy 78.781 %, best 78.892 %
+Finished training it 115712/306969 of epoch 1, 17.55 ms/it, loss 0.442586, accuracy 79.476 %
+Testing at - 115712/306969 of epoch 0, loss 0.454192, accuracy 78.840 %, best 78.892 %
+Finished training it 116736/306969 of epoch 1, 16.56 ms/it, loss 0.445088, accuracy 79.361 %
+Testing at - 116736/306969 of epoch 0, loss 0.452989, accuracy 78.855 %, best 78.892 %
+Finished training it 117760/306969 of epoch 1, 16.58 ms/it, loss 0.442411, accuracy 79.536 %
+Testing at - 117760/306969 of epoch 0, loss 0.452996, accuracy 78.779 %, best 78.892 %
+Finished training it 118784/306969 of epoch 1, 16.57 ms/it, loss 0.444008, accuracy 79.298 %
+Testing at - 118784/306969 of epoch 0, loss 0.452788, accuracy 78.787 %, best 78.892 %
+Finished training it 119808/306969 of epoch 1, 16.37 ms/it, loss 0.446460, accuracy 79.234 %
+Testing at - 119808/306969 of epoch 0, loss 0.454636, accuracy 78.710 %, best 78.892 %
+Finished training it 120832/306969 of epoch 1, 16.61 ms/it, loss 0.441604, accuracy 79.529 %
+Testing at - 120832/306969 of epoch 0, loss 0.452544, accuracy 78.842 %, best 78.892 %
+Finished training it 121856/306969 of epoch 1, 17.02 ms/it, loss 0.443615, accuracy 79.511 %
+Testing at - 121856/306969 of epoch 0, loss 0.452571, accuracy 78.849 %, best 78.892 %
+Finished training it 122880/306969 of epoch 1, 18.96 ms/it, loss 0.444006, accuracy 79.234 %
+Testing at - 122880/306969 of epoch 0, loss 0.452085, accuracy 78.871 %, best 78.892 %
+Finished training it 123904/306969 of epoch 1, 19.66 ms/it, loss 0.446678, accuracy 79.205 %
+Testing at - 123904/306969 of epoch 0, loss 0.452239, accuracy 78.879 %, best 78.892 %
+Finished training it 124928/306969 of epoch 1, 19.59 ms/it, loss 0.442887, accuracy 79.358 %
+Testing at - 124928/306969 of epoch 0, loss 0.452867, accuracy 78.818 %, best 78.892 %
+Finished training it 125952/306969 of epoch 1, 16.78 ms/it, loss 0.445478, accuracy 79.370 %
+Testing at - 125952/306969 of epoch 0, loss 0.453217, accuracy 78.835 %, best 78.892 %
+Finished training it 126976/306969 of epoch 1, 15.81 ms/it, loss 0.446018, accuracy 79.221 %
+Testing at - 126976/306969 of epoch 0, loss 0.452155, accuracy 78.874 %, best 78.892 %
+Finished training it 128000/306969 of epoch 1, 16.05 ms/it, loss 0.442072, accuracy 79.496 %
+Testing at - 128000/306969 of epoch 0, loss 0.452337, accuracy 78.835 %, best 78.892 %
+Finished training it 129024/306969 of epoch 1, 16.25 ms/it, loss 0.444517, accuracy 79.326 %
+Testing at - 129024/306969 of epoch 0, loss 0.452574, accuracy 78.846 %, best 78.892 %
+Finished training it 130048/306969 of epoch 1, 17.25 ms/it, loss 0.446661, accuracy 79.188 %
+Testing at - 130048/306969 of epoch 0, loss 0.452673, accuracy 78.854 %, best 78.892 %
+Finished training it 131072/306969 of epoch 1, 16.82 ms/it, loss 0.445094, accuracy 79.234 %
+Testing at - 131072/306969 of epoch 0, loss 0.452887, accuracy 78.848 %, best 78.892 %
+Finished training it 132096/306969 of epoch 1, 19.79 ms/it, loss 0.445458, accuracy 79.292 %
+Testing at - 132096/306969 of epoch 0, loss 0.452689, accuracy 78.831 %, best 78.892 %
+Finished training it 133120/306969 of epoch 1, 19.31 ms/it, loss 0.442160, accuracy 79.591 %
+Testing at - 133120/306969 of epoch 0, loss 0.452972, accuracy 78.802 %, best 78.892 %
+Finished training it 134144/306969 of epoch 1, 17.02 ms/it, loss 0.443045, accuracy 79.321 %
+Testing at - 134144/306969 of epoch 0, loss 0.452290, accuracy 78.881 %, best 78.892 %
+Finished training it 135168/306969 of epoch 1, 15.86 ms/it, loss 0.440787, accuracy 79.422 %
+Testing at - 135168/306969 of epoch 0, loss 0.452454, accuracy 78.841 %, best 78.892 %
+Finished training it 136192/306969 of epoch 1, 16.51 ms/it, loss 0.444595, accuracy 79.434 %
+Testing at - 136192/306969 of epoch 0, loss 0.453140, accuracy 78.850 %, best 78.892 %
+Finished training it 137216/306969 of epoch 1, 15.99 ms/it, loss 0.443830, accuracy 79.456 %
+Saving model to results/240-120-1_lr0.1/model.pth
+Testing at - 137216/306969 of epoch 0, loss 0.451908, accuracy 78.893 %, best 78.893 %
+Finished training it 138240/306969 of epoch 1, 18.16 ms/it, loss 0.444811, accuracy 79.322 %
+Testing at - 138240/306969 of epoch 0, loss 0.452031, accuracy 78.887 %, best 78.893 %
+Finished training it 139264/306969 of epoch 1, 17.93 ms/it, loss 0.444279, accuracy 79.227 %
+Testing at - 139264/306969 of epoch 0, loss 0.453308, accuracy 78.798 %, best 78.893 %
+Finished training it 140288/306969 of epoch 1, 18.11 ms/it, loss 0.440065, accuracy 79.571 %
+Testing at - 140288/306969 of epoch 0, loss 0.453496, accuracy 78.865 %, best 78.893 %
+Finished training it 141312/306969 of epoch 1, 19.62 ms/it, loss 0.443324, accuracy 79.382 %
+Testing at - 141312/306969 of epoch 0, loss 0.452987, accuracy 78.783 %, best 78.893 %
+Finished training it 142336/306969 of epoch 1, 19.72 ms/it, loss 0.440838, accuracy 79.552 %
+Testing at - 142336/306969 of epoch 0, loss 0.452306, accuracy 78.874 %, best 78.893 %
+Finished training it 143360/306969 of epoch 1, 18.77 ms/it, loss 0.443112, accuracy 79.462 %
+Testing at - 143360/306969 of epoch 0, loss 0.457492, accuracy 78.462 %, best 78.893 %
+Finished training it 144384/306969 of epoch 1, 19.99 ms/it, loss 0.443199, accuracy 79.377 %
+Testing at - 144384/306969 of epoch 0, loss 0.452246, accuracy 78.873 %, best 78.893 %
+Finished training it 145408/306969 of epoch 1, 17.94 ms/it, loss 0.445774, accuracy 79.244 %
+Testing at - 145408/306969 of epoch 0, loss 0.453176, accuracy 78.844 %, best 78.893 %
+Finished training it 146432/306969 of epoch 1, 18.01 ms/it, loss 0.441882, accuracy 79.487 %
+Testing at - 146432/306969 of epoch 0, loss 0.452267, accuracy 78.858 %, best 78.893 %
+Finished training it 147456/306969 of epoch 1, 17.06 ms/it, loss 0.441852, accuracy 79.449 %
+Testing at - 147456/306969 of epoch 0, loss 0.454070, accuracy 78.734 %, best 78.893 %
+Finished training it 148480/306969 of epoch 1, 19.61 ms/it, loss 0.440611, accuracy 79.445 %
+Testing at - 148480/306969 of epoch 0, loss 0.452080, accuracy 78.850 %, best 78.893 %
+Finished training it 149504/306969 of epoch 1, 17.99 ms/it, loss 0.441666, accuracy 79.504 %
+Testing at - 149504/306969 of epoch 0, loss 0.453014, accuracy 78.771 %, best 78.893 %
+Finished training it 150528/306969 of epoch 1, 17.26 ms/it, loss 0.442817, accuracy 79.443 %
+Testing at - 150528/306969 of epoch 0, loss 0.452073, accuracy 78.847 %, best 78.893 %
+Finished training it 151552/306969 of epoch 1, 14.29 ms/it, loss 0.439621, accuracy 79.659 %
+Testing at - 151552/306969 of epoch 0, loss 0.455878, accuracy 78.515 %, best 78.893 %
+Finished training it 152576/306969 of epoch 1, 18.62 ms/it, loss 0.440743, accuracy 79.588 %
+Testing at - 152576/306969 of epoch 0, loss 0.452619, accuracy 78.835 %, best 78.893 %
+Finished training it 153600/306969 of epoch 1, 17.99 ms/it, loss 0.443008, accuracy 79.433 %
+Testing at - 153600/306969 of epoch 0, loss 0.452708, accuracy 78.761 %, best 78.893 %
+Finished training it 154624/306969 of epoch 1, 18.24 ms/it, loss 0.442605, accuracy 79.453 %
+Testing at - 154624/306969 of epoch 0, loss 0.451691, accuracy 78.867 %, best 78.893 %
+Finished training it 155648/306969 of epoch 1, 18.35 ms/it, loss 0.441593, accuracy 79.434 %
+Testing at - 155648/306969 of epoch 0, loss 0.451890, accuracy 78.892 %, best 78.893 %
+Finished training it 156672/306969 of epoch 1, 16.82 ms/it, loss 0.441878, accuracy 79.397 %
+Testing at - 156672/306969 of epoch 0, loss 0.452066, accuracy 78.866 %, best 78.893 %
+Finished training it 157696/306969 of epoch 1, 17.77 ms/it, loss 0.440424, accuracy 79.594 %
+Testing at - 157696/306969 of epoch 0, loss 0.452255, accuracy 78.867 %, best 78.893 %
+Finished training it 158720/306969 of epoch 1, 18.44 ms/it, loss 0.443616, accuracy 79.472 %
+Testing at - 158720/306969 of epoch 0, loss 0.452005, accuracy 78.868 %, best 78.893 %
+Finished training it 159744/306969 of epoch 1, 17.94 ms/it, loss 0.442570, accuracy 79.400 %
+Testing at - 159744/306969 of epoch 0, loss 0.454750, accuracy 78.706 %, best 78.893 %
+Finished training it 160768/306969 of epoch 1, 17.92 ms/it, loss 0.443313, accuracy 79.517 %
+Testing at - 160768/306969 of epoch 0, loss 0.452372, accuracy 78.852 %, best 78.893 %
+Finished training it 161792/306969 of epoch 1, 17.87 ms/it, loss 0.444409, accuracy 79.323 %
+Testing at - 161792/306969 of epoch 0, loss 0.451836, accuracy 78.866 %, best 78.893 %
+Finished training it 162816/306969 of epoch 1, 18.15 ms/it, loss 0.444524, accuracy 79.374 %
+Testing at - 162816/306969 of epoch 0, loss 0.451864, accuracy 78.874 %, best 78.893 %
+Finished training it 163840/306969 of epoch 1, 18.60 ms/it, loss 0.444096, accuracy 79.429 %
+Testing at - 163840/306969 of epoch 0, loss 0.452650, accuracy 78.808 %, best 78.893 %
+Finished training it 164864/306969 of epoch 1, 18.24 ms/it, loss 0.443556, accuracy 79.367 %
+Testing at - 164864/306969 of epoch 0, loss 0.451667, accuracy 78.873 %, best 78.893 %
+Finished training it 165888/306969 of epoch 1, 16.95 ms/it, loss 0.443214, accuracy 79.555 %
+Testing at - 165888/306969 of epoch 0, loss 0.453118, accuracy 78.830 %, best 78.893 %
+Finished training it 166912/306969 of epoch 1, 16.88 ms/it, loss 0.444674, accuracy 79.270 %
+Testing at - 166912/306969 of epoch 0, loss 0.452136, accuracy 78.817 %, best 78.893 %
+Finished training it 167936/306969 of epoch 1, 19.28 ms/it, loss 0.444854, accuracy 79.408 %
+Testing at - 167936/306969 of epoch 0, loss 0.452096, accuracy 78.872 %, best 78.893 %
+Finished training it 168960/306969 of epoch 1, 17.72 ms/it, loss 0.442036, accuracy 79.462 %
+Testing at - 168960/306969 of epoch 0, loss 0.451526, accuracy 78.878 %, best 78.893 %
+Finished training it 169984/306969 of epoch 1, 17.93 ms/it, loss 0.442677, accuracy 79.408 %
+Testing at - 169984/306969 of epoch 0, loss 0.452707, accuracy 78.834 %, best 78.893 %
+Finished training it 171008/306969 of epoch 1, 20.36 ms/it, loss 0.439417, accuracy 79.584 %
+Testing at - 171008/306969 of epoch 0, loss 0.452742, accuracy 78.794 %, best 78.893 %
+Finished training it 172032/306969 of epoch 1, 22.66 ms/it, loss 0.441755, accuracy 79.568 %
+Testing at - 172032/306969 of epoch 0, loss 0.451319, accuracy 78.889 %, best 78.893 %
+Finished training it 173056/306969 of epoch 1, 20.81 ms/it, loss 0.444361, accuracy 79.306 %
+Saving model to results/240-120-1_lr0.1/model.pth
+Testing at - 173056/306969 of epoch 0, loss 0.451392, accuracy 78.917 %, best 78.917 %
+Finished training it 174080/306969 of epoch 1, 17.40 ms/it, loss 0.441891, accuracy 79.449 %
+Testing at - 174080/306969 of epoch 0, loss 0.452583, accuracy 78.860 %, best 78.917 %
+Finished training it 175104/306969 of epoch 1, 16.84 ms/it, loss 0.442162, accuracy 79.498 %
+Testing at - 175104/306969 of epoch 0, loss 0.451963, accuracy 78.820 %, best 78.917 %
+Finished training it 176128/306969 of epoch 1, 16.41 ms/it, loss 0.441941, accuracy 79.528 %
+Testing at - 176128/306969 of epoch 0, loss 0.452789, accuracy 78.870 %, best 78.917 %
+Finished training it 177152/306969 of epoch 1, 19.04 ms/it, loss 0.439596, accuracy 79.657 %
+Testing at - 177152/306969 of epoch 0, loss 0.452220, accuracy 78.867 %, best 78.917 %
+Finished training it 178176/306969 of epoch 1, 17.61 ms/it, loss 0.441266, accuracy 79.541 %
+Testing at - 178176/306969 of epoch 0, loss 0.451928, accuracy 78.833 %, best 78.917 %
+Finished training it 179200/306969 of epoch 1, 17.10 ms/it, loss 0.441709, accuracy 79.495 %
+Testing at - 179200/306969 of epoch 0, loss 0.452215, accuracy 78.891 %, best 78.917 %
+Finished training it 180224/306969 of epoch 1, 15.84 ms/it, loss 0.443493, accuracy 79.322 %
+Testing at - 180224/306969 of epoch 0, loss 0.451802, accuracy 78.897 %, best 78.917 %
+Finished training it 181248/306969 of epoch 1, 22.41 ms/it, loss 0.444375, accuracy 79.342 %
+Testing at - 181248/306969 of epoch 0, loss 0.451332, accuracy 78.900 %, best 78.917 %
+Finished training it 182272/306969 of epoch 1, 20.73 ms/it, loss 0.444401, accuracy 79.321 %
+Testing at - 182272/306969 of epoch 0, loss 0.452897, accuracy 78.829 %, best 78.917 %
+Finished training it 183296/306969 of epoch 1, 18.25 ms/it, loss 0.443150, accuracy 79.410 %
+Testing at - 183296/306969 of epoch 0, loss 0.452214, accuracy 78.865 %, best 78.917 %
+Finished training it 184320/306969 of epoch 1, 17.08 ms/it, loss 0.442623, accuracy 79.443 %
+Testing at - 184320/306969 of epoch 0, loss 0.451504, accuracy 78.897 %, best 78.917 %
+Finished training it 185344/306969 of epoch 1, 16.45 ms/it, loss 0.444594, accuracy 79.279 %
+Testing at - 185344/306969 of epoch 0, loss 0.451327, accuracy 78.909 %, best 78.917 %
+Finished training it 186368/306969 of epoch 1, 15.73 ms/it, loss 0.442238, accuracy 79.478 %
+Testing at - 186368/306969 of epoch 0, loss 0.452589, accuracy 78.824 %, best 78.917 %
+Finished training it 187392/306969 of epoch 1, 17.20 ms/it, loss 0.443347, accuracy 79.441 %
+Testing at - 187392/306969 of epoch 0, loss 0.451848, accuracy 78.888 %, best 78.917 %
+Finished training it 188416/306969 of epoch 1, 19.27 ms/it, loss 0.440258, accuracy 79.585 %
+Testing at - 188416/306969 of epoch 0, loss 0.451578, accuracy 78.885 %, best 78.917 %
+Finished training it 189440/306969 of epoch 1, 17.37 ms/it, loss 0.446280, accuracy 79.230 %
+Saving model to results/240-120-1_lr0.1/model.pth
+Testing at - 189440/306969 of epoch 0, loss 0.451725, accuracy 78.924 %, best 78.924 %
+Finished training it 190464/306969 of epoch 1, 16.20 ms/it, loss 0.443213, accuracy 79.435 %
+Testing at - 190464/306969 of epoch 0, loss 0.451809, accuracy 78.875 %, best 78.924 %
+Finished training it 191488/306969 of epoch 1, 17.09 ms/it, loss 0.442127, accuracy 79.626 %
+Testing at - 191488/306969 of epoch 0, loss 0.452026, accuracy 78.881 %, best 78.924 %
+Finished training it 192512/306969 of epoch 1, 17.75 ms/it, loss 0.439038, accuracy 79.752 %
+Testing at - 192512/306969 of epoch 0, loss 0.451937, accuracy 78.876 %, best 78.924 %
+Finished training it 193536/306969 of epoch 1, 18.54 ms/it, loss 0.442802, accuracy 79.490 %
+Testing at - 193536/306969 of epoch 0, loss 0.451693, accuracy 78.890 %, best 78.924 %
+Finished training it 194560/306969 of epoch 1, 19.62 ms/it, loss 0.442400, accuracy 79.500 %
+Testing at - 194560/306969 of epoch 0, loss 0.452718, accuracy 78.829 %, best 78.924 %
+Finished training it 195584/306969 of epoch 1, 17.42 ms/it, loss 0.445734, accuracy 79.223 %
+Testing at - 195584/306969 of epoch 0, loss 0.451965, accuracy 78.873 %, best 78.924 %
+Finished training it 196608/306969 of epoch 1, 21.43 ms/it, loss 0.442839, accuracy 79.549 %
+Testing at - 196608/306969 of epoch 0, loss 0.453915, accuracy 78.764 %, best 78.924 %
+Finished training it 197632/306969 of epoch 1, 16.61 ms/it, loss 0.442808, accuracy 79.494 %
+Testing at - 197632/306969 of epoch 0, loss 0.452264, accuracy 78.898 %, best 78.924 %
+Finished training it 198656/306969 of epoch 1, 17.43 ms/it, loss 0.442027, accuracy 79.491 %
+Testing at - 198656/306969 of epoch 0, loss 0.452003, accuracy 78.868 %, best 78.924 %
+Finished training it 199680/306969 of epoch 1, 20.50 ms/it, loss 0.444285, accuracy 79.356 %
+Testing at - 199680/306969 of epoch 0, loss 0.451738, accuracy 78.878 %, best 78.924 %
+Finished training it 200704/306969 of epoch 1, 20.14 ms/it, loss 0.442496, accuracy 79.562 %
+Testing at - 200704/306969 of epoch 0, loss 0.453857, accuracy 78.638 %, best 78.924 %
+Finished training it 201728/306969 of epoch 1, 19.08 ms/it, loss 0.443057, accuracy 79.404 %
+Testing at - 201728/306969 of epoch 0, loss 0.453235, accuracy 78.772 %, best 78.924 %
+Finished training it 202752/306969 of epoch 1, 17.74 ms/it, loss 0.441940, accuracy 79.483 %
+Testing at - 202752/306969 of epoch 0, loss 0.450869, accuracy 78.921 %, best 78.924 %
+Finished training it 203776/306969 of epoch 1, 14.74 ms/it, loss 0.441427, accuracy 79.707 %
+Testing at - 203776/306969 of epoch 0, loss 0.451481, accuracy 78.889 %, best 78.924 %
+Finished training it 204800/306969 of epoch 1, 13.66 ms/it, loss 0.440199, accuracy 79.615 %
+Testing at - 204800/306969 of epoch 0, loss 0.451989, accuracy 78.882 %, best 78.924 %
+Finished training it 205824/306969 of epoch 1, 17.76 ms/it, loss 0.442302, accuracy 79.483 %
+Testing at - 205824/306969 of epoch 0, loss 0.452414, accuracy 78.809 %, best 78.924 %
+Finished training it 206848/306969 of epoch 1, 17.60 ms/it, loss 0.440179, accuracy 79.630 %
+Testing at - 206848/306969 of epoch 0, loss 0.451587, accuracy 78.887 %, best 78.924 %
+Finished training it 207872/306969 of epoch 1, 17.73 ms/it, loss 0.441552, accuracy 79.497 %
+Testing at - 207872/306969 of epoch 0, loss 0.452141, accuracy 78.817 %, best 78.924 %
+Finished training it 208896/306969 of epoch 1, 17.53 ms/it, loss 0.443492, accuracy 79.391 %
+Testing at - 208896/306969 of epoch 0, loss 0.451473, accuracy 78.910 %, best 78.924 %
+Finished training it 209920/306969 of epoch 1, 20.60 ms/it, loss 0.440880, accuracy 79.466 %
+Testing at - 209920/306969 of epoch 0, loss 0.451760, accuracy 78.892 %, best 78.924 %
+Finished training it 210944/306969 of epoch 1, 19.12 ms/it, loss 0.441527, accuracy 79.488 %
+Testing at - 210944/306969 of epoch 0, loss 0.451947, accuracy 78.861 %, best 78.924 %
+Finished training it 211968/306969 of epoch 1, 21.96 ms/it, loss 0.441156, accuracy 79.474 %
+Testing at - 211968/306969 of epoch 0, loss 0.451794, accuracy 78.886 %, best 78.924 %
+Finished training it 212992/306969 of epoch 1, 22.99 ms/it, loss 0.439754, accuracy 79.612 %
+Testing at - 212992/306969 of epoch 0, loss 0.452770, accuracy 78.838 %, best 78.924 %
+Finished training it 214016/306969 of epoch 1, 23.03 ms/it, loss 0.440958, accuracy 79.555 %
+Testing at - 214016/306969 of epoch 0, loss 0.451428, accuracy 78.880 %, best 78.924 %
+Finished training it 215040/306969 of epoch 1, 17.74 ms/it, loss 0.440796, accuracy 79.538 %
+Testing at - 215040/306969 of epoch 0, loss 0.452446, accuracy 78.854 %, best 78.924 %
+Finished training it 216064/306969 of epoch 1, 15.80 ms/it, loss 0.440247, accuracy 79.472 %
+Testing at - 216064/306969 of epoch 0, loss 0.451744, accuracy 78.858 %, best 78.924 %
+Finished training it 217088/306969 of epoch 1, 14.02 ms/it, loss 0.441699, accuracy 79.568 %
+Testing at - 217088/306969 of epoch 0, loss 0.451986, accuracy 78.874 %, best 78.924 %
+Finished training it 218112/306969 of epoch 1, 15.25 ms/it, loss 0.442098, accuracy 79.612 %
+Testing at - 218112/306969 of epoch 0, loss 0.452891, accuracy 78.800 %, best 78.924 %
+Finished training it 219136/306969 of epoch 1, 17.09 ms/it, loss 0.441686, accuracy 79.479 %
+Testing at - 219136/306969 of epoch 0, loss 0.451603, accuracy 78.871 %, best 78.924 %
+Finished training it 220160/306969 of epoch 1, 16.28 ms/it, loss 0.440755, accuracy 79.559 %
+Saving model to results/240-120-1_lr0.1/model.pth
+Testing at - 220160/306969 of epoch 0, loss 0.450985, accuracy 78.929 %, best 78.929 %
+Finished training it 221184/306969 of epoch 1, 18.96 ms/it, loss 0.438896, accuracy 79.575 %
+Testing at - 221184/306969 of epoch 0, loss 0.454790, accuracy 78.612 %, best 78.929 %
+Finished training it 222208/306969 of epoch 1, 17.81 ms/it, loss 0.442456, accuracy 79.474 %
+Saving model to results/240-120-1_lr0.1/model.pth
+Testing at - 222208/306969 of epoch 0, loss 0.450811, accuracy 78.937 %, best 78.937 %
+Finished training it 223232/306969 of epoch 1, 21.23 ms/it, loss 0.442842, accuracy 79.385 %
+Testing at - 223232/306969 of epoch 0, loss 0.453273, accuracy 78.879 %, best 78.937 %
+Finished training it 224256/306969 of epoch 1, 17.81 ms/it, loss 0.442841, accuracy 79.481 %
+Testing at - 224256/306969 of epoch 0, loss 0.451371, accuracy 78.890 %, best 78.937 %
+Finished training it 225280/306969 of epoch 1, 19.49 ms/it, loss 0.444321, accuracy 79.276 %
+Testing at - 225280/306969 of epoch 0, loss 0.451159, accuracy 78.925 %, best 78.937 %
+Finished training it 226304/306969 of epoch 1, 18.78 ms/it, loss 0.439799, accuracy 79.729 %
+Saving model to results/240-120-1_lr0.1/model.pth
+Testing at - 226304/306969 of epoch 0, loss 0.450687, accuracy 78.957 %, best 78.957 %
+Finished training it 227328/306969 of epoch 1, 18.98 ms/it, loss 0.443212, accuracy 79.204 %
+Testing at - 227328/306969 of epoch 0, loss 0.451741, accuracy 78.879 %, best 78.957 %
+Finished training it 228352/306969 of epoch 1, 19.18 ms/it, loss 0.442920, accuracy 79.408 %
+Testing at - 228352/306969 of epoch 0, loss 0.452007, accuracy 78.858 %, best 78.957 %
+Finished training it 229376/306969 of epoch 1, 20.04 ms/it, loss 0.441587, accuracy 79.507 %
+Testing at - 229376/306969 of epoch 0, loss 0.451720, accuracy 78.881 %, best 78.957 %
+Finished training it 230400/306969 of epoch 1, 17.71 ms/it, loss 0.440962, accuracy 79.600 %
+Testing at - 230400/306969 of epoch 0, loss 0.452159, accuracy 78.866 %, best 78.957 %
+Finished training it 231424/306969 of epoch 1, 18.20 ms/it, loss 0.440920, accuracy 79.540 %
+Testing at - 231424/306969 of epoch 0, loss 0.451842, accuracy 78.901 %, best 78.957 %
+Finished training it 232448/306969 of epoch 1, 18.64 ms/it, loss 0.441917, accuracy 79.443 %
+Testing at - 232448/306969 of epoch 0, loss 0.452216, accuracy 78.845 %, best 78.957 %
+Finished training it 233472/306969 of epoch 1, 16.63 ms/it, loss 0.443528, accuracy 79.404 %
+Testing at - 233472/306969 of epoch 0, loss 0.451291, accuracy 78.918 %, best 78.957 %
+Finished training it 234496/306969 of epoch 1, 17.04 ms/it, loss 0.442146, accuracy 79.488 %
+Testing at - 234496/306969 of epoch 0, loss 0.452184, accuracy 78.861 %, best 78.957 %
+Finished training it 235520/306969 of epoch 1, 16.02 ms/it, loss 0.441970, accuracy 79.530 %
+Testing at - 235520/306969 of epoch 0, loss 0.451270, accuracy 78.911 %, best 78.957 %
+Finished training it 236544/306969 of epoch 1, 18.62 ms/it, loss 0.444081, accuracy 79.329 %
+Testing at - 236544/306969 of epoch 0, loss 0.451860, accuracy 78.892 %, best 78.957 %
+Finished training it 237568/306969 of epoch 1, 16.37 ms/it, loss 0.440823, accuracy 79.559 %
+Testing at - 237568/306969 of epoch 0, loss 0.454319, accuracy 78.644 %, best 78.957 %
+Finished training it 238592/306969 of epoch 1, 17.95 ms/it, loss 0.441948, accuracy 79.639 %
+Testing at - 238592/306969 of epoch 0, loss 0.450894, accuracy 78.934 %, best 78.957 %
+Finished training it 239616/306969 of epoch 1, 18.23 ms/it, loss 0.445294, accuracy 79.260 %
+Testing at - 239616/306969 of epoch 0, loss 0.450942, accuracy 78.918 %, best 78.957 %
+Finished training it 240640/306969 of epoch 1, 18.66 ms/it, loss 0.441754, accuracy 79.359 %
+Testing at - 240640/306969 of epoch 0, loss 0.451091, accuracy 78.881 %, best 78.957 %
+Finished training it 241664/306969 of epoch 1, 19.72 ms/it, loss 0.439427, accuracy 79.659 %
+Testing at - 241664/306969 of epoch 0, loss 0.451677, accuracy 78.871 %, best 78.957 %
+Finished training it 242688/306969 of epoch 1, 17.04 ms/it, loss 0.440984, accuracy 79.594 %
+Testing at - 242688/306969 of epoch 0, loss 0.451933, accuracy 78.807 %, best 78.957 %
+Finished training it 243712/306969 of epoch 1, 18.88 ms/it, loss 0.441266, accuracy 79.586 %
+Testing at - 243712/306969 of epoch 0, loss 0.452627, accuracy 78.901 %, best 78.957 %
+Finished training it 244736/306969 of epoch 1, 18.59 ms/it, loss 0.442069, accuracy 79.497 %
+Testing at - 244736/306969 of epoch 0, loss 0.451507, accuracy 78.891 %, best 78.957 %
+Finished training it 245760/306969 of epoch 1, 19.01 ms/it, loss 0.441617, accuracy 79.627 %
+Testing at - 245760/306969 of epoch 0, loss 0.452443, accuracy 78.850 %, best 78.957 %
+Finished training it 246784/306969 of epoch 1, 19.73 ms/it, loss 0.440289, accuracy 79.488 %
+Testing at - 246784/306969 of epoch 0, loss 0.451418, accuracy 78.886 %, best 78.957 %
+Finished training it 247808/306969 of epoch 1, 16.95 ms/it, loss 0.440317, accuracy 79.513 %
+Testing at - 247808/306969 of epoch 0, loss 0.451201, accuracy 78.930 %, best 78.957 %
+Finished training it 248832/306969 of epoch 1, 18.22 ms/it, loss 0.441270, accuracy 79.565 %
+Testing at - 248832/306969 of epoch 0, loss 0.451096, accuracy 78.931 %, best 78.957 %
+Finished training it 249856/306969 of epoch 1, 17.74 ms/it, loss 0.443572, accuracy 79.398 %
+Testing at - 249856/306969 of epoch 0, loss 0.452591, accuracy 78.767 %, best 78.957 %
+Finished training it 250880/306969 of epoch 1, 17.97 ms/it, loss 0.441544, accuracy 79.481 %
+Testing at - 250880/306969 of epoch 0, loss 0.451825, accuracy 78.863 %, best 78.957 %
+Finished training it 251904/306969 of epoch 1, 17.73 ms/it, loss 0.442425, accuracy 79.439 %
+Testing at - 251904/306969 of epoch 0, loss 0.451254, accuracy 78.917 %, best 78.957 %
+Finished training it 252928/306969 of epoch 1, 19.17 ms/it, loss 0.440341, accuracy 79.630 %
+Testing at - 252928/306969 of epoch 0, loss 0.450974, accuracy 78.946 %, best 78.957 %
+Finished training it 253952/306969 of epoch 1, 18.17 ms/it, loss 0.440114, accuracy 79.578 %
+Testing at - 253952/306969 of epoch 0, loss 0.450813, accuracy 78.910 %, best 78.957 %
+Finished training it 254976/306969 of epoch 1, 18.69 ms/it, loss 0.441441, accuracy 79.530 %
+Testing at - 254976/306969 of epoch 0, loss 0.452006, accuracy 78.839 %, best 78.957 %
+Finished training it 256000/306969 of epoch 1, 19.52 ms/it, loss 0.443168, accuracy 79.366 %
+Testing at - 256000/306969 of epoch 0, loss 0.451649, accuracy 78.867 %, best 78.957 %
+Finished training it 257024/306969 of epoch 1, 17.76 ms/it, loss 0.441426, accuracy 79.550 %
+Testing at - 257024/306969 of epoch 0, loss 0.451103, accuracy 78.908 %, best 78.957 %
+Finished training it 258048/306969 of epoch 1, 17.42 ms/it, loss 0.440044, accuracy 79.465 %
+Testing at - 258048/306969 of epoch 0, loss 0.451837, accuracy 78.866 %, best 78.957 %
+Finished training it 259072/306969 of epoch 1, 15.62 ms/it, loss 0.439254, accuracy 79.630 %
+Testing at - 259072/306969 of epoch 0, loss 0.451816, accuracy 78.859 %, best 78.957 %
+Finished training it 260096/306969 of epoch 1, 17.30 ms/it, loss 0.440273, accuracy 79.682 %
+Testing at - 260096/306969 of epoch 0, loss 0.451460, accuracy 78.883 %, best 78.957 %
+Finished training it 261120/306969 of epoch 1, 16.64 ms/it, loss 0.442081, accuracy 79.406 %
+Testing at - 261120/306969 of epoch 0, loss 0.451295, accuracy 78.903 %, best 78.957 %
+Finished training it 262144/306969 of epoch 1, 16.67 ms/it, loss 0.440700, accuracy 79.698 %
+Testing at - 262144/306969 of epoch 0, loss 0.452714, accuracy 78.812 %, best 78.957 %
+Finished training it 263168/306969 of epoch 1, 19.08 ms/it, loss 0.442700, accuracy 79.366 %
+Testing at - 263168/306969 of epoch 0, loss 0.452589, accuracy 78.847 %, best 78.957 %
+Finished training it 264192/306969 of epoch 1, 20.34 ms/it, loss 0.442301, accuracy 79.434 %
+Testing at - 264192/306969 of epoch 0, loss 0.452041, accuracy 78.842 %, best 78.957 %
+Finished training it 265216/306969 of epoch 1, 20.59 ms/it, loss 0.440212, accuracy 79.584 %
+Testing at - 265216/306969 of epoch 0, loss 0.451016, accuracy 78.932 %, best 78.957 %
+Finished training it 266240/306969 of epoch 1, 21.21 ms/it, loss 0.440113, accuracy 79.572 %
+Testing at - 266240/306969 of epoch 0, loss 0.453136, accuracy 78.871 %, best 78.957 %
+Finished training it 267264/306969 of epoch 1, 21.39 ms/it, loss 0.443048, accuracy 79.437 %
+Testing at - 267264/306969 of epoch 0, loss 0.454320, accuracy 78.643 %, best 78.957 %
+Finished training it 268288/306969 of epoch 1, 19.52 ms/it, loss 0.442697, accuracy 79.466 %
+Testing at - 268288/306969 of epoch 0, loss 0.452736, accuracy 78.818 %, best 78.957 %
+Finished training it 269312/306969 of epoch 1, 20.61 ms/it, loss 0.439027, accuracy 79.726 %
+Testing at - 269312/306969 of epoch 0, loss 0.454150, accuracy 78.791 %, best 78.957 %
+Finished training it 270336/306969 of epoch 1, 19.96 ms/it, loss 0.442423, accuracy 79.480 %
+Testing at - 270336/306969 of epoch 0, loss 0.451305, accuracy 78.897 %, best 78.957 %
+Finished training it 271360/306969 of epoch 1, 17.72 ms/it, loss 0.438076, accuracy 79.594 %
+Testing at - 271360/306969 of epoch 0, loss 0.451491, accuracy 78.859 %, best 78.957 %
+Finished training it 272384/306969 of epoch 1, 16.20 ms/it, loss 0.441327, accuracy 79.562 %
+Testing at - 272384/306969 of epoch 0, loss 0.453387, accuracy 78.719 %, best 78.957 %
+Finished training it 273408/306969 of epoch 1, 20.38 ms/it, loss 0.441115, accuracy 79.568 %
+Testing at - 273408/306969 of epoch 0, loss 0.450955, accuracy 78.924 %, best 78.957 %
+Finished training it 274432/306969 of epoch 1, 20.44 ms/it, loss 0.441129, accuracy 79.498 %
+Testing at - 274432/306969 of epoch 0, loss 0.450606, accuracy 78.944 %, best 78.957 %
+Finished training it 275456/306969 of epoch 1, 17.99 ms/it, loss 0.441953, accuracy 79.445 %
+Testing at - 275456/306969 of epoch 0, loss 0.451391, accuracy 78.902 %, best 78.957 %
+Finished training it 276480/306969 of epoch 1, 18.20 ms/it, loss 0.441257, accuracy 79.576 %
+Testing at - 276480/306969 of epoch 0, loss 0.451091, accuracy 78.907 %, best 78.957 %
+Finished training it 277504/306969 of epoch 1, 17.24 ms/it, loss 0.438603, accuracy 79.733 %
+Testing at - 277504/306969 of epoch 0, loss 0.451388, accuracy 78.900 %, best 78.957 %
+Finished training it 278528/306969 of epoch 1, 18.78 ms/it, loss 0.443963, accuracy 79.317 %
+Testing at - 278528/306969 of epoch 0, loss 0.452656, accuracy 78.756 %, best 78.957 %
+Finished training it 279552/306969 of epoch 1, 18.51 ms/it, loss 0.444033, accuracy 79.268 %
+Testing at - 279552/306969 of epoch 0, loss 0.450722, accuracy 78.925 %, best 78.957 %
+Finished training it 280576/306969 of epoch 1, 20.36 ms/it, loss 0.441551, accuracy 79.427 %
+Testing at - 280576/306969 of epoch 0, loss 0.451174, accuracy 78.916 %, best 78.957 %
+Finished training it 281600/306969 of epoch 1, 19.28 ms/it, loss 0.439384, accuracy 79.622 %
+Testing at - 281600/306969 of epoch 0, loss 0.451218, accuracy 78.911 %, best 78.957 %
+Finished training it 282624/306969 of epoch 1, 16.18 ms/it, loss 0.439031, accuracy 79.687 %
+Testing at - 282624/306969 of epoch 0, loss 0.450713, accuracy 78.941 %, best 78.957 %
+Finished training it 283648/306969 of epoch 1, 17.07 ms/it, loss 0.442196, accuracy 79.387 %
+Testing at - 283648/306969 of epoch 0, loss 0.451885, accuracy 78.898 %, best 78.957 %
+Finished training it 284672/306969 of epoch 1, 19.08 ms/it, loss 0.440834, accuracy 79.473 %
+Testing at - 284672/306969 of epoch 0, loss 0.451484, accuracy 78.925 %, best 78.957 %
+Finished training it 285696/306969 of epoch 1, 19.56 ms/it, loss 0.440875, accuracy 79.555 %
+Testing at - 285696/306969 of epoch 0, loss 0.451882, accuracy 78.852 %, best 78.957 %
+Finished training it 286720/306969 of epoch 1, 19.40 ms/it, loss 0.443263, accuracy 79.328 %
+Saving model to results/240-120-1_lr0.1/model.pth
+Testing at - 286720/306969 of epoch 0, loss 0.451381, accuracy 78.963 %, best 78.963 %
+Finished training it 287744/306969 of epoch 1, 19.20 ms/it, loss 0.438614, accuracy 79.587 %
+Testing at - 287744/306969 of epoch 0, loss 0.451727, accuracy 78.935 %, best 78.963 %
+Finished training it 288768/306969 of epoch 1, 19.16 ms/it, loss 0.440726, accuracy 79.525 %
+Testing at - 288768/306969 of epoch 0, loss 0.453371, accuracy 78.810 %, best 78.963 %
+Finished training it 289792/306969 of epoch 1, 20.72 ms/it, loss 0.439498, accuracy 79.585 %
+Testing at - 289792/306969 of epoch 0, loss 0.451087, accuracy 78.920 %, best 78.963 %
+Finished training it 290816/306969 of epoch 1, 20.72 ms/it, loss 0.442852, accuracy 79.391 %
+Testing at - 290816/306969 of epoch 0, loss 0.451523, accuracy 78.936 %, best 78.963 %
+Finished training it 291840/306969 of epoch 1, 18.05 ms/it, loss 0.439391, accuracy 79.650 %
+Testing at - 291840/306969 of epoch 0, loss 0.452507, accuracy 78.839 %, best 78.963 %
+Finished training it 292864/306969 of epoch 1, 19.20 ms/it, loss 0.441118, accuracy 79.465 %
+Testing at - 292864/306969 of epoch 0, loss 0.450832, accuracy 78.897 %, best 78.963 %
+Finished training it 293888/306969 of epoch 1, 17.22 ms/it, loss 0.442300, accuracy 79.436 %
+Testing at - 293888/306969 of epoch 0, loss 0.451875, accuracy 78.853 %, best 78.963 %
+Finished training it 294912/306969 of epoch 1, 16.91 ms/it, loss 0.440535, accuracy 79.446 %
+Testing at - 294912/306969 of epoch 0, loss 0.450671, accuracy 78.941 %, best 78.963 %
+Finished training it 295936/306969 of epoch 1, 19.17 ms/it, loss 0.440508, accuracy 79.551 %
+Testing at - 295936/306969 of epoch 0, loss 0.451000, accuracy 78.926 %, best 78.963 %
+Finished training it 296960/306969 of epoch 1, 21.18 ms/it, loss 0.441181, accuracy 79.485 %
+Testing at - 296960/306969 of epoch 0, loss 0.451343, accuracy 78.888 %, best 78.963 %
+Finished training it 297984/306969 of epoch 1, 18.75 ms/it, loss 0.444426, accuracy 79.324 %
+Testing at - 297984/306969 of epoch 0, loss 0.450605, accuracy 78.949 %, best 78.963 %
+Finished training it 299008/306969 of epoch 1, 17.94 ms/it, loss 0.443193, accuracy 79.337 %
+Testing at - 299008/306969 of epoch 0, loss 0.450815, accuracy 78.960 %, best 78.963 %
+Finished training it 300032/306969 of epoch 1, 20.60 ms/it, loss 0.440707, accuracy 79.652 %
+Testing at - 300032/306969 of epoch 0, loss 0.451396, accuracy 78.890 %, best 78.963 %
+Finished training it 301056/306969 of epoch 1, 17.83 ms/it, loss 0.440472, accuracy 79.559 %
+Testing at - 301056/306969 of epoch 0, loss 0.451339, accuracy 78.914 %, best 78.963 %
+Finished training it 302080/306969 of epoch 1, 16.07 ms/it, loss 0.439909, accuracy 79.625 %
+Testing at - 302080/306969 of epoch 0, loss 0.450666, accuracy 78.897 %, best 78.963 %
+Finished training it 303104/306969 of epoch 1, 16.08 ms/it, loss 0.441038, accuracy 79.335 %
+Testing at - 303104/306969 of epoch 0, loss 0.454739, accuracy 78.700 %, best 78.963 %
+Finished training it 304128/306969 of epoch 1, 17.95 ms/it, loss 0.442336, accuracy 79.422 %
+Testing at - 304128/306969 of epoch 0, loss 0.450672, accuracy 78.935 %, best 78.963 %
+Finished training it 305152/306969 of epoch 1, 20.16 ms/it, loss 0.438643, accuracy 79.563 %
+Testing at - 305152/306969 of epoch 0, loss 0.451298, accuracy 78.864 %, best 78.963 %
+Finished training it 306176/306969 of epoch 1, 16.64 ms/it, loss 0.440259, accuracy 79.695 %
+Testing at - 306176/306969 of epoch 0, loss 0.450519, accuracy 78.956 %, best 78.963 %
+Finished training it 306969/306969 of epoch 1, 15.47 ms/it, loss 0.441954, accuracy 79.580 %
+Testing at - 306969/306969 of epoch 0, loss 0.451514, accuracy 78.867 %, best 78.963 %
+Finished training it 1024/306969 of epoch 2, 15.53 ms/it, loss 0.441734, accuracy 79.552 %
+Saving model to results/240-120-1_lr0.1/model.pth
+Testing at - 1024/306969 of epoch 0, loss 0.450569, accuracy 78.965 %, best 78.965 %
+Finished training it 2048/306969 of epoch 2, 16.34 ms/it, loss 0.438009, accuracy 79.710 %
+Testing at - 2048/306969 of epoch 0, loss 0.451161, accuracy 78.914 %, best 78.965 %
+Finished training it 3072/306969 of epoch 2, 17.25 ms/it, loss 0.441010, accuracy 79.557 %
+Testing at - 3072/306969 of epoch 0, loss 0.451331, accuracy 78.890 %, best 78.965 %
+Finished training it 4096/306969 of epoch 2, 15.11 ms/it, loss 0.438179, accuracy 79.767 %
+Testing at - 4096/306969 of epoch 0, loss 0.452332, accuracy 78.836 %, best 78.965 %
+Finished training it 5120/306969 of epoch 2, 14.98 ms/it, loss 0.441809, accuracy 79.531 %
+Testing at - 5120/306969 of epoch 0, loss 0.451366, accuracy 78.919 %, best 78.965 %
+Finished training it 6144/306969 of epoch 2, 16.75 ms/it, loss 0.439992, accuracy 79.650 %
+Testing at - 6144/306969 of epoch 0, loss 0.451867, accuracy 78.867 %, best 78.965 %
+Finished training it 7168/306969 of epoch 2, 16.32 ms/it, loss 0.438334, accuracy 79.799 %
+Testing at - 7168/306969 of epoch 0, loss 0.452397, accuracy 78.796 %, best 78.965 %
+Finished training it 8192/306969 of epoch 2, 20.00 ms/it, loss 0.439058, accuracy 79.600 %
+Testing at - 8192/306969 of epoch 0, loss 0.451342, accuracy 78.883 %, best 78.965 %
+Finished training it 9216/306969 of epoch 2, 18.53 ms/it, loss 0.437953, accuracy 79.692 %
+Testing at - 9216/306969 of epoch 0, loss 0.451463, accuracy 78.928 %, best 78.965 %
+Finished training it 10240/306969 of epoch 2, 18.45 ms/it, loss 0.438445, accuracy 79.601 %
+Testing at - 10240/306969 of epoch 0, loss 0.452862, accuracy 78.867 %, best 78.965 %
+Finished training it 11264/306969 of epoch 2, 16.54 ms/it, loss 0.437072, accuracy 79.790 %
+Testing at - 11264/306969 of epoch 0, loss 0.451878, accuracy 78.867 %, best 78.965 %
+Finished training it 12288/306969 of epoch 2, 16.13 ms/it, loss 0.433705, accuracy 79.942 %
+Testing at - 12288/306969 of epoch 0, loss 0.451997, accuracy 78.874 %, best 78.965 %
+Finished training it 13312/306969 of epoch 2, 16.64 ms/it, loss 0.439960, accuracy 79.603 %
+Testing at - 13312/306969 of epoch 0, loss 0.451609, accuracy 78.884 %, best 78.965 %
+Finished training it 14336/306969 of epoch 2, 18.57 ms/it, loss 0.437545, accuracy 79.726 %
+Testing at - 14336/306969 of epoch 0, loss 0.452849, accuracy 78.752 %, best 78.965 %
+Finished training it 15360/306969 of epoch 2, 19.27 ms/it, loss 0.436232, accuracy 79.798 %
+Testing at - 15360/306969 of epoch 0, loss 0.452998, accuracy 78.827 %, best 78.965 %
+Finished training it 16384/306969 of epoch 2, 18.63 ms/it, loss 0.436576, accuracy 79.855 %
+Testing at - 16384/306969 of epoch 0, loss 0.451399, accuracy 78.900 %, best 78.965 %
+Finished training it 17408/306969 of epoch 2, 18.25 ms/it, loss 0.434965, accuracy 79.771 %
+Testing at - 17408/306969 of epoch 0, loss 0.454408, accuracy 78.622 %, best 78.965 %
+Finished training it 18432/306969 of epoch 2, 18.53 ms/it, loss 0.436924, accuracy 79.790 %
+Testing at - 18432/306969 of epoch 0, loss 0.451845, accuracy 78.882 %, best 78.965 %
+Finished training it 19456/306969 of epoch 2, 17.90 ms/it, loss 0.435918, accuracy 79.757 %
+Testing at - 19456/306969 of epoch 0, loss 0.454384, accuracy 78.684 %, best 78.965 %
+Finished training it 20480/306969 of epoch 2, 16.23 ms/it, loss 0.437077, accuracy 79.787 %
+Testing at - 20480/306969 of epoch 0, loss 0.453303, accuracy 78.889 %, best 78.965 %
+Finished training it 21504/306969 of epoch 2, 15.43 ms/it, loss 0.437837, accuracy 79.713 %
+Testing at - 21504/306969 of epoch 0, loss 0.453419, accuracy 78.756 %, best 78.965 %
+Finished training it 22528/306969 of epoch 2, 17.00 ms/it, loss 0.435991, accuracy 79.658 %
+Testing at - 22528/306969 of epoch 0, loss 0.452396, accuracy 78.870 %, best 78.965 %
+Finished training it 23552/306969 of epoch 2, 16.17 ms/it, loss 0.439066, accuracy 79.755 %
+Testing at - 23552/306969 of epoch 0, loss 0.452567, accuracy 78.858 %, best 78.965 %
+Finished training it 24576/306969 of epoch 2, 15.32 ms/it, loss 0.435581, accuracy 79.910 %
+Testing at - 24576/306969 of epoch 0, loss 0.453688, accuracy 78.678 %, best 78.965 %
+Finished training it 25600/306969 of epoch 2, 15.79 ms/it, loss 0.433373, accuracy 80.042 %
+Testing at - 25600/306969 of epoch 0, loss 0.452514, accuracy 78.779 %, best 78.965 %
+Finished training it 26624/306969 of epoch 2, 17.60 ms/it, loss 0.434604, accuracy 80.037 %
+Testing at - 26624/306969 of epoch 0, loss 0.453222, accuracy 78.859 %, best 78.965 %
+Finished training it 27648/306969 of epoch 2, 16.13 ms/it, loss 0.433680, accuracy 79.922 %
+Testing at - 27648/306969 of epoch 0, loss 0.452411, accuracy 78.874 %, best 78.965 %
+Finished training it 28672/306969 of epoch 2, 14.89 ms/it, loss 0.436394, accuracy 79.842 %
+Testing at - 28672/306969 of epoch 0, loss 0.452927, accuracy 78.848 %, best 78.965 %
+Finished training it 29696/306969 of epoch 2, 17.41 ms/it, loss 0.437398, accuracy 79.754 %
+Testing at - 29696/306969 of epoch 0, loss 0.453595, accuracy 78.810 %, best 78.965 %
+Finished training it 30720/306969 of epoch 2, 18.75 ms/it, loss 0.435930, accuracy 79.785 %
+Testing at - 30720/306969 of epoch 0, loss 0.453947, accuracy 78.750 %, best 78.965 %
+Finished training it 31744/306969 of epoch 2, 18.88 ms/it, loss 0.436851, accuracy 79.785 %
+Testing at - 31744/306969 of epoch 0, loss 0.455667, accuracy 78.580 %, best 78.965 %
+Finished training it 32768/306969 of epoch 2, 20.14 ms/it, loss 0.436036, accuracy 79.742 %
+Testing at - 32768/306969 of epoch 0, loss 0.452224, accuracy 78.859 %, best 78.965 %
+Finished training it 33792/306969 of epoch 2, 16.51 ms/it, loss 0.433720, accuracy 79.908 %
+Testing at - 33792/306969 of epoch 0, loss 0.452429, accuracy 78.835 %, best 78.965 %
+Finished training it 34816/306969 of epoch 2, 19.08 ms/it, loss 0.431103, accuracy 80.060 %
+Testing at - 34816/306969 of epoch 0, loss 0.453951, accuracy 78.827 %, best 78.965 %
+Finished training it 35840/306969 of epoch 2, 17.06 ms/it, loss 0.437649, accuracy 79.851 %
+Testing at - 35840/306969 of epoch 0, loss 0.454255, accuracy 78.796 %, best 78.965 %
+Finished training it 36864/306969 of epoch 2, 16.04 ms/it, loss 0.434582, accuracy 79.941 %
+Testing at - 36864/306969 of epoch 0, loss 0.453811, accuracy 78.804 %, best 78.965 %
+Finished training it 37888/306969 of epoch 2, 16.29 ms/it, loss 0.432298, accuracy 79.955 %
+Testing at - 37888/306969 of epoch 0, loss 0.454599, accuracy 78.694 %, best 78.965 %
+Finished training it 38912/306969 of epoch 2, 18.32 ms/it, loss 0.435915, accuracy 79.740 %
+Testing at - 38912/306969 of epoch 0, loss 0.454017, accuracy 78.764 %, best 78.965 %
+Finished training it 39936/306969 of epoch 2, 19.34 ms/it, loss 0.435099, accuracy 79.834 %
+Testing at - 39936/306969 of epoch 0, loss 0.454497, accuracy 78.806 %, best 78.965 %
+Finished training it 40960/306969 of epoch 2, 17.26 ms/it, loss 0.434261, accuracy 79.900 %
+Testing at - 40960/306969 of epoch 0, loss 0.454494, accuracy 78.711 %, best 78.965 %
+Finished training it 41984/306969 of epoch 2, 18.13 ms/it, loss 0.434018, accuracy 80.003 %
+Testing at - 41984/306969 of epoch 0, loss 0.454193, accuracy 78.827 %, best 78.965 %
+Finished training it 43008/306969 of epoch 2, 20.08 ms/it, loss 0.433897, accuracy 80.042 %
+Testing at - 43008/306969 of epoch 0, loss 0.454030, accuracy 78.833 %, best 78.965 %
+Finished training it 44032/306969 of epoch 2, 21.31 ms/it, loss 0.435172, accuracy 79.879 %
+Testing at - 44032/306969 of epoch 0, loss 0.456086, accuracy 78.801 %, best 78.965 %
+Finished training it 45056/306969 of epoch 2, 19.98 ms/it, loss 0.435493, accuracy 79.893 %
+Testing at - 45056/306969 of epoch 0, loss 0.453400, accuracy 78.775 %, best 78.965 %
+Finished training it 46080/306969 of epoch 2, 17.83 ms/it, loss 0.433470, accuracy 79.964 %
+Testing at - 46080/306969 of epoch 0, loss 0.454510, accuracy 78.730 %, best 78.965 %
+Finished training it 47104/306969 of epoch 2, 16.78 ms/it, loss 0.437538, accuracy 79.767 %

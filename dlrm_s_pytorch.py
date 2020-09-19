@@ -915,10 +915,15 @@ if __name__ == "__main__":
         )
 
     print("time/loss/accuracy (if enabled):")
+    print('skip_upto_epoch:', skip_upto_epoch)
+    print('args.nepochs:', args.nepochs)
+    print('k:', k)
     with torch.autograd.profiler.profile(args.enable_profiling, use_gpu) as prof:
         while k < args.nepochs:
             if k < skip_upto_epoch:
                 continue
+            elif k == skip_upto_epoch + 1:
+                skip_upto_batch = 0
 
             accum_time_begin = time_wrap(use_gpu)
 
