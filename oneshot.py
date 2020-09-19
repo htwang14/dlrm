@@ -851,20 +851,24 @@ if __name__ == "__main__":
             Z = dlrm_wrap(X, lS_o, lS_i, use_gpu, device)
             E += loss_fn_wrap(Z, T, use_gpu, device)
         E /= 1024 # total loss
+        E.backward()
         t2_train = time_wrap(use_gpu)
         print('Training set inference time: ', t2_train-t1_train)
         for name, p in dlrm.named_parameters():
             print(name, p.size())       
             if 'top' in name and 'weight' in name:
-                W = p.detach()
+                W = p.data
                 print('W:', W.size())
-                grad = torch.autograd.grad(E, p).detach()
+                grad = p.grad
                 print('grad:', grad.size())
                 importance_score = torch.pow(torch.sum(W * grad, dim=1), 2)
                 print('importance_score:', importance_score.size())
                 importance_score_dict[name] = importance_score.detach().cpu().numpy()
 
-    np.save(os.path.join('importance_score/%s.npy' % args.metric), importance_score_dict)
+    import pickle
+    f = open(os.path.join('importance_score/%s.pkl' % args.metric),"wb")
+    pickle.dump(importance_score_dict,f)
+    f.close()
 
     # test
     correct_num = 0
