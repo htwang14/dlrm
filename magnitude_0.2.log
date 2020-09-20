@@ -1,0 +1,25 @@
+Using 1 GPU(s)...
+Reading pre-processed data=/hdd3/jiayi/kaggle/kaggleAdDisplayChallenge_processed.npz
+Sparse fea = 26, Dense fea = 13
+Defined train indices...
+Randomized indices across days ...
+Split data according to indices...
+Reading pre-processed data=/hdd3/jiayi/kaggle/kaggleAdDisplayChallenge_processed.npz
+Sparse fea = 26, Dense fea = 13
+Defined test indices...
+Randomized indices across days ...
+Split data according to indices...
+Traceback (most recent call last):
+  File "dlrm_s_pytorch.py", line 794, in <module>
+    dlrm = dlrm.to(device)  # .cuda()
+  File "/home/haotao/py35/lib/python3.5/site-packages/torch/nn/modules/module.py", line 425, in to
+    return self._apply(convert)
+  File "/home/haotao/py35/lib/python3.5/site-packages/torch/nn/modules/module.py", line 201, in _apply
+    module._apply(fn)
+  File "/home/haotao/py35/lib/python3.5/site-packages/torch/nn/modules/module.py", line 201, in _apply
+    module._apply(fn)
+  File "/home/haotao/py35/lib/python3.5/site-packages/torch/nn/modules/module.py", line 223, in _apply
+    param_applied = fn(param)
+  File "/home/haotao/py35/lib/python3.5/site-packages/torch/nn/modules/module.py", line 423, in convert
+    return t.to(device, dtype if t.is_floating_point() else None, non_blocking)
+RuntimeError: CUDA out of memory. Tried to allocate 510.00 MiB (GPU 0; 10.92 GiB total capacity; 759.78 MiB already allocated; 391.44 MiB free; 778.00 MiB reserved in total by PyTorch)

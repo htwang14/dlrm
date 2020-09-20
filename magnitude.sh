@@ -100,7 +100,7 @@ CUDA_VISIBLE_DEVICES=3 python dlrm_s_pytorch.py \
     2>&1 | tee magnitude_0.3.log
 
 
-CUDA_VISIBLE_DEVICES=0 python dlrm_s_pytorch.py \
+CUDA_VISIBLE_DEVICES=3 python dlrm_s_pytorch.py \
     --arch-sparse-feature-size=16 \
     --arch-mlp-bot="13-512-256-64-16" \
     --arch-mlp-top="512-256-1" \
