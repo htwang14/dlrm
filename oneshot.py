@@ -1,56 +1,3 @@
-# Copyright (c) Facebook, Inc. and its affiliates.
-#
-# This source code is licensed under the MIT license found in the
-# LICENSE file in the root directory of this source tree.
-#
-# Description: an implementation of a deep learning recommendation model (DLRM)
-# The model input consists of dense and sparse features. The former is a vector
-# of floating point values. The latter is a list of sparse indices into
-# embedding tables, which consist of vectors of floating point values.
-# The selected vectors are passed to mlp networks denoted by triangles,
-# in some cases the vectors are interacted through operators (Ops).
-#
-# output:
-#                         vector of values
-# model:                        |
-#                              /\
-#                             /__\
-#                               |
-#       _____________________> Op  <___________________
-#     /                         |                      \
-#    /\                        /\                      /\
-#   /__\                      /__\           ...      /__\
-#    |                          |                       |
-#    |                         Op                      Op
-#    |                    ____/__\_____           ____/__\____
-#    |                   |_Emb_|____|__|    ...  |_Emb_|__|___|
-# input:
-# [ dense features ]     [sparse indices] , ..., [sparse indices]
-#
-# More precise definition of model layers:
-# 1) fully connected layers of an mlp
-# z = f(y)
-# y = Wx + b
-#
-# 2) embedding lookup (for a list of sparse indices p=[p1,...,pk])
-# z = Op(e1,...,ek)
-# obtain vectors e1=E[:,p1], ..., ek=E[:,pk]
-#
-# 3) Operator Op can be one of the following
-# Sum(e1,...,ek) = e1 + ... + ek
-# Dot(e1,...,ek) = [e1'e1, ..., e1'ek, ..., ek'e1, ..., ek'ek]
-# Cat(e1,...,ek) = [e1', ..., ek']'
-# where ' denotes transpose operation
-#
-# References:
-# [1] Maxim Naumov, Dheevatsa Mudigere, Hao-Jun Michael Shi, Jianyu Huang,
-# Narayanan Sundaram, Jongsoo Park, Xiaodong Wang, Udit Gupta, Carole-Jean Wu,
-# Alisson G. Azzolini, Dmytro Dzhulgakov, Andrey Mallevich, Ilia Cherniavskii,
-# Yinghai Lu, Raghuraman Krishnamoorthi, Ansha Yu, Volodymyr Kondratenko,
-# Stephanie Pereira, Xianjie Chen, Wenlin Chen, Vijay Rao, Bill Jia, Liang Xiong,
-# Misha Smelyanskiy, "Deep Learning Recommendation Model for Personalization and
-# Recommendation Systems", CoRR, arXiv:1906.00091, 2019
-
 from __future__ import absolute_import, division, print_function, unicode_literals
 
 # miscellaneous
@@ -484,12 +431,12 @@ if __name__ == "__main__":
         description="Train Deep Learning Recommendation Model (DLRM)"
     )
     # model related parameters
-    parser.add_argument("--arch-sparse-feature-size", type=int, default=2)
+    parser.add_argument("--arch-sparse-feature-size", type=int, default=16)
     parser.add_argument("--arch-embedding-size", type=str, default="4-3-2")
     # j will be replaced with the table number
-    parser.add_argument("--arch-mlp-bot", type=str, default="4-3-2")
-    parser.add_argument("--arch-mlp-top", type=str, default="4-2-1")
-    parser.add_argument("--arch-interaction-op", type=str, default="dot")
+    parser.add_argument("--arch-mlp-bot", type=str, default="13-512-256-64-16")
+    parser.add_argument("--arch-mlp-top", type=str, default="512-256-1")
+    parser.add_argument("--arch-interaction-op", type=str, default="cat")
     parser.add_argument("--arch-interaction-itself", action="store_true", default=False)
     # embedding table options
     parser.add_argument("--md-flag", action="store_true", default=False)
@@ -502,30 +449,30 @@ if __name__ == "__main__":
     parser.add_argument("--qr-collisions", type=int, default=4)
     # activations and loss
     parser.add_argument("--activation-function", type=str, default="relu")
-    parser.add_argument("--loss-function", type=str, default="mse")  # or bce or wbce
+    parser.add_argument("--loss-function", type=str, default="bce")  # or bce or wbce
     parser.add_argument("--loss-weights", type=str, default="1.0-1.0")  # for wbce
     parser.add_argument("--loss-threshold", type=float, default=0.0)  # 1.0e-7
-    parser.add_argument("--round-targets", type=bool, default=False)
+    parser.add_argument("--round-targets", type=bool, default=True)
     # data
     parser.add_argument("--data-size", type=int, default=1)
     parser.add_argument("--num-batches", type=int, default=0)
     parser.add_argument(
-        "--data-generation", type=str, default="random"
+        "--data-generation", type=str, default="dataset"
     )  # synthetic or dataset
     parser.add_argument("--data-trace-file", type=str, default="./input/dist_emb_j.log")
     parser.add_argument("--data-set", type=str, default="kaggle")  # or terabyte
-    parser.add_argument("--raw-data-file", type=str, default="")
-    parser.add_argument("--processed-data-file", type=str, default="")
+    parser.add_argument("--raw-data-file", type=str, default="/hdd3/jiayi/kaggle/train.txt")
+    parser.add_argument("--processed-data-file", type=str, default="/hdd3/jiayi/kaggle/kaggleAdDisplayChallenge_processed.npz")
     parser.add_argument("--data-randomize", type=str, default="total")  # or day or none
     parser.add_argument("--data-trace-enable-padding", type=bool, default=False)
     parser.add_argument("--max-ind-range", type=int, default=-1)
-    parser.add_argument("--data-sub-sample-rate", type=float, default=0.0)  # in [0, 1]
+    parser.add_argument("--data-sub-sample-rate", type=float, default=0.1)  # in [0, 1]
     parser.add_argument("--num-indices-per-lookup", type=int, default=10)
     parser.add_argument("--num-indices-per-lookup-fixed", type=bool, default=False)
     parser.add_argument("--num-workers", type=int, default=0)
     parser.add_argument("--memory-map", action="store_true", default=False)
     # training
-    parser.add_argument("--mini-batch-size", type=int, default=1)
+    parser.add_argument("--mini-batch-size", type=int, default=128)
     parser.add_argument("--nepochs", type=int, default=1)
     parser.add_argument("--learning-rate", type=float, default=0.01)
     parser.add_argument("--print-precision", type=int, default=5)
@@ -536,19 +483,19 @@ if __name__ == "__main__":
     # onnx
     parser.add_argument("--save-onnx", action="store_true", default=False)
     # gpu
-    parser.add_argument("--use-gpu", action="store_true", default=False)
+    parser.add_argument("--use-gpu", action="store_true", default=True)
     # debugging and profiling
     parser.add_argument("--print-freq", type=int, default=1024)
     parser.add_argument("--test-freq", type=int, default=1024)
-    parser.add_argument("--test-mini-batch-size", type=int, default=-1)
-    parser.add_argument("--test-num-workers", type=int, default=-1)
-    parser.add_argument("--print-time", action="store_true", default=False)
+    parser.add_argument("--test-mini-batch-size", type=int, default=16384)
+    parser.add_argument("--test-num-workers", type=int, default=16)
+    parser.add_argument("--print-time", action="store_true", default=True)
     parser.add_argument("--debug-mode", action="store_true", default=False)
     parser.add_argument("--enable-profiling", action="store_true", default=False)
     parser.add_argument("--plot-compute-graph", action="store_true", default=False)
     # store/load model
     # parser.add_argument("--save-model", type=str, default="")
-    parser.add_argument("--load-model", type=str, default="")
+    parser.add_argument("--load-model", type=str, default="/hdd3/jiayi/result/baseline_cat_extended/best.pt")
     # mlperf logging (disables other output and stops early)
     parser.add_argument("--mlperf-logging", action="store_true", default=False)
     # stop at target accuracy Kaggle 0.789, Terabyte (sub-sampled=0.875) 0.8107

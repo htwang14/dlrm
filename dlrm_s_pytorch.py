@@ -484,12 +484,12 @@ if __name__ == "__main__":
         description="Train Deep Learning Recommendation Model (DLRM)"
     )
     # model related parameters
-    parser.add_argument("--arch-sparse-feature-size", type=int, default=2)
+    parser.add_argument("--arch-sparse-feature-size", type=int, default=16)
     parser.add_argument("--arch-embedding-size", type=str, default="4-3-2")
     # j will be replaced with the table number
-    parser.add_argument("--arch-mlp-bot", type=str, default="4-3-2")
-    parser.add_argument("--arch-mlp-top", type=str, default="4-2-1")
-    parser.add_argument("--arch-interaction-op", type=str, default="dot")
+    parser.add_argument("--arch-mlp-bot", type=str, default="13-512-256-64-16")
+    parser.add_argument("--arch-mlp-top", type=str, default="512-256-1")
+    parser.add_argument("--arch-interaction-op", type=str, default="cat")
     parser.add_argument("--arch-interaction-itself", action="store_true", default=False)
     # embedding table options
     parser.add_argument("--md-flag", action="store_true", default=False)
@@ -502,30 +502,30 @@ if __name__ == "__main__":
     parser.add_argument("--qr-collisions", type=int, default=4)
     # activations and loss
     parser.add_argument("--activation-function", type=str, default="relu")
-    parser.add_argument("--loss-function", type=str, default="mse")  # or bce or wbce
+    parser.add_argument("--loss-function", type=str, default="bce")  # or bce or wbce
     parser.add_argument("--loss-weights", type=str, default="1.0-1.0")  # for wbce
     parser.add_argument("--loss-threshold", type=float, default=0.0)  # 1.0e-7
-    parser.add_argument("--round-targets", type=bool, default=False)
+    parser.add_argument("--round-targets", type=bool, default=True)
     # data
     parser.add_argument("--data-size", type=int, default=1)
     parser.add_argument("--num-batches", type=int, default=0)
     parser.add_argument(
-        "--data-generation", type=str, default="random"
+        "--data-generation", type=str, default="dataset"
     )  # synthetic or dataset
     parser.add_argument("--data-trace-file", type=str, default="./input/dist_emb_j.log")
     parser.add_argument("--data-set", type=str, default="kaggle")  # or terabyte
-    parser.add_argument("--raw-data-file", type=str, default="")
-    parser.add_argument("--processed-data-file", type=str, default="")
+    parser.add_argument("--raw-data-file", type=str, default="/hdd3/jiayi/kaggle/train.txt")
+    parser.add_argument("--processed-data-file", type=str, default="/hdd3/jiayi/kaggle/kaggleAdDisplayChallenge_processed.npz")
     parser.add_argument("--data-randomize", type=str, default="total")  # or day or none
     parser.add_argument("--data-trace-enable-padding", type=bool, default=False)
     parser.add_argument("--max-ind-range", type=int, default=-1)
-    parser.add_argument("--data-sub-sample-rate", type=float, default=0.0)  # in [0, 1]
+    parser.add_argument("--data-sub-sample-rate", type=float, default=0.1)  # in [0, 1]
     parser.add_argument("--num-indices-per-lookup", type=int, default=10)
     parser.add_argument("--num-indices-per-lookup-fixed", type=bool, default=False)
     parser.add_argument("--num-workers", type=int, default=0)
     parser.add_argument("--memory-map", action="store_true", default=False)
     # training
-    parser.add_argument("--mini-batch-size", type=int, default=1)
+    parser.add_argument("--mini-batch-size", type=int, default=128)
     parser.add_argument("--nepochs", type=int, default=1)
     parser.add_argument("--learning-rate", type=float, default=0.01)
     parser.add_argument("--print-precision", type=int, default=5)
@@ -536,19 +536,19 @@ if __name__ == "__main__":
     # onnx
     parser.add_argument("--save-onnx", action="store_true", default=False)
     # gpu
-    parser.add_argument("--use-gpu", action="store_true", default=False)
+    parser.add_argument("--use-gpu", action="store_true", default=True)
     # debugging and profiling
     parser.add_argument("--print-freq", type=int, default=1024)
     parser.add_argument("--test-freq", type=int, default=1024)
-    parser.add_argument("--test-mini-batch-size", type=int, default=-1)
-    parser.add_argument("--test-num-workers", type=int, default=-1)
-    parser.add_argument("--print-time", action="store_true", default=False)
+    parser.add_argument("--test-mini-batch-size", type=int, default=16384)
+    parser.add_argument("--test-num-workers", type=int, default=16)
+    parser.add_argument("--print-time", action="store_true", default=True)
     parser.add_argument("--debug-mode", action="store_true", default=False)
     parser.add_argument("--enable-profiling", action="store_true", default=False)
     parser.add_argument("--plot-compute-graph", action="store_true", default=False)
     # store/load model
     # parser.add_argument("--save-model", type=str, default="")
-    parser.add_argument("--load-model", type=str, default="")
+    parser.add_argument("--load-model", type=str, default="/hdd3/jiayi/result/baseline_cat_extended/best.pt")
     # mlperf logging (disables other output and stops early)
     parser.add_argument("--mlperf-logging", action="store_true", default=False)
     # stop at target accuracy Kaggle 0.789, Terabyte (sub-sampled=0.875) 0.8107
@@ -561,10 +561,13 @@ if __name__ == "__main__":
     parser.add_argument("--lr-num-warmup-steps", type=int, default=0)
     parser.add_argument("--lr-decay-start-step", type=int, default=0)
     parser.add_argument("--lr-num-decay-steps", type=int, default=0)
+    # gpu
+    parser.add_argument("--gpu", default='0')
     # load mask
-    parser.add_argument("--mask_path", default='')
+    parser.add_argument("--mask_path", default='masks/l1/281677_0.6.pkl')
     args = parser.parse_args()
 
+    os.environ['CUDA_VISIBLE_DEVICES'] = args.gpu
     if args.mask_path:
         metric = (args.mask_path).split('/')[-2]
         _file_name = (args.mask_path).split('/')[-1][:-4]
@@ -885,8 +888,8 @@ if __name__ == "__main__":
         dlrm.load_state_dict(ld_model["state_dict"])
 
         # define masks:
+        print(args.mask_path)
         if args.mask_path:
-            print(args.mask_path)
             if not os.path.isfile(args.mask_path):
                 raise Exception('file not exist: %s' % args.mask_path)
             dlrm_weights = []
@@ -898,9 +901,12 @@ if __name__ == "__main__":
             f = open(args.mask_path, "rb")
             dlrm_weights_mask = pickle.load(f)
             f.close()
+
+            # mask to cuda
+            dlrm_weights_mask = [mask.cuda() for mask in dlrm_weights_mask]
+                
             for mask in dlrm_weights_mask:
-                mask = mask.cuda()
-                print('mask:', mask.size())
+                print('mask:', mask.size(), mask.is_cuda)
 
 
         ld_j = ld_model["iter"]
@@ -945,6 +951,8 @@ if __name__ == "__main__":
     print('skip_upto_epoch:', skip_upto_epoch)
     print('args.nepochs:', args.nepochs)
     print('k:', k)
+    if args.mask_path:
+        best_gA_test = 0
     with torch.autograd.profiler.profile(args.enable_profiling, use_gpu) as prof:
         while k < args.nepochs:
             if k < skip_upto_epoch:
