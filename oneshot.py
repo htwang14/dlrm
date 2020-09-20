@@ -509,8 +509,12 @@ if __name__ == "__main__":
     parser.add_argument("--lr-decay-start-step", type=int, default=0)
     parser.add_argument("--lr-num-decay-steps", type=int, default=0)
     # pruning
-    parser.add_argument("--metric", choices=['l1', 'taylor'], default='l1')
+    parser.add_argument("--metric", '-m', choices=['l1', 'taylor'], default='l1')
+    parser.add_argument("--gpu", default='2')
     args = parser.parse_args()
+
+    if args.use_gpu:
+        os.environ['CUDA_VISIBLE_DEVICES'] = args.gpu
 
     save_model_dir = os.path.join('results', '%s_lr%s' % (args.arch_mlp_top, args.learning_rate))
     if not os.path.isdir(save_model_dir):
@@ -785,9 +789,12 @@ if __name__ == "__main__":
         for name, p in dlrm.named_parameters():
             print(name, p.size())            
             if 'top' in name and 'weight' in name:
+                print(name, torch.mean(torch.abs(p)), torch.max(p), torch.min(p))
                 importance_score = torch.norm(p, p=1, dim=1)
                 print('importance_score:', importance_score.size())
                 importance_score_dict[name] = importance_score.detach().cpu().numpy()
+            elif 'top' in name and 'bias' in name:
+                print(name, torch.mean(torch.abs(p)), torch.max(p), torch.min(p))
     elif args.metric == 'taylor':
         print('Calculating training loss...')
         t1_train = time_wrap(use_gpu)

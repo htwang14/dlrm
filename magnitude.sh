@@ -124,7 +124,7 @@ CUDA_VISIBLE_DEVICES=3 python dlrm_s_pytorch.py \
     --nepochs 2 \
     2>&1 | tee magnitude_0.2.log
 
-CUDA_VISIBLE_DEVICES=0 python dlrm_s_pytorch.py \
+python dlrm_s_pytorch.py \
     --arch-sparse-feature-size=16 \
     --arch-mlp-bot="13-512-256-64-16" \
     --arch-mlp-top="512-256-1" \
@@ -146,4 +146,5 @@ CUDA_VISIBLE_DEVICES=0 python dlrm_s_pytorch.py \
     --mask_path ./masks/l1/34066_0.1.pkl \
     --use-gpu \
     --nepochs 2 \
+    --gpu 3
     2>&1 | tee magnitude_0.1.log

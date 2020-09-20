@@ -14,6 +14,7 @@ split_ids = []
 C = 0
 score_list = []
 for name, score in importance_score.items():
+    print(name, score.shape[0])
     C += score.shape[0]
     split_ids.append(C)
     score_list.append(score)
