@@ -142,9 +142,9 @@ python dlrm_s_pytorch.py \
     --test-mini-batch-size=16384 \
     --test-num-workers=16 \
     --arch-interaction-op cat \
-    --load-model /hdd3/jiayi/result/baseline_cat_extended/best.pt \
+    --load-model results/l1/34066_0.1/model.pth \
     --mask_path ./masks/l1/34066_0.1.pkl \
     --use-gpu \
     --nepochs 2 \
-    --gpu 3
+    --gpu 3 \
     2>&1 | tee magnitude_0.1.log

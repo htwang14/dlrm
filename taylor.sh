@@ -1,6 +1,6 @@
 #!/bin/bash
 
-python dlrm_s_pytorch.py \
+CUDA_VISIBLE_DEVICES=0 python dlrm_s_pytorch.py \
     --arch-sparse-feature-size=16 \
     --arch-mlp-bot="13-512-256-64-16" \
     --arch-mlp-top="512-256-1" \
@@ -18,11 +18,11 @@ python dlrm_s_pytorch.py \
     --test-mini-batch-size=16384 \
     --test-num-workers=16 \
     --arch-interaction-op cat \
-    --load-model /hdd3/jiayi/result/baseline_cat_extended/best.pt \
+    --load-model results/taylor/309550_0.5/model.pth \
     --mask_path ./masks/taylor/309550_0.5.pkl \
     --use-gpu \
     --nepochs 2 \
-    --gpu 2
+    --gpu 2 \
     2>&1 | tee taylor_309550_0.5.log
 
 CUDA_VISIBLE_DEVICES=0 python dlrm_s_pytorch.py \
