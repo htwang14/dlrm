@@ -22,7 +22,6 @@ CUDA_VISIBLE_DEVICES=0 python dlrm_s_pytorch.py \
     --mask_path ./masks/taylor/309550_0.5.pkl \
     --use-gpu \
     --nepochs 2 \
-    --gpu 2 \
     2>&1 | tee taylor_309550_0.5.log
 
 CUDA_VISIBLE_DEVICES=0 python dlrm_s_pytorch.py \
