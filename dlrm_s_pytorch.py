@@ -562,12 +562,13 @@ if __name__ == "__main__":
     parser.add_argument("--lr-decay-start-step", type=int, default=0)
     parser.add_argument("--lr-num-decay-steps", type=int, default=0)
     # gpu
-    # parser.add_argument("--gpu", default='0')
+    parser.add_argument("--gpu", default='0')
     # load mask
     parser.add_argument("--mask_path", default='masks/l1/281677_0.6.pkl')
     args = parser.parse_args()
 
-    # os.environ['CUDA_VISIBLE_DEVICES'] = args.gpu
+    if args.use_gpu:
+        os.environ['CUDA_VISIBLE_DEVICES'] = args.gpu
     if args.mask_path:
         metric = (args.mask_path).split('/')[-2]
         _file_name = (args.mask_path).split('/')[-1][:-4]

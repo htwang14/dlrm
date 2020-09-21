@@ -1,4 +1,4 @@
-CUDA_VISIBLE_DEVICES=1 python oneshot.py \
+python importance_score.py \
     --arch-sparse-feature-size=16 \
     --arch-mlp-bot="13-512-256-64-16" \
     --arch-mlp-top="512-256-1" \
@@ -18,10 +18,11 @@ CUDA_VISIBLE_DEVICES=1 python oneshot.py \
     --arch-interaction-op cat \
     --inference-only \
     --use-gpu \
+    --gpu 0 \
     --metric l1 \
     --data-generation=dataset 
 
-CUDA_VISIBLE_DEVICES=0 python oneshot.py \
+python importance_score.py \
     --arch-sparse-feature-size=16 \
     --arch-mlp-bot="13-512-256-64-16" \
     --arch-mlp-top="512-256-1" \
@@ -41,5 +42,6 @@ CUDA_VISIBLE_DEVICES=0 python oneshot.py \
     --arch-interaction-op cat \
     --inference-only \
     --use-gpu \
+    --gpu 0 \
     --metric taylor \
     --data-generation=dataset 

@@ -30,9 +30,9 @@ print('prune_bin:', prune_bin.shape, prune_bin[0:10])
 
 prune_bins = np.array_split(prune_bin, split_ids)
 
-prune_bins_w3 = prune_bins[0]
+prune_bins_w1 = prune_bins[0]
 prune_bins_w2 = prune_bins[1]
-prune_bins_w1 = prune_bins[2]
+prune_bins_w3 = prune_bins[2]
 print('prune_bins_w3:', prune_bins_w3.shape)
 print('prune_bins_w2:', prune_bins_w2.shape)
 print('prune_bins_w1:', prune_bins_w1.shape)

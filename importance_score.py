@@ -789,10 +789,11 @@ if __name__ == "__main__":
         for name, p in dlrm.named_parameters():
             print(name, p.size())            
             if 'top' in name and 'weight' in name:
-                weight = p
-                print(name, torch.mean(torch.abs(weight)), torch.max(weight), torch.min(weight))
-                bias = list(dlrm.named_parameters())[name.replace('weight', 'bias')]
-                importance_score = torch.norm(weight, p=1, dim=1) + torch.norm(bias.unsqueeze(1), p=1, dim=1)
+                pW = p
+                print(name, torch.mean(torch.abs(pW)), torch.max(pW), torch.min(pW))
+                pb = dict(dlrm.named_parameters())[name.replace('weight', 'bias')]
+                print(torch.mean(torch.abs(pb)), torch.max(pb), torch.min(pb))
+                importance_score = torch.norm(pW, p=1, dim=1) + torch.abs(pb)
                 print('importance_score:', importance_score.size())
                 importance_score_dict[name] = importance_score.detach().cpu().numpy()
             
@@ -812,15 +813,25 @@ if __name__ == "__main__":
         for name, p in dlrm.named_parameters():
             print(name, p.size())       
             if 'top' in name and 'weight' in name:
-                W = p.data
+                # weight:
+                pW = p
+                W = pW.data
                 print('W:', W.size())
-                grad = p.grad
-                print('grad:', grad.size())
-                importance_score = torch.pow(torch.sum(W * grad, dim=1), 2)
+                grad_W = pW.grad
+                print('grad_W:', grad_W.size())
+                # bias:
+                pb = dict(dlrm.named_parameters())[name.replace('weight', 'bias')]
+                b = pb.data
+                print('b:', b.size())
+                grad_b = pb.grad
+                print('grad_b:', grad_b.size())
+                importance_score = torch.pow(torch.sum(W * grad_W, dim=1) + b * grad_b, 2)
                 print('importance_score:', importance_score.size())
                 importance_score_dict[name] = importance_score.detach().cpu().numpy()
 
     import pickle
+    if not os.path.isdir('importance_score'):
+        os.makedirs('importance_score')
     f = open(os.path.join('importance_score/%s.pkl' % args.metric),"wb")
     pickle.dump(importance_score_dict,f)
     f.close()
