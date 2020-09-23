@@ -137,8 +137,8 @@ class DLRM_Net(nn.Module):
     def create_mlp(self, ln, sigmoid_layer):
         # build MLP layer by layer
         layers = nn.ModuleList()
-        for i in range(0, ln.size - 1):
-            n = ln[i]
+        for i in range(0, ln.size - 1): # ln.size = 26 (cat: 26*16)
+            n = ln[i] # n -> 16
             m = ln[i + 1]
 
             # construct fully connected operator
@@ -174,7 +174,7 @@ class DLRM_Net(nn.Module):
         # approach 2: use Sequential container to wrap all layers
         return torch.nn.Sequential(*layers)
 
-    def create_emb(self, m, ln):
+    def create_emb(self, m, ln): # m = 16
         emb_l = nn.ModuleList()
         for i in range(0, ln.size):
             n = ln[i]
@@ -201,13 +201,13 @@ class DLRM_Net(nn.Module):
                     low=-np.sqrt(1 / n), high=np.sqrt(1 / n), size=(n, m)
                 ).astype(np.float32)
                 # approach 1
-                EE.weight.data = torch.tensor(W, requires_grad=True)
+                EE.weight.data = torch.tensor(W, requires_grad=True) # Embedding matrix
                 # approach 2
                 # EE.weight.data.copy_(torch.tensor(W))
                 # approach 3
                 # EE.weight = Parameter(torch.tensor(W),requires_grad=True)
 
-            emb_l.append(EE)
+            emb_l.append(EE) # list len is 26
 
         return emb_l
 

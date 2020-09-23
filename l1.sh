@@ -10,7 +10,7 @@ python dlrm_s_pytorch.py \
     --processed-data-file=/hdd3/jiayi/kaggle/kaggleAdDisplayChallenge_processed.npz \
     --loss-function=bce \
     --round-targets=True \
-    --learning-rate=0.1 \
+    --learning-rate=0.01 \
     --mini-batch-size=128 \
     --test-freq=1024 \
     --print-freq=1024 \
@@ -21,7 +21,7 @@ python dlrm_s_pytorch.py \
     --load-model /hdd3/jiayi/result/baseline_cat_extended/best.pt \
     --mask_path ./masks/l1/281677_0.6.pkl \
     --use-gpu \
-    --gpu 4 \
+    --gpu 0 \
     --nepochs 2 \
     2>&1 | tee l1_281677_0.6.log
 
@@ -36,7 +36,7 @@ python dlrm_s_pytorch.py \
     --processed-data-file=/hdd3/jiayi/kaggle/kaggleAdDisplayChallenge_processed.npz \
     --loss-function=bce \
     --round-targets=True \
-    --learning-rate=0.1 \
+    --learning-rate=0.01 \
     --mini-batch-size=128 \
     --test-freq=1024 \
     --print-freq=1024 \
@@ -62,7 +62,7 @@ python dlrm_s_pytorch.py \
     --processed-data-file=/hdd3/jiayi/kaggle/kaggleAdDisplayChallenge_processed.npz \
     --loss-function=bce \
     --round-targets=True \
-    --learning-rate=0.1 \
+    --learning-rate=0.01 \
     --mini-batch-size=128 \
     --test-freq=1024 \
     --print-freq=1024 \
@@ -88,7 +88,7 @@ python dlrm_s_pytorch.py \
     --processed-data-file=/hdd3/jiayi/kaggle/kaggleAdDisplayChallenge_processed.npz \
     --loss-function=bce \
     --round-targets=True \
-    --learning-rate=0.1 \
+    --learning-rate=0.01 \
     --mini-batch-size=128 \
     --test-freq=1024 \
     --print-freq=1024 \
@@ -99,7 +99,7 @@ python dlrm_s_pytorch.py \
     --load-model /hdd3/jiayi/result/baseline_cat_extended/best.pt \
     --mask_path ./masks/l1/102326_0.3.pkl \
     --use-gpu \
-    --gpu 6 \
+    --gpu 7 \
     --nepochs 2 \
     2>&1 | tee l1_102326_0.3.log
 
@@ -114,7 +114,7 @@ python dlrm_s_pytorch.py \
     --processed-data-file=/hdd3/jiayi/kaggle/kaggleAdDisplayChallenge_processed.npz \
     --loss-function=bce \
     --round-targets=True \
-    --learning-rate=0.1 \
+    --learning-rate=0.01 \
     --mini-batch-size=128 \
     --test-freq=1024 \
     --print-freq=1024 \
@@ -139,7 +139,7 @@ python dlrm_s_pytorch.py \
     --processed-data-file=/hdd3/jiayi/kaggle/kaggleAdDisplayChallenge_processed.npz \
     --loss-function=bce \
     --round-targets=True \
-    --learning-rate=0.1 \
+    --learning-rate=0.01 \
     --mini-batch-size=128 \
     --test-freq=1024 \
     --print-freq=1024 \
