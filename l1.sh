@@ -127,7 +127,7 @@ python dlrm_s_pytorch.py \
     --use-gpu \
     --gpu 6 \
     --nepochs 2 \
-    2>&1 | tee l1_59481_0.2.log
+    2>&1 | tee l1_59481_0.2_lr0.01.log
 
 python dlrm_s_pytorch.py \
     --arch-sparse-feature-size=16 \
@@ -152,5 +152,5 @@ python dlrm_s_pytorch.py \
     --use-gpu \
     --gpu 6 \
     --nepochs 2 \
-    --gpu 3 \
-    2>&1 | tee l1_33196_0.1.log
+    --gpu 0 \
+    2>&1 | tee l1_33196_0.1_lr0.01.log

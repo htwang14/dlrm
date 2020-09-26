@@ -110,7 +110,7 @@ python dlrm_s_pytorch.py \
     --processed-data-file=/hdd3/jiayi/kaggle/kaggleAdDisplayChallenge_processed.npz \
     --loss-function=bce \
     --round-targets=True \
-    --learning-rate=0.01 \
+    --learning-rate=0.1 \
     --mini-batch-size=128 \
     --test-freq=1024 \
     --print-freq=1024 \
@@ -123,7 +123,7 @@ python dlrm_s_pytorch.py \
     --use-gpu \
     --gpu 0 \
     --nepochs 2 \
-    2>&1 | tee taylor_45012_0.1.log
+    2>&1 | tee taylor_45012_0.1_lr0.1.log
 
 python dlrm_s_pytorch.py \
     --arch-sparse-feature-size=16 \
@@ -135,7 +135,7 @@ python dlrm_s_pytorch.py \
     --processed-data-file=/hdd3/jiayi/kaggle/kaggleAdDisplayChallenge_processed.npz \
     --loss-function=bce \
     --round-targets=True \
-    --learning-rate=0.01 \
+    --learning-rate=0.1 \
     --mini-batch-size=128 \
     --test-freq=1024 \
     --print-freq=1024 \
@@ -148,6 +148,6 @@ python dlrm_s_pytorch.py \
     --use-gpu \
     --gpu 1 \
     --nepochs 2 \
-    2>&1 | tee taylor_34609_0.08.log
+    2>&1 | tee taylor_34609_0.08_lr0.1.log
 
 

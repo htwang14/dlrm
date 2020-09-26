@@ -572,9 +572,9 @@ if __name__ == "__main__":
     if args.mask_path:
         metric = (args.mask_path).split('/')[-2]
         _file_name = (args.mask_path).split('/')[-1][:-4]
-        save_model_dir = os.path.join('results', metric, _file_name)
+        save_model_dir = os.path.join('results', metric, '%s_lr%s' % (_file_name, args.learning_rate))
     else:
-        save_model_dir = os.path.join('results', '%s_lr%s' % (args.arch_mlp_top, args.learning_rate))
+        save_model_dir = os.path.join('results', 'hand_crafted', '%s_lr%s' % (args.arch_mlp_top, args.learning_rate))
     if not os.path.isdir(save_model_dir):
         os.makedirs(save_model_dir)
     args.save_model = os.path.join(save_model_dir, 'model.pth')
